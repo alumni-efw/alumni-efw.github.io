@@ -3,18 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
     <title>English For Work - Alumni Network Website</title>
-    <!-- Link to the compiled CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
 
+<body>
+    <!-- Header include -->
+    <div id="header-placeholder"></div>
+
+    
+
+    <!-- Main Content -->
     <div class="container">
-        <img src="images/alumni_network.png" alt="English for Work Alumni Network Logo" class="logo">
-        <h1>Welcome to Alumni Network!</h1>
+        <h1>Welcome to English for Work Alumni Network!</h1><br>
         <p>Please join our WhatsApp group.</p>
-        <img src="images/WhatsApp.jpg" alt="WhatsApp Group QR code" class="qrcode">
+        <img src="assets/images/WhatsApp.jpg" alt="WhatsApp QR code" class="qrcode">
     </div>
 
+    <!-- Footer include -->
+    <div id="footer-placeholder"></div>
+
+    <script>
+        async function loadComponent(id, file) {
+            const res = await fetch(file);
+            const html = await res.text();
+            document.getElementById(id).innerHTML = html;
+        }
+
+        // load
+        loadComponent("header-placeholder", "header.html");
+        loadComponent("footer-placeholder", "footer.html");
+
+        // mobile menu toggle (after load)
+        document.addEventListener("click", function(e) {
+            if (e.target.id === "menuToggle") {
+                document.getElementById("mobileMenu").classList.toggle("active");
+            }
+        });
+    </script>
 </body>
 </html>
