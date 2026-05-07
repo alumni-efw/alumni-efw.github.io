@@ -1,0 +1,40 @@
+---
+---
+
+@import "minima";
+
+$brand-color: #a5c855;
+$brand-primary:#B6E2EE;
+$brand-secondary: #4974B5;
+
+
+.site-header {
+    a:hover{
+        text-decoration: none;
+    }
+
+    /* Logo */
+    .logo {
+        width: 100px;
+        vertical-align: middle;
+        margin-right: 8px;
+    }
+}
+
+.site-nav
+{
+    a {
+        color: $brand-primary;
+        text-decoration: none;
+    }
+    a:hover {
+        color: $brand-secondary;
+    }
+}
+
+.page-content .qrcode {
+  max-width: 250px;
+  height: auto;
+  display: inline-block;
+  margin: 10px auto;
+}

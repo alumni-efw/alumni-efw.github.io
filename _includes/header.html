@@ -1,0 +1,27 @@
+<header class="site-header" role="banner">
+  <div class="wrapper">
+
+    <!-- LOGO + TITLE -->
+    <a class="site-title" rel="author" href="{{ "/" | relative_url }}">
+      <img src="{{ "/assets/images/alumni_network_logo.jpg" | relative_url }}"
+           alt="EFW Alumni Network Logo"
+           class="logo"
+        >
+      {{ site.title }}
+    </a>
+
+    <!-- Navigation -->
+    <nav class="site-nav">
+        <div class="trigger">
+            {% assign sorted_pages = site.pages | sort: "order" %}
+            {% for page in sorted_pages %}
+                {% if page.title %}
+                <a class="page-link" href="{{ page.url | relative_url }}">
+                    {{ page.title }}
+                </a>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </nav>
+  </div>
+</header>
