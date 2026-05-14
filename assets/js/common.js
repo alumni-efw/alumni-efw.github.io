@@ -8,6 +8,17 @@ async function loadComponent(id, file) {
 document.addEventListener("DOMContentLoaded", async () => {
     await loadComponent("header-placeholder", "header.html");
     await loadComponent("footer-placeholder", "footer.html");
+
+    // window resize
+    window.addEventListener("resize", () => {
+        if (window.innerWidth > 600) {
+            const mobileMenu = document.getElementById("mobileMenu");
+
+            if (mobileMenu) {
+                mobileMenu.classList.remove("active");
+            }
+        }
+    });
 });
 
 // Mobile menu toggle
