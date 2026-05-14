@@ -1,8 +1,48 @@
+/* variables */
+:root{
+    --green-color : #a5c855;
+    --blue-color: #4974B5;
+    --light-blue-color:#B6E2EE;
+    --grey-color : #CCCCCC;
+    --body-font-color: #333;
+    --black-color:#000000;
+}
+
+/* General */
 body {
   margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
-  color: #333;
+  color: var(--body-font-color);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: none;
+}
+
+button{
+    background: none;
+    border: none;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+button:focus{
+    outline: none;
+}
+
+/* Section css */
+section{
+    padding: 48px;
+    position: relative;
 }
 
 /* header */
@@ -25,16 +65,23 @@ body {
     padding: 0 20px;
 }
 
-/* Logo */
-.logo {
+.site_header {
   display: flex;
   align-items: center;
   gap: 20px;
-  max-width: 100px;
 }
 
-.logo a{
-  text-decoration: none;
+/* Logo + Title */
+.site_logo img{
+  height: 60px;
+  width: auto;
+  display: block;
+}
+
+.site_title{
+  white-space: nowrap;
+  font-size: 20px;
+  font-width: 600;
 }
 
 /* Navigation */
@@ -45,7 +92,6 @@ body {
 }
 
 .nav_menu li a {
-  text-decoration: none;
   padding: 6px;
   color: #333;
   font-weight: 500;
@@ -58,31 +104,70 @@ body {
   color: rgb(36, 122, 191);
 }
 
-/* Main content */
-.container {
-  padding: 20px;
+/* Body content */
+.body-container {
+  padding: 20px 40px 20px 40px;
+  flex:1;
+
 }
 
-.container .qrcode {
+.body-container .qrcode {
   max-width: 250px;
   height: auto;
   display: inline-block;
   margin: 10px auto;
 }
-.container h1 {
+.body-container h1 {
   font-size: 2rem;
   margin-bottom: 10px;
 }
 
-.container p {
+.body-container p {
   font-size: 1.1rem;
   color: #666;
 }
+
+/* footer-css */
+#footer-placeholder{
+  border-top: 2px solid var(--green-color);
+}
+
+#footer, .footer{
+  padding:20px;
+}
+
+.footer .text-light{
+  color: #333 !important;
+  font-size: .875em;
+  font-weight: 400;
+}
+
+.footer a{
+  text-decoration: none;
+  text-align: left;
+  color: var(--body-font-color);
+}
+
+.footer a:hover{
+    text-decoration: underline;
+}
+
+.copyright{
+    color: var(--body-font-color);
+    font-size: 15px;
+}
+
+.quickLinks{
+  text-align: left;
+}
+
+
 
 /* Responsive for mobile*/
 /* Mobile Toggle */
 .menu_toggle {
     display: none;
+
     font-size: 24px;
     cursor: pointer;
 }
@@ -119,7 +204,7 @@ body {
     font-size: 1rem;
   }
 
-  .nav {
+  .site_nav {
       display: none;
   }
 
