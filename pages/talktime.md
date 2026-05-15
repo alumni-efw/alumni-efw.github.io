@@ -62,42 +62,11 @@ nav: true
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
     <!-- FAQ: talk time-->
   <p class="fs-3 fw-semibold">Frequently Asked Questions</p>
-    <div class="accordion" id="accordionExample">
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-            Who can join Talk Time?
-          </button>
-        </h2>
-        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-          <div class="accordion-body">
-            Talk Time is for members of the English for Work Alumni Network. If you are an English for Work graduate and want to join Alumni, please start with the New Members page.
-          </div>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-            Do I need to attend every week?
-          </button>
-        </h2>
-        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-          <div class="accordion-body">
-            No. You can join when you have time. Talk Time is a resource you can return to whenever it is useful for you.
-          </div>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-            Do I need perfect English?
-          </button>
-        </h2>
-        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-          <div class="accordion-body">
-            No. Talk Time is a place to practice, not a place to be perfect. Mistakes are a normal part of learning and speaking.
-          </div>
-        </div>
-      </div>
-    </div>
+  <p class="font-weight-light">
+    Visit our full <a class="page-content-link" href="/faq/">FAQ page</a> for more helpful information about our Alumni Community, events, and resources.
+  </p>
+
+  {% assign highlighted_items=site.data.faq.talktime.items | where: "highlighted", true %}
+  {% include faq-list.html data=highlighted_items %}
+
 </div>

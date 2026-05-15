@@ -7,6 +7,8 @@ $brand-secondary: #4974B5;
 $body-font-color: #333;
 $light-blue-color:#B6E2EE;
 $green-color : #a5c855;
+$gray-color: gray;
+$faq-font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 
 /* General */
 body {
@@ -106,6 +108,7 @@ button:focus{
   font-weight: 700;
 }
 
+/* Body */
 /* page content */
 .page-content {
   max-width: 1200px;
@@ -114,30 +117,38 @@ button:focus{
   flex:1;
   font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
 }
-
 .page-content p {
   font-size: 1.1rem;
   margin-bottom: 1.3rem;
   color: $body-font-color;
 }
-
+.page-content-link {
+  color:  $brand-secondary;
+  font-weight: 600;
+}
 .qrcode {
   max-width: 250px;
   height: auto;
   display: inline-block;
   margin: 10px auto;
 }
-
-.accordion {
-  width: 80%;
+/* FAQ */
+.faq-list {
+  width: 90%;
+  margin-left: 20px;
+  font-family: $faq-font-family;
 }
+.faq-list .faq-item p{
+  font-size: 14px;
+  font-width: 400;
+  margin-bottom: 0;
+}
+
 .accordion-button {
   font-weight: 600;
 }
 
-/* footer-css */
 /* footer */
-
 .footer-contact {
   text-align: center;
 }
@@ -178,7 +189,6 @@ button:focus{
   margin-bottom: 14px;
 }
 
-/* Contact Icons */
 .social-btn {
   width: 44px;
   height: 44px;
@@ -208,6 +218,10 @@ button:focus{
 .footer a:hover {
   text-decoration: underline;
 }
+
+
+
+
 
 /* Responsive for mobile*/
 /* Mobile Toggle */
@@ -289,6 +303,7 @@ button:focus{
     border-bottom: 1px solid #eee;
   }
 
+  .faq-list,
   .accordion {
     width: 95%;
   }
