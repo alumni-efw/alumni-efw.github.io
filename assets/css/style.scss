@@ -7,6 +7,8 @@ $brand-secondary: #4974B5;
 $body-font-color: #333;
 $light-blue-color:#B6E2EE;
 $green-color : #a5c855;
+$gray-color: gray;
+$faq-font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 
 /* General */
 body {
@@ -45,7 +47,6 @@ button:focus{
   border-bottom: 5px solid $green-color;
   margin-bottom: 35px;
 }
-
 .header-inner{
   max-width: 1200px;
   height: 85px;
@@ -55,7 +56,6 @@ button:focus{
   justify-content: space-between;
   padding: 0 20px;
 }
-
 /* Logo + Title */
 .alumni-efw {
   .logo {
@@ -66,13 +66,11 @@ button:focus{
     text-decoration: none;
     color: inherit;
   }
-
   .site-logo {
     height: 60px;
     width: auto;
     display: block;
   }
-
   .site-title {
     white-space: nowrap;
     font-size: 20px;
@@ -86,13 +84,11 @@ button:focus{
   display: flex;
   list-style: none;
   gap: 30px;
-
   li a {
     padding: 6px;
     font-weight: 500;
     color: $body-font-color;
   }
-
   a:hover {
     background-color: $brand-primary;
     border-radius: 4px;
@@ -100,12 +96,12 @@ button:focus{
     color: $brand-secondary;
   }
 }
-
 .page-link.active {
   color: $brand-secondary;
   font-weight: 700;
 }
 
+/* Body */
 /* page content */
 .page-content {
   max-width: 1200px;
@@ -114,13 +110,15 @@ button:focus{
   flex:1;
   font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
 }
-
 .page-content p {
   font-size: 1.1rem;
   margin-bottom: 1.3rem;
   color: $body-font-color;
 }
-
+.page-content-link {
+  color:  $brand-secondary;
+  font-weight: 600;
+}
 .qrcode {
   max-width: 250px;
   height: auto;
@@ -128,86 +126,79 @@ button:focus{
   margin: 10px auto;
 }
 
-.accordion {
-  width: 80%;
+/* FAQ */
+.faq-list {
+  width: 90%;
+  margin-left: 20px;
+  font-family: $faq-font-family;
+}
+.faq-list .faq-item p{
+  font-size: 14px;
+  font-width: 400;
+  margin-bottom: 0;
 }
 .accordion-button {
   font-weight: 600;
 }
 
-/* footer-css */
 /* footer */
-
 .footer-contact {
   text-align: center;
 }
-
 .site-footer {
   border-top: 2px solid $green-color;
   padding: 20px 40px;
   color: $body-font-color;
 }
-
 .footer-container {
   .text-light{
     color:  $body-font-color !important;
     font-size: .875em;
     font-weight: 400;
   }
-
   .footer-bottom{
     color:  gray;
     font-size: .875em;
     border-top: 1px solid #ddd;
     font-weight: 400;
   }
-
   .links{
     text-align: left;
   }
-
   ul {
     list-style: none;
     padding: 0;
     margin-top: 12px;
   }
 }
-
 .footer-top h6 {
   font-weight: 700;
   margin-bottom: 14px;
 }
-
-/* Contact Icons */
 .social-btn {
   width: 44px;
   height: 44px;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   border-radius: 50%;
-
   color: $body-font-color;
   font-size: 22px;
-
   transition: 0.2s ease;
 }
-
 .social-btn:hover {
   background-color: $brand-primary;
   color: $brand-secondary;
 }
-
 .footer a {
   text-decoration: none;
   color: $body-font-color;
 }
-
 .footer a:hover {
   text-decoration: underline;
 }
+
+
 
 /* Responsive for mobile*/
 /* Mobile Toggle */
@@ -289,6 +280,7 @@ button:focus{
     border-bottom: 1px solid #eee;
   }
 
+  .faq-list,
   .accordion {
     width: 95%;
   }

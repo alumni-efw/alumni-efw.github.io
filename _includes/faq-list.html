@@ -1,0 +1,17 @@
+<div class="faq-list">
+
+  {% for item in include.data %}
+
+    <div class="faq-item py-3 border-bottom">
+      <h5 class="fw-semibold mb-2">
+        {{ item.question }}
+      </h5>
+
+      <p class="ps-2">
+        {{ item.answer | markdownify }}
+      </p>
+    </div>
+
+  {% endfor %}
+
+</div>
