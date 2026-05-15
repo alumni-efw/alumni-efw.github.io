@@ -15,19 +15,29 @@ document.addEventListener("DOMContentLoaded", async () => {
       const siteNav = document.getElementById("siteNav");
 
       if (siteNav) {
-          siteNav.classList.toggle("active");
+        //toggle menu
+        siteNav.classList.toggle("active");
+
+        // change icon
+        if (siteNav.classList.contains("active")) {
+            menuToggle.innerHTML = "✕";
+        } else {
+            menuToggle.innerHTML = "☰";
+        }
       }
     }
   });
 
   // window resize
   window.addEventListener("resize", () => {
-      if (window.innerWidth > 600) {
-        const siteNav = document.getElementById("siteNav");
+    const siteNav = document.getElementById("siteNav");
 
-        if (siteNav) {
-            siteNav.classList.remove("active");
-        }
-      }
+    if (window.innerWidth > 768) {
+
+        siteNav.classList.remove("active");
+
+        // reset icon
+        menuToggle.innerHTML = "☰";
+    }
   });
 });

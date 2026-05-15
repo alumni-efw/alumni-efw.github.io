@@ -1,11 +1,54 @@
 <footer class="site-footer">
   <div class="footer">
     <div class="container footer-container">
-      <div class="row footer-top">
+      <div class="row">
+
+        <!-- community guide -->
+        <div class="col-md mt-2">
+          <h6>&copy; 2026 EFW Alumni Community</h6>
+          <ul>
+            <li>
+              <a class="text-light pl-4" href="/guidelines/">Community Guidelines</a>
+            </li>
+
+            <li>
+              <a class="text-light pl-4" href="/privacy/">Privacy & Data Notice</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Contact Us -->
+        <div class="col-md mt-2">
+          <div class="footer-contact">
+            <h6>Contact Us</h6>
+
+            <div class="social-icons row justify-content-center mt-3">
+              <a class="social-btn"
+                  href="mailto:{{ site.email }}"
+                  aria-label="Email">
+                 <i class="fa-solid fa-envelope"></i>
+              </a>
+
+              <a class="social-btn"
+                  href="{{ site.whatsapp_link }}"
+                  target="_blank"
+                  aria-label="WhatsApp">
+                 <i class="fa-brands fa-whatsapp"></i>
+              </a>
+
+              <a class="social-btn"
+                href="https://www.linkedin.com/in/{{ site.linkedin_username }}"
+                target="_blank"
+                aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin"></i>
+              </a>
+            </div>
+          </div>
+        </div>
 
         <!-- Learn more -->
-        <div class="col-md-3 mt-2">
-          <div class="links">
+        <div class="col-md mt-2">
+          <div class="links text-end">
             <h6>Learn more</h6>
 
             <ul>
@@ -23,58 +66,7 @@
             </ul>
           </div>
         </div>
-
-        <!-- Contact Us -->
-        <div class="col-md-3 mt-2">
-          <div class="footer-contact">
-            <h6>Contact Us</h6>
-            <div class="social-icons row justify-content-center mt-3">
-              <a class="social-btn"
-                  href="mailto:{{ site.email }}"
-                  aria-label="Email">
-                 <i class="fa-solid fa-envelope"></i>
-              </a>
-
-              <a class="social-btn"
-                  href="https://chat.whatsapp.com/GTNYq7YzEYn0BGb6N1qcED?mode=gi_t"
-                  target="_blank"
-                  aria-label="WhatsApp">
-                 <i class="fa-brands fa-whatsapp"></i>
-              </a>
-
-              <a class="social-btn"
-                href="https://www.linkedin.com/in/{{ site.linkedin_username }}"
-                target="_blank"
-                aria-label="LinkedIn">
-              <i class="fa-brands fa-linkedin"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-
-         <!-- community guide -->
-         <div class="col-md-6 mt-2 text-end">
-          <h6>English for Work Alumni Community</h6>
-          <ul>
-            <li>
-              <a class="text-light" href="/guidelines/">Community Guidelines</a>
-            </li>
-
-            <li>
-              <a class="text-light" href="/privacy/">Privacy & Data Notice</a>
-            </li>
-        </ul>
-        </div>
       </div>
-
-    <div class="row footer-bottom">
-        <div class="copyright col-md-3 pt-2">
-            &copy; 2026 EFW Alumni Community
-        </div>
-        <div class="col pt-2 text-end">
-          EFW Alumni Community is a volunteer-led community for English for Work alumni
-        </div>
-    </div>
     </div>
   </div>
 </footer>

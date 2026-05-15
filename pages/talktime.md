@@ -1,15 +1,14 @@
 ---
 layout: page
 title: Talk Time
-permalink: /talktime/
+permalink: /talk-time/
 order: 2
 nav: true
 ---
 
-<h1 class="pb-4">About Talk Time</h1>
+<h1>Keep practicing English with your Alumni community</h1>
 
 <div id="talkTime-section1">
-  <h2>Keep practicing English with your Alumni community</h2>
   <div class="container-md mt-4">
     <p>You finished English for Work, but you do not have to continue your journey alone. Talk Time is a friendly online meeting where Alumni members practice English, share experiences, and support each other.</p>
     <p>Each week, we talk about one topic together. You can speak, listen, ask questions, learn from others, and meet people who may be going through a similar job search or adaptation experience.</p>
@@ -33,21 +32,23 @@ nav: true
       <table class="table">
         <tbody>
           <tr>
-            <td><i class="fa-regular fa-sun"></i></td>
-            <td>Wednesday</td>
-            <td class="text-end">10:00-11:00 AM</td>
+            <td><i class="fa-regular {{ site.talktime-icon1 }}"></i></td>
+            <td>{{ site.talktime-date1 }}</td>
+            <td class="text-end">{{ site.talktime-time1 }}</td>
           </tr>
+          {% if site.talktime-date2 %}
           <tr>
-            <td><i class="fa-regular fa-moon"></i></td>
-            <td>Thursday</td>
-            <td class="text-end">6:30-7:30 PM</td>
+            <td><i class="fa-regular {{ site.talktime-icon2 }}"></i></td>
+            <td>{{ site.talktime-date2 }}</td>
+            <td class="text-end">{{ site.talktime-time2 }}</td>
           </tr>
+          {% endif %}
         </tbody>
       </table>
       <div class="text-center font-weight-light">Find the link and the topic of the week in our community channels.</div>
       <div class="social-icons row justify-content-center">
         <a class="social-btn"
-          href="https://chat.whatsapp.com/GTNYq7YzEYn0BGb6N1qcED?mode=gi_t"
+          href=" {{ site.whatsapp_link }}"
           target="_blank"
           aria-label="WhatsApp">
           <i class="fa-brands fa-whatsapp"></i>

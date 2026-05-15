@@ -27,7 +27,19 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 username: EFW Alumni Community
 github_username:  alumni-efw
+
+# custom variable
 linkedin_username: alumni-network-english-for-work-5946973a7
+#whatsapp_link: https://chat.whatsapp.com/GTNYq7YzEYn0BGb6N1qcED?mode=gi_t
+whatsapp_link: https://chat.whatsapp.com
+
+talktime-icon1: fa-sun
+talktime-date1: Wednesday
+talktime-time1: 10:00 - 11:00 AM
+talktime-icon2: fa-moon
+talktime-date2: Thursday
+talktime-time2: 6:30 - 7:30 PM
+
 # Build settings
 # theme: minima
 

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Ways to Connect
-permalink: /to-connect/
+permalink: /ways-to-connect/
 order: 1
 nav: true
 ---

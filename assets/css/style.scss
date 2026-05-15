@@ -101,6 +101,11 @@ button:focus{
   }
 }
 
+.page-link.active {
+  color: $brand-secondary;
+  font-weight: 700;
+}
+
 /* page content */
 .page-content {
   max-width: 1200px;
@@ -129,6 +134,7 @@ button:focus{
 .accordion-button {
   font-weight: 600;
 }
+
 /* footer-css */
 /* footer */
 
@@ -203,11 +209,6 @@ button:focus{
   text-decoration: underline;
 }
 
-.copyright {
-  font-size: 15px;
-}
-
-
 /* Responsive for mobile*/
 /* Mobile Toggle */
   .menu-toggle {
@@ -247,6 +248,11 @@ button:focus{
   .menu-toggle {
     display: block;
     order: 2;
+
+    font-size: 32px;
+    line-height: 1;
+
+    margin-left: auto;
   }
 
   .site-nav {

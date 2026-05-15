@@ -5,8 +5,7 @@ permalink: /get-involved/
 order: 3
 nav: true
 ---
-<h1 class="pb-4">Get Involved</h1>
-<h2>Help Alumni grow — in a way that works for you</h2>
+<h1>Help Alumni grow — in a way that works for you</h1>
 <div class="container-md text-start mt-4">
 <p>Alumni Community grows when members share their time, skills, ideas, and experience.</p>
 
