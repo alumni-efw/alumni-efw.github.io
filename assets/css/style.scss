@@ -19,23 +19,19 @@ body {
   flex-direction: column;
   min-height: 100vh;
 }
-
 a{
   text-decoration: none;
 }
 a:hover{
   text-decoration: none;
 }
-
 button{
   background: none;
   border: none;
 }
-
 button:hover{
   cursor: pointer;
 }
-
 button:focus{
   outline: none;
 }
@@ -198,8 +194,6 @@ button:focus{
   text-decoration: underline;
 }
 
-
-
 /* Responsive for mobile*/
 /* Mobile Toggle */
   .menu-toggle {
@@ -217,35 +211,27 @@ button:focus{
   .container p {
     font-size: 1rem;
   }
-
   .header-inner {
     height: auto;
     flex-wrap: wrap;
     align-items: center;
   }
-
   .alumni-efw {
     order: 1;
   }
-
   .site-title {
     font-size: 18px;
   }
-
   .site-logo {
     height: 45px;
   }
-
   .menu-toggle {
     display: block;
     order: 2;
-
     font-size: 32px;
     line-height: 1;
-
     margin-left: auto;
   }
-
   .site-nav {
     order: 3;
     position: static;
@@ -255,7 +241,6 @@ button:focus{
     background: white;
     display: none;
   }
-
   .site-nav .nav-menu {
     display: flex;
     flex-direction: column;
@@ -264,22 +249,18 @@ button:focus{
     padding: 0;
     margin: 0;
   }
-
   /* click */
   .site-nav.active{
     display: block ;
   }
-
   .site-nav .nav-menu li {
     list-style: none;
     text-align: right;
   }
-
   .site-nav .page-link {
     display: block;
     border-bottom: 1px solid #eee;
   }
-
   .faq-list,
   .accordion {
     width: 95%;
