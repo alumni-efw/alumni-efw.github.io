@@ -1,27 +1,36 @@
-<header class="site-header" role="banner">
-  <div class="wrapper">
+<header class="header" role="banner">
+  <div class="header-inner">
 
     <!-- LOGO + TITLE -->
-    <a class="site-title" rel="author" href="{{ "/" | relative_url }}">
-      <img src="{{ "/assets/images/alumni_network_logo.jpg" | relative_url }}"
-           alt="EFW Alumni Network Logo"
-           class="logo"
+    <div class="alumni-efw">
+    <a class="logo" rel="author" href="{{ "/" | relative_url }}">
+      <img src="{{ "/assets/images/logo.jpg" | relative_url }}"
+           alt="EFW Alumni Community Logo"
+           class="site-logo"
         >
-      {{ site.title }}
+      <div class="site-title">
+        {{ site.title }}
+      </div>
     </a>
+    </div>
 
     <!-- Navigation -->
-    <nav class="site-nav">
-        <div class="trigger">
-            {% assign sorted_pages = site.pages | sort: "order" %}
+    <nav class="site-nav" id="siteNav">
+        <ul class="nav-menu">
+            {% assign sorted_pages = site.pages | where: "nav", true | sort: "order" %}
             {% for page in sorted_pages %}
                 {% if page.title %}
-                <a class="page-link" href="{{ page.url | relative_url }}">
+                <li><a class="page-link" href="{{ page.url | relative_url }}">
                     {{ page.title }}
-                </a>
+                </a></li>
                 {% endif %}
             {% endfor %}
-        </div>
+        </ul>
     </nav>
+
+    <!-- Mobile Menu Button -->
+    <div class="menu-toggle" id="menuToggle">
+        ☰
+    </div>
   </div>
 </header>

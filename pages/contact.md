@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Contact Us
-permalink: /contact/
-order: 4
+permalink: /contact-us/
+nav: false
 ---
 Contact Us

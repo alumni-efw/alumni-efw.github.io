@@ -18,17 +18,18 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: EFW Alumni Network
+title: EFW Alumni Community
 email: alumni.efw@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  This is the Alumni Network Community space.
+  This is the Alumni Community space.
 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
+username: EFW Alumni Community
 github_username:  alumni-efw
 linkedin_username: alumni-network-english-for-work-5946973a7
 # Build settings
-theme: minima
+# theme: minima
 
 plugins:
   - jekyll-feed

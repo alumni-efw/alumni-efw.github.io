@@ -2,7 +2,7 @@
 layout: page
 title: Events
 permalink: /events/
-order: 3
+nav: false
 ---
 General events schedule
 <ul><b>Talk time (Zoom)</b>

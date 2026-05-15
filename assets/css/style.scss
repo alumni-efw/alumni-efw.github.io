@@ -1,40 +1,289 @@
 ---
 ---
-
-@import "minima";
-
+/* Theme Colors */
 $brand-color: #a5c855;
 $brand-primary:#B6E2EE;
 $brand-secondary: #4974B5;
+$body-font-color: #333;
+$light-blue-color:#B6E2EE;
+$green-color : #a5c855;
 
-
-.site-header {
-    a:hover{
-        text-decoration: none;
-    }
-
-    /* Logo */
-    .logo {
-        width: 100px;
-        vertical-align: middle;
-        margin-right: 8px;
-    }
+/* General */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: $body-font-color;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-.site-nav
+a{
+  text-decoration: none;
+}
+a:hover{
+  text-decoration: none;
+}
+
+button{
+  background: none;
+  border: none;
+}
+
+button:hover{
+  cursor: pointer;
+}
+
+button:focus{
+  outline: none;
+}
+
+/* header */
+.header{
+  width: 100%;
+  /* R#C54B34, Y#E5B945, G#a5c855, RB#B6E2EE, B#4974B5 P#7A579E */
+  border-bottom: 5px solid $green-color;
+  margin-bottom: 35px;
+}
+
+.header-inner{
+  max-width: 1200px;
+  height: 85px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+/* Logo + Title */
+.alumni-efw {
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .site-logo {
+    height: 60px;
+    width: auto;
+    display: block;
+  }
+
+  .site-title {
+    white-space: nowrap;
+    font-size: 20px;
+    font-weight: 600;
+  }
+}
+
+/* Navigation */
+.nav-menu
 {
-    a {
-        color: $brand-primary;
-        text-decoration: none;
-    }
-    a:hover {
-        color: $brand-secondary;
-    }
+  display: flex;
+  list-style: none;
+  gap: 30px;
+
+  li a {
+    padding: 6px;
+    font-weight: 500;
+    color: $body-font-color;
+  }
+
+  a:hover {
+    background-color: $brand-primary;
+    border-radius: 4px;
+    padding:6px;
+    color: $brand-secondary;
+  }
 }
 
-.page-content .qrcode {
+/* page content */
+.page-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  flex:1;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+.page-content p {
+  font-size: 1.1rem;
+  margin-bottom: 1.3rem;
+  color: $body-font-color;
+}
+
+.qrcode {
   max-width: 250px;
   height: auto;
   display: inline-block;
   margin: 10px auto;
+}
+
+.accordion {
+  width: 80%;
+}
+.accordion-button {
+  font-weight: 600;
+}
+/* footer-css */
+/* footer */
+
+.footer-contact {
+  text-align: center;
+}
+
+.site-footer {
+  border-top: 2px solid $green-color;
+  padding: 20px 40px;
+  color: $body-font-color;
+}
+
+.footer-container {
+  .text-light{
+    color:  $body-font-color !important;
+    font-size: .875em;
+    font-weight: 400;
+  }
+
+  .footer-bottom{
+    color:  gray;
+    font-size: .875em;
+    border-top: 1px solid #ddd;
+    font-weight: 400;
+  }
+
+  .links{
+    text-align: left;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 12px;
+  }
+}
+
+.footer-top h6 {
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+/* Contact Icons */
+.social-btn {
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  color: $body-font-color;
+  font-size: 22px;
+
+  transition: 0.2s ease;
+}
+
+.social-btn:hover {
+  background-color: $brand-primary;
+  color: $brand-secondary;
+}
+
+.footer a {
+  text-decoration: none;
+  color: $body-font-color;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.copyright {
+  font-size: 15px;
+}
+
+
+/* Responsive for mobile*/
+/* Mobile Toggle */
+  .menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+@media (max-width: 768px) {
+  .page-content h1,
+  .container h1 {
+    font-size: 1.5rem;
+  }
+  .page-content p,
+  .container p {
+    font-size: 1rem;
+  }
+
+  .header-inner {
+    height: auto;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .alumni-efw {
+    order: 1;
+  }
+
+  .site-title {
+    font-size: 18px;
+  }
+
+  .site-logo {
+    height: 45px;
+  }
+
+  .menu-toggle {
+    display: block;
+    order: 2;
+  }
+
+  .site-nav {
+    order: 3;
+    position: static;
+    right: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+    background: white;
+    display: none;
+  }
+
+  .site-nav .nav-menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+    padding: 0;
+    margin: 0;
+  }
+
+  /* click */
+  .site-nav.active{
+    display: block ;
+  }
+
+  .site-nav .nav-menu li {
+    list-style: none;
+    text-align: right;
+  }
+
+  .site-nav .page-link {
+    display: block;
+    border-bottom: 1px solid #eee;
+  }
+
+  .accordion {
+    width: 95%;
+  }
 }

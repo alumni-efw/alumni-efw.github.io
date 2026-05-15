@@ -1,35 +1,80 @@
-<footer class="site-footer h-card">
-  <data class="u-url" href="{{ "/" | relative_url }}"></data>
+<footer class="site-footer">
+  <div class="footer">
+    <div class="container footer-container">
+      <div class="row footer-top">
 
-  <div class="wrapper">
+        <!-- Learn more -->
+        <div class="col-md-3 mt-2">
+          <div class="links">
+            <h6>Learn more</h6>
 
-    <h2 class="footer-heading">{{ site.title | escape }}</h2>
+            <ul>
+              <li>
+                <a class="text-light" href="/faq/">FAQ</a>
+              </li>
 
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
+              <li>
+                <a class="text-light"
+                  href="https://www.hopelink.org/programs/english-for-work/"
+                  target="_blank">
+                  English for Work
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
 
-            {%- if site.email -%}
-            <li><a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-            {%- endif -%}
-        </ul>
-      </div>
+        <!-- Contact Us -->
+        <div class="col-md-3 mt-2">
+          <div class="footer-contact">
+            <h6>Contact Us</h6>
+            <div class="social-icons row justify-content-center mt-3">
+              <a class="social-btn"
+                  href="mailto:{{ site.email }}"
+                  aria-label="Email">
+                 <i class="fa-solid fa-envelope"></i>
+              </a>
 
-      <div class="footer-col footer-col-2">
-        {% if site.linkedin_username %}
-        <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}" target="_blank">
-            <i class="fa-brands fa-linkedin fa-lg"></i>
-        </a>
-      {% endif %}
-      </div>
+              <a class="social-btn"
+                  href="https://chat.whatsapp.com/GTNYq7YzEYn0BGb6N1qcED?mode=gi_t"
+                  target="_blank"
+                  aria-label="WhatsApp">
+                 <i class="fa-brands fa-whatsapp"></i>
+              </a>
 
-      <div class="footer-col footer-col-3">
-            <!-- Copyright -->
-            <div class="footer-copy">
-            © {{ site.time | date: "%Y" }} {{ site.title }}. All rights reserved.
+              <a class="social-btn"
+                href="https://www.linkedin.com/in/{{ site.linkedin_username }}"
+                target="_blank"
+                aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin"></i>
+              </a>
             </div>
-      </div>
-    </div>
+          </div>
+        </div>
 
+         <!-- community guide -->
+         <div class="col-md-6 mt-2 text-end">
+          <h6>English for Work Alumni Community</h6>
+          <ul>
+            <li>
+              <a class="text-light" href="/guidelines/">Community Guidelines</a>
+            </li>
+
+            <li>
+              <a class="text-light" href="/privacy/">Privacy & Data Notice</a>
+            </li>
+        </ul>
+        </div>
+      </div>
+
+    <div class="row footer-bottom">
+        <div class="copyright col-md-3 pt-2">
+            &copy; 2026 EFW Alumni Community
+        </div>
+        <div class="col pt-2 text-end">
+          EFW Alumni Community is a volunteer-led community for English for Work alumni
+        </div>
+    </div>
+    </div>
   </div>
 </footer>

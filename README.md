@@ -1,2 +1,2 @@
 # alumni-efw.github.io
-This is EFW Alumni Network Website.
+This is for EFW Alumni Community Website.
