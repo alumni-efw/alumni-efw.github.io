@@ -1,0 +1,77 @@
+# How to edit this file
+# IMPORTANT:
+# - Put ONE space after each colon [:]
+# - Keep the same indentation (spaces)
+# - Do NOT remove the dash [-]
+#   The dash means "start of a new section or list item"
+#
+# - If the text contains special characters such as [:] [#] [@] or starts with [-],
+#   wrap the text with double quotes [" "]
+#
+# Example:
+#   - "Our community is a place to:"
+
+# Adding a new section
+# Each section should include:
+# - id: section number
+# - title: section title
+# - content: paragraph text list
+# - bullets: optional bullet list
+
+# Example format:
+#
+# sections:
+#   - id: 1
+#     title: Example title
+#     content:
+#       - First paragraph
+#       - Second paragraph
+#     bullets:
+#       - First bullet
+#       - Second bullet
+#     content2: (optional)
+#       - First paragraph
+
+title: Privacy & Data Notice
+updated: May 2026
+intro: EFW Alumni Community is a volunteer-led community for English for Work alumni. This notice explains what information we may collect through our website, forms, and community activities, and how we use it.
+
+sections:
+  - id: 1
+    title: What information we collect
+    content:
+      - The EFW Alumni Community website itself does not collect personal information directly.
+      - "However, we may use external forms, such as Microsoft Forms, for activities such as:"
+    bullets:
+      - Alumni registration;
+      - requesting access to community channels;
+      - applying for volunteer opportunities;
+      - signing up to help with events or activities;
+      - submitting ideas, questions, or feedback.
+    content2:
+      - "Depending on the form, we may ask for information such as:"
+    bullets2:
+      - your name;
+      - email address;
+      - phone number, if needed for community communication;
+      - which English for Work course or quarter you attended;
+      - your teacher's name, if needed to help confirm Alumni eligibility;
+      - your professional interests or career field;
+      - your interest in volunteering or joining activities;
+      - any message or information you choose to share with us.
+    content3:
+      - Please do not submit sensitive personal information unless it is clearly requested and necessary.
+
+  - id: 2
+    title: How we use your information
+    content:
+      - "We use the information you provide only for EFW Alumni Community purposes, such as:"
+    bullets:
+      - confirming that you are an English for Work alum;
+      - helping you join Alumni communication channels;
+      - contacting you about Alumni activities, events, or volunteer opportunities;
+      - reviewing volunteer applications or interest forms;
+      - improving Alumni activities and communication;
+      - understanding what resources may be useful for Alumni members.
+    content2:
+      - We do not sell your personal information.

@@ -40,11 +40,6 @@ button:focus{
   background: $light-green-color;
 }
 
-
-
-
-
-
 /* header */
 .header{
   width: 100%;
@@ -156,7 +151,7 @@ button:focus{
   }
 }
 
-
+/* social button style */
 .social-btn {
   width: 44px;
   height: 44px;
@@ -185,6 +180,43 @@ button:focus{
 }
 .accordion-button {
   font-weight: 600;
+}
+
+/* policy page - community guidelines, privacy page */
+.policy-page {
+  max-width: 820px;
+}
+/* Main title */
+.policy-page h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+/* Section title */
+.policy-page h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: .75rem;
+}
+.policy-page p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: .75rem;
+}
+.policy-page li {
+  font-size: 1rem;
+  line-height: 1;
+  margin-bottom: .75rem;
+}
+.policy-page ul {
+  padding-left: 1.25rem;
+  margin-bottom: 1rem;
+}
+.policy-page .updated-date {
+  font-size: .95rem;
+  color: $brand-primary;
+  margin-bottom: 2rem;
 }
 
 /* footer */

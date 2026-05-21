@@ -4,3 +4,42 @@ title: Privacy & Data Notice
 permalink: /privacy/
 nav: false
 ---
+<div class="policy-page container py-4">
+  <h1>{{ site.data.privacy.title }}</h1>
+  <p class="updated-date"><strong>Last updated:</strong> {{ site.data.privacy.updated }}</p>
+
+  <p>{{ site.data.privacy.intro | markdownify }}</p>
+
+  {% for section in site.data.privacy.sections %}
+    <h2>{{ section.id }}. {{ section.title }}</h2>
+
+    {% for paragraph in section.content %}
+      <p>{{ paragraph }}</p>
+    {% endfor %}
+
+    {% if section.bullets %}
+      <ul>
+        {% for item in section.bullets %}
+          <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+
+    {% for paragraph in section.content2 %}
+      <p class="pt-2">{{ paragraph }}</p>
+    {% endfor %}
+
+    {% if section.bullets2 %}
+      <ul>
+        {% for item in section.bullets2 %}
+          <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+
+    {% for paragraph in section.content3 %}
+      <p class="pt-2">{{ paragraph }}</p>
+    {% endfor %}
+
+  {% endfor %}
+</div>
