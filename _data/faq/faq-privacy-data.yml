@@ -25,16 +25,9 @@
 #   answer: Yes. I'll send the message.
 #   highlighted: true
 
-title: Getting Involved
+title: Privacy and Data
 
 items:
-  - question: Is this a paid role?
-    answer: No. These are unpaid volunteer opportunities for Alumni members. They can still be valuable experience for your résumé, LinkedIn profile, and future interviews.
-    highlighted: true
-
-  - question: Can I help only once?
-    answer: Yes. Some opportunities can be one-time, such as facilitating one session, sharing one story, suggesting one topic, or helping with one small task.
-
-  - question: Do I need previous volunteer experience?
-    answer: No. Previous experience can be helpful, but it is not always required. For many roles, the most important things are interest, communication, reliability, and willingness to learn.
+  - question: Does the website collect my personal information?
+    answer: The EFW Alumni Community website itself does not collect personal information directly. However, we may use external forms, such as Microsoft Forms, for registration, access requests, volunteer opportunities, event sign-ups, ideas, questions, or feedback.
     highlighted: true
