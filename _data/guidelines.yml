@@ -1,0 +1,73 @@
+# How to edit this file
+# IMPORTANT:
+# - Put ONE space after each colon [:]
+# - Keep the same indentation (spaces)
+# - Do NOT remove the dash [-]
+#   The dash means "start of a new section or list item"
+#
+# - If the text contains special characters such as [:] [#] [@] or starts with [-],
+#   wrap the text with double quotes [" "]
+#
+# Example:
+#   - "Our community is a place to:"
+
+# Adding a new section
+# Each section should include:
+# - id: section number
+# - title: section title
+# - content: paragraph text list
+# - bullets: optional bullet list
+
+# Example format:
+#
+# sections:
+#   - id: 1
+#     title: Example title
+#     content:
+#       - First paragraph
+#       - Second paragraph
+#     bullets:
+#       - First bullet
+#       - Second bullet
+
+title: Community Guidelines
+updated: May 2026
+intro: |
+  EFW Alumni Community is a volunteer-led community for English for Work alumni.
+
+  These guidelines help us keep the community respectful, safe, supportive,
+  and useful for all members.
+
+sections:
+  - id: 1
+    title: Our community purpose
+    content:
+      - EFW Alumni Community exists to help alumni stay connected after English for Work.
+      - "Our community is a place to:"
+    bullets:
+      - practice English
+      - share helpful resources
+      - support each other
+      - build confidence
+      - make professional and personal connections
+      - grow together
+
+  - id: 2
+    title: Participation is voluntary
+    content:
+      - Participation in EFW Alumni Community is optional.
+      - You are welcome to join activities when you have time. You do not need to attend every event, be active every week, or volunteer in order to be part of the community.
+      - You can participate in the way that works best for you.
+
+  - id: 3
+    title: Be respectful and supportive
+    content:
+      - We ask all members to communicate with respect and kindness.
+      - "Please:"
+    bullets:
+      - listen to others
+      - give people time to speak
+      - respect different English levels and accents
+      - avoid judging mistakes
+      - use friendly and professional language
+      - support a welcoming environment

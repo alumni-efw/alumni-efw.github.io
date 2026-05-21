@@ -1,0 +1,46 @@
+# How to add or edit FAQ items
+# IMPORTANT:
+# - Put ONE space after each colon [:]
+# - Keep the same indentation (spaces)
+# - Do not remove the dash [-]
+#   The dash means "start of a new FAQ item"
+
+# Format:
+# - question: Your question here
+#   answer: Your answer here
+#   highlighted: true   # optional
+
+# About /highlighted/:
+# - highlighted: true
+#   → This FAQ item will also appear on FAQ section in the individual page
+#
+# - If highlighted is omitted, it is treated as false by default
+#   → The item will appear only in the Full FAQ page
+#
+# - Add highlighted: true for FAQ items that should appear
+#   on both the Full FAQ page and the individual FAQ section
+
+# Example:
+# - question: Do you have any question?
+#   answer: Yes. I'll send the message.
+#   highlighted: true
+
+title: Ways to connect
+
+items:
+  - question: Do I have to join all channels?
+    answer: No. You can join one channel, several channels, or all available channels. Choose what works best for your life and schedule.
+    highlighted: false
+
+  - question: Can I join only WhatsApp or only LinkedIn?
+    answer: Yes. You can choose the channel that feels most useful for you. WhatsApp is best for quick reminders, and LinkedIn is best for professional networking.
+    highlighted: true
+
+  - question: What if I do not want many notifications?
+    answer: You may prefer email updates or LinkedIn. You can also adjust notification settings in WhatsApp or LinkedIn.
+
+  - question:
+    answer:
+
+  - question:
+    answer:

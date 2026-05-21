@@ -21,7 +21,7 @@
 
             {% for page_menu in sorted_pages %}
               {% if page_menu.title %}
-                <li><a class="page-link {% if page_menu.url == page.url %}active{% endif %}"
+                <li><a class="nav-link {% if page_menu.url == page.url %}active{% endif %}"
                         href="{{ page_menu.url | relative_url }}">
                     {{ page_menu.title }}
                 </a></li>

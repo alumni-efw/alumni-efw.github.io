@@ -1,0 +1,40 @@
+# How to add or edit FAQ items
+# IMPORTANT:
+# - Put ONE space after each colon [:]
+# - Keep the same indentation (spaces)
+# - Do not remove the dash [-]
+#   The dash means "start of a new FAQ item"
+
+# Format:
+# - question: Your question here
+#   answer: Your answer here
+#   highlighted: true   # optional
+
+# About /highlighted/:
+# - highlighted: true
+#   → This FAQ item will also appear on FAQ section in the individual page
+#
+# - If highlighted is omitted, it is treated as false by default
+#   → The item will appear only in the Full FAQ page
+#
+# - Add highlighted: true for FAQ items that should appear
+#   on both the Full FAQ page and the individual FAQ section
+
+# Example:
+# - question: Do you have any question?
+#   answer: Yes. I'll send the message.
+#   highlighted: true
+
+title: Get Involved
+
+items:
+  - question: Is this a paid role?
+    answer: No. These are unpaid volunteer opportunities for Alumni members. They can still be valuable experience for your résumé, LinkedIn profile, and future interviews.
+    highlighted: true
+
+  - question: Can I help only once?
+    answer: Yes. Some opportunities can be one-time, such as facilitating one session, sharing one story, suggesting one topic, or helping with one small task.
+
+  - question: Do I need previous volunteer experience?
+    answer: No. Previous experience can be helpful, but it is not always required. For many roles, the most important things are interest, communication, reliability, and willingness to learn.
+    highlighted: true

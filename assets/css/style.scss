@@ -1,14 +1,13 @@
 ---
 ---
 /* Theme Colors */
-$brand-color: #a5c855;
-$brand-primary:#B6E2EE;
-$brand-secondary: #4974B5;
+$brand-color: #99CB3C;
+$brand-primary:#4974B5;
+$brand-secondary: #B6E2EE;
 $body-font-color: #333;
-$light-blue-color:#B6E2EE;
-$green-color : #a5c855;
+$light-green-color:#f0f6df;
+$dark-green-color : #5D7D21;
 $gray-color: gray;
-$faq-font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 
 /* General */
 body {
@@ -25,22 +24,32 @@ a{
 a:hover{
   text-decoration: none;
 }
-button{
-  background: none;
-  border: none;
-}
-button:hover{
-  cursor: pointer;
-}
 button:focus{
   outline: none;
 }
+
+.btn-outline-efw{
+  background: none;
+  border-color: $brand-color;
+  box-shadow: 0 3px 8px rgba($brand-color, 0.25);
+}
+
+.btn-outline-efw:hover{
+  cursor: pointer;
+  border-color: $brand-color;
+  background: $light-green-color;
+}
+
+
+
+
+
 
 /* header */
 .header{
   width: 100%;
   /* R#C54B34, Y#E5B945, G#a5c855, RB#B6E2EE, B#4974B5 P#7A579E */
-  border-bottom: 5px solid $green-color;
+  border-bottom: 5px solid $brand-color;
   margin-bottom: 35px;
 }
 .header-inner{
@@ -86,14 +95,21 @@ button:focus{
     color: $body-font-color;
   }
   a:hover {
-    background-color: $brand-primary;
     border-radius: 4px;
     padding:6px;
-    color: $brand-secondary;
+    color: $brand-primary;
+    border-bottom-color: $brand-secondary;
   }
 }
-.page-link.active {
-  color: $brand-secondary;
+.nav-link {
+  display: inline-block;
+  padding: 6px;
+  border-bottom: 3px solid transparent;
+  color: $body-font-color;
+}
+.nav-link.active {
+  color: $dark-green-color;
+  border-bottom-color: $brand-color;
   font-weight: 700;
 }
 
@@ -112,7 +128,7 @@ button:focus{
   color: $body-font-color;
 }
 .page-content-link {
-  color:  $brand-secondary;
+  color:  $brand-primary;
   font-weight: 600;
 }
 .qrcode {
@@ -121,12 +137,46 @@ button:focus{
   display: inline-block;
   margin: 10px auto;
 }
+.talk-time-section {
+  gap: 2rem;
+  align-items: flex-start;
+}
+.talk-time-content {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
+  min-width: 500px;
+}
+.talk-time-table {
+  flex-shrink: 0;
+  width: 320px;
+
+  table td{
+    white-space: nowrap;
+  }
+}
+
+
+.social-btn {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: $body-font-color;
+  font-size: 22px;
+  transition: 0.2s ease;
+}
+.social-btn:hover {
+  background-color: $light-green-color;
+  color: $brand-primary;
+}
 
 /* FAQ */
 .faq-list {
   width: 90%;
   margin-left: 20px;
-  font-family: $faq-font-family;
 }
 .faq-list .faq-item p{
   font-size: 14px;
@@ -142,7 +192,7 @@ button:focus{
   text-align: center;
 }
 .site-footer {
-  border-top: 2px solid $green-color;
+  border-top: 2px solid $brand-color;
   padding: 20px 40px;
   color: $body-font-color;
 }
@@ -171,27 +221,15 @@ button:focus{
   font-weight: 700;
   margin-bottom: 14px;
 }
-.social-btn {
-  width: 44px;
-  height: 44px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  color: $body-font-color;
-  font-size: 22px;
-  transition: 0.2s ease;
-}
-.social-btn:hover {
-  background-color: $brand-primary;
-  color: $brand-secondary;
-}
 .footer a {
   text-decoration: none;
   color: $body-font-color;
 }
 .footer a:hover {
   text-decoration: underline;
+}
+.footer a.social-btn:hover {
+  text-decoration: none;
 }
 
 /* Responsive for mobile*/

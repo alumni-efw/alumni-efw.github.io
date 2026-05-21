@@ -1,0 +1,46 @@
+# How to add or edit FAQ items
+# IMPORTANT:
+# - Put ONE space after each colon [:]
+# - Keep the same indentation (spaces)
+# - Do not remove the dash [-]
+#   The dash means "start of a new FAQ item"
+
+# Format:
+# - question: Your question here
+#   answer: Your answer here
+#   highlighted: true   # optional
+
+# About /highlighted/:
+# - highlighted: true
+#   → This FAQ item will also appear on FAQ section in the individual page
+#
+# - If highlighted is omitted, it is treated as false by default
+#   → The item will appear only in the Full FAQ page
+#
+# - Add highlighted: true for FAQ items that should appear
+#   on both the Full FAQ page and the individual FAQ section
+
+# Example:
+# - question: Do you have any question?
+#   answer: Yes. I'll send the message.
+#   highlighted: true
+
+title: About Us
+
+items:
+  - question: Who is Alumni Community for?
+    answer: Alumni Community is for people who completed English for Work and want to stay connected after the program ends.
+    highlighted: true
+
+  - question: Do I need to be active every week?
+    answer: No. You can join activities when you have time, read updates, connect with others, or return later when you need support.
+
+  - question: Do I need perfect English to participate?
+    answer: No. Alumni Community is a place to keep practicing. Mistakes are part of learning, and members are encouraged to support each other.
+
+  - question: Who organizes Alumni Community?
+    answer: Alumni Community is supported by a volunteer Leadership Team and active Alumni members. The team helps organize activities, communication, resources, and community support.
+    highlighted: true
+
+  - question: Is Alumni Community part of Hopelink?
+    answer: Alumni Community is connected to graduates of Hopelink’s English for Work program. At this stage, it should be described carefully as a volunteer-led community for English for Work alumni, not as a separate official Hopelink department unless that wording is confirmed.

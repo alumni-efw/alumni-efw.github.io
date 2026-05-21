@@ -1,0 +1,19 @@
+<div class="faq-highlighted mt-4 pt-4 border-top">
+
+  <p class="fs-3 fw-semibold">
+    Frequently Asked Questions
+  </p>
+
+  <p class="font-weight-light">
+    Visit our full
+    <a class="page-content-link" href="/faq/">FAQ page</a>
+    for more helpful information about our Alumni Community,
+    events, and resources.
+  </p>
+
+  {% assign faq = site.data.faq[include.faq_key] %}
+  {% assign highlighted_items = faq.items | where: "highlighted", true %}
+
+  {% include faq-list.html data=highlighted_items %}
+
+</div>
