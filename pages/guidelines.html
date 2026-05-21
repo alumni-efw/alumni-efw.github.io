@@ -24,5 +24,9 @@ nav: false
         {% endfor %}
       </ul>
     {% endif %}
+
+    {% for paragraph in section.content2 %}
+      <p>{{ paragraph }}</p>
+    {% endfor %}
   {% endfor %}
 </div>
