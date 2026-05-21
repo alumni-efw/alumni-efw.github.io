@@ -71,3 +71,22 @@ sections:
       - avoid judging mistakes
       - use friendly and professional language
       - support a welcoming environment
+    content2:
+      - Mistakes are a normal part of learning and speaking English. This community should be a safe place to practice.
+  
+  - id: 4
+    title: Protect privacy
+    content:
+      - Please respect other members' privacy.
+      - "Do not share someone else’s personal information without permission, including:"
+    bullets:
+      - phone numbers
+      - email addresses
+      - photos
+      - screenshots
+      - personal stories
+      - job search details
+      - immigration, family, health, or financial information.
+    content2:
+      - Please do not take screenshots, record meetings, or share private group messages outside the community unless you have permission.
+
