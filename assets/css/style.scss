@@ -173,6 +173,9 @@ button:focus{
   width: 90%;
   margin-left: 20px;
 }
+.faq-list .faq-item:first-child {
+  border-top: none !important;
+}
 .faq-list .faq-item p{
   font-size: 1rem;
   font-width: 400;
