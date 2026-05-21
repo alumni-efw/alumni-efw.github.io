@@ -29,11 +29,13 @@ username: EFW Alumni Community
 github_username:  alumni-efw
 
 # custom variable
-linkedin_username: 17798005
+linkedin_groupid: 17798005
 #whatsapp_link: https://chat.whatsapp.com/GTNYq7YzEYn0BGb6N1qcED?mode=gi_t
 whatsapp_link: https://chat.whatsapp.com
-faq_link: http://localhost
+efw_link: https://www.hopelink.org/programs/english-for-work/
 
+
+#talk time table information
 talktime-icon1: fa-sun
 talktime-date1: Wednesdays
 talktime-time1: 10:00 - 11:00 AM

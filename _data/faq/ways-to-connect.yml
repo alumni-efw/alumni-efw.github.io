@@ -28,19 +28,20 @@
 title: Ways to connect
 
 items:
-  - question: Do I have to join all channels?
-    answer: No. You can join one channel, several channels, or all available channels. Choose what works best for your life and schedule.
-    highlighted: false
-
-  - question: Can I join only WhatsApp or only LinkedIn?
-    answer: Yes. You can choose the channel that feels most useful for you. WhatsApp is best for quick reminders, and LinkedIn is best for professional networking.
+  - question: Do I need to join every channel?
+    answer:  No. You can choose the channel that feels easiest and most useful for you. WhatsApp is helpful for quick reminders and updates. LinkedIn is useful for professional networking. Email updates are good if you prefer a simple summary.
     highlighted: true
 
-  - question: What if I do not want many notifications?
-    answer: You may prefer email updates or LinkedIn. You can also adjust notification settings in WhatsApp or LinkedIn.
+  - question: What is the difference between WhatsApp, LinkedIn, and email updates?
+    answer: WhatsApp is the fastest way to receive reminders, schedule changes, and short community updates. LinkedIn is a professional space for networking and updates. Email updates are useful if you prefer to receive the most important information in one place.
+    highlighted: true
 
-  - question:
-    answer:
+  - question: What is the WhatsApp group for?
+    answer: The WhatsApp group is a closed community channel for Alumni members. It is used for important updates, Talk Time reminders, schedule changes, community announcements, useful resources, and relevant questions from members
 
-  - question:
-    answer:
+  - question: Who can join the WhatsApp group?
+    answer: The WhatsApp group is for Alumni members. To keep the group useful and respectful, members are expected to follow the Community Guidelines.
+    highlighted: true
+
+  - question: Can I ask questions in WhatsApp?
+    answer: Yes, if your question is relevant to Alumni Community, English practice, events, resources, job search, or community support. Please keep messages respectful, clear, and useful for the group.
