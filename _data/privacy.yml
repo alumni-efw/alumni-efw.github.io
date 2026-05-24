@@ -75,3 +75,74 @@ sections:
       - understanding what resources may be useful for Alumni members.
     content2:
       - We do not sell your personal information.
+
+  - id: 3
+    title: Microsoft Forms
+    content:
+      - Some forms on this website may be hosted by Microsoft Forms.
+      - When you open a Microsoft Form, you are leaving the EFW Alumni Community website and using a Microsoft service. Information submitted through Microsoft Forms may be stored and processed according to Microsoft’s own privacy and security practices.
+      - Before submitting a form, please review the information requested and submit only what you are comfortable sharing.
+
+  - id: 4
+    title: Who can access the information
+    content:
+      - Access to form responses is limited to EFW Alumni Community team members who need the information for their role.
+      - "For example, this may include people helping with:"
+    bullets:
+      - Alumni registration;
+      - membership coordination;
+      - communication;
+      - volunteer coordination;
+      - event planning;
+      - website or administrative support.
+    content2:
+      - We try to limit access to only what is needed. When a volunteer no longer needs access for their role, access should be removed.
+
+  - id: 5
+    title: Community channels and external platforms
+    content:
+      - EFW Alumni Community may use external platforms such as WhatsApp, LinkedIn, Zoom, email, or Microsoft Forms.
+      - Each platform has its own privacy practices and settings. For example, if you join a WhatsApp group, other members may be able to see your name, phone number, profile photo, or messages depending on your WhatsApp settings.
+      - Please be careful when sharing personal information in community channels.
+
+  - id: 6
+    title: Website analytics
+    content:
+      - At this time, we do not use Google Analytics or other external website analytics tools on this website.
+      - This means we are not currently using third-party analytics tools to track how visitors use the website.
+      - If we decide to add website analytics in the future, we will update this notice.
+
+  - id: 7
+    title: Photos, stories, and testimonials
+    content:
+      - We will not intentionally publish your photo, personal story, testimonial, or identifying personal information on the public website without your permission.
+      - If we ask to share your story or feedback publicly, we will explain how it may be used and ask for your consent first.
+
+  - id: 8
+    title:  How long we keep information
+    content:
+      - We keep information only as long as it is useful for Alumni Community purposes, such as managing membership, communication, activities, volunteer opportunities, or internal planning.
+      - Because the EFW Alumni Community is volunteer-led, our data retention process may continue to develop over time. We will try to review and remove information that is no longer needed.
+
+  - id: 9
+    title: Your choices
+    content:
+      - You can choose not to submit a form.
+      - "You can also contact us if you want to:"
+    bullets:
+      - ask what information you submitted;
+      - update your information;
+      - ask us to remove your information from Alumni records, when possible;
+      - stop receiving Alumni communications.
+    content2:
+      - Some information may need to be kept for a limited time if it is needed for community administration, safety, or recordkeeping.
+
+  - id: 10
+    title: Contact us
+    content:
+      - "If you have questions about this Privacy & Data Notice or how your information is used, please contact us:"
+      - "alumni.efw@gmail.com"
+
+  - id: 11
+    title: Updates to this notice
+    content: We may update this Privacy & Data Notice as the EFW Alumni Community website, forms, activities, or tools change.
