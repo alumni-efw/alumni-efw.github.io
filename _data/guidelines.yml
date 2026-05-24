@@ -33,7 +33,7 @@
 title: Community Guidelines
 updated: May 2026
 intro: |
-  EFW Alumni Community is a volunteer-led community for English for Work alumni.
+  EFW Alumni Community is a volunteer-led community for [English for Work](mailto:alumni.efw@gmail.com) alumni.
 
   These guidelines help us keep the community respectful, safe, supportive,
   and useful for all members.
@@ -42,7 +42,7 @@ sections:
   - id: 1
     title: Our community purpose
     content:
-      - EFW Alumni Community exists to help alumni stay connected after English for Work.
+      - EFW Alumni Community exists to help alumni stay connected after [English for Work](mailto:alumni.efw@gmail.com).
       - "Our community is a place to:"
     bullets:
       - practice English
@@ -73,12 +73,12 @@ sections:
       - support a welcoming environment
     content2:
       - Mistakes are a normal part of learning and speaking English. This community should be a safe place to practice.
-  
+
   - id: 4
     title: Protect privacy
     content:
       - Please respect other members' privacy.
-      - "Do not share someone else’s personal information without permission, including:"
+      - "Do not share someone else's personal information without permission, including:"
     bullets:
       - phone numbers
       - email addresses
@@ -90,3 +90,62 @@ sections:
     content2:
       - Please do not take screenshots, record meetings, or share private group messages outside the community unless you have permission.
 
+  - id: 5
+    title: Use community channels appropriately
+    content:
+      - EFW Alumni Community may use platforms such as WhatsApp, LinkedIn, Zoom, email, or external forms.
+      - "Please use community channels for Alumni-related communication, such as:"
+    bullets:
+      - event updates;
+      - Talk Time or Mock Interview information;
+      - helpful resources;
+      - career-related information;
+      - questions for the community;
+      - networking;
+      - volunteer opportunities;
+      - respectful support.
+    content2:
+      - "Please do not use community channels for:"
+    bullets2:
+      - spam;
+      - scams or suspicious links;
+      - unrelated advertising;
+      - repeated self-promotion;
+      - disrespectful comments;
+      - political arguments;
+      - religious debates;
+      - offensive, discriminatory, or harmful content.
+
+  - id: 6
+    title: Sharing resources and opportunities
+    content:
+      - Members may share helpful resources, events, or job-related information if they are relevant to the Alumni community.
+      - Please make sure that shared information is clear, respectful, and useful.
+      - The Alumni team may remove posts or links if they seem misleading, unsafe, unrelated, repeated too often, or not appropriate for the community.
+
+  - id: 7
+    title: Online and in-person events
+    content:
+      - Most EFW Alumni Community activities are currently online.
+      - If in-person events are offered in the future, event details, expectations, and safety information will be shared before the event.
+      - Members are expected to behave respectfully during both online and in-person activities.
+
+  - id: 8
+    title: No formal advice
+    content:
+      - Information shared in EFW Alumni Community is for general support, learning, and community connection.
+      - It is not legal, immigration, medical, financial, or professional employment advice.
+      - Members are responsible for making their own decisions and should contact qualified professionals when they need formal advice.
+
+  - id: 9
+    title: Moderation
+    content:
+      - The Alumni team may moderate community spaces to help keep them safe and respectful.
+      - This may include removing spam, inappropriate content, or messages that do not follow these guidelines.
+      - In some cases, a person may be removed from a community channel if their behavior creates risk, discomfort, or repeated problems for other members.
+
+  - id: 10
+    title: Questions or concerns
+    content:
+      - "If you have a question, concern, or want to report a problem, please contact us: [English for Work](mailto:alumni.efw@gmail.com)"
+      - "We appreciate your help in keeping EFW Alumni Community welcoming, respectful, and supportive."

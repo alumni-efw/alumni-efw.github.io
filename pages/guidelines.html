@@ -14,7 +14,7 @@ nav: false
     <h2>{{ section.id }}. {{ section.title }}</h2>
 
     {% for paragraph in section.content %}
-      <p>{{ paragraph }}</p>
+      <p>{{ paragraph | markdownify }}</p>
     {% endfor %}
 
     {% if section.bullets %}
@@ -28,5 +28,13 @@ nav: false
     {% for paragraph in section.content2 %}
       <p>{{ paragraph }}</p>
     {% endfor %}
+
+    {% if section.bullets2 %}
+      <ul>
+        {% for item in section.bullets2 %}
+          <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
   {% endfor %}
 </div>
