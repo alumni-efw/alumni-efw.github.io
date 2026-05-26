@@ -56,25 +56,12 @@ button:focus{
   justify-content: space-between;
   padding: 0 20px;
 }
-/* Logo + Title */
+/* Logo */
 .alumni-efw {
-  .logo {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-
-    text-decoration: none;
-    color: inherit;
-  }
   .site-logo {
     height: 60px;
     width: auto;
     display: block;
-  }
-  .site-title {
-    white-space: nowrap;
-    font-size: 20px;
-    font-weight: 600;
   }
 }
 
