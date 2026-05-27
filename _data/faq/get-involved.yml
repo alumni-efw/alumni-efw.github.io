@@ -28,13 +28,44 @@
 title: Getting Involved
 
 items:
-  - question: Is this a paid role?
-    answer: No. These are unpaid volunteer opportunities for Alumni members. They can still be valuable experience for your résumé, LinkedIn profile, and future interviews.
+
+  - question: How can I help the Alumni Community?
+    answer: >
+    There are many ways to help. You can share feedback, suggest a Talk Time topic, recommend a resource, tell us about an interview experience, support one activity, facilitate Talk Time, help with content, or apply for a Leadership Team role.
     highlighted: true
 
-  - question: Can I help only once?
-    answer: Yes. Some opportunities can be one-time, such as facilitating one session, sharing one story, suggesting one topic, or helping with one small task.
+  - question: Is this a paid role?
+    answer: <
+    No. These are unpaid volunteer opportunities for Alumni members. They can still be valuable experience for your resume, LinkedIn profile, and future interviews.
+    highlighted: true
 
-  - question: Do I need previous volunteer experience?
-    answer: No. Previous experience can be helpful, but it is not always required. For many roles, the most important things are interest, communication, reliability, and willingness to learn.
+  - question: Can I help only one time?
+    answer: >
+    Yes. You can help one time, occasionally, or on a regular basis. For example, you might lead one Talk Time session, share one resource, support one event, or contribute one idea.
+    highlighted: true
+
+  - question: Can I suggest an idea without volunteering?
+    >
+    answer: Yes. Your ideas are helpful even if you do not have time to volunteer. You can suggest topics, resources, website content, event ideas, or improvements.
+
+  - question: Do I need perfect English to volunteer?
+    answer: >
+    No. You do not need perfect English. Volunteering can be a way to practice English, build confidence, and develop communication skills in a supportive environment.
+    highlighted: true
+
+  - question: Can volunteering help my resume or LinkedIn profile?
+    answer: >
+    Yes. Volunteering can help you gain experience in communication, teamwork, leadership, event support, content creation, facilitation, or community building.
+
+  - question: What is the Leadership Team?
+    answer: >
+    The Leadership Team is a group of volunteers who help keep the Alumni Community organized, welcoming, and useful. Team members may help with communication channels, events, Talk Time, membership, website updates, planning, and community growth.
+
+  - question: How is the Leadership Team different from one-time volunteering?
+    answer: >
+    One-time volunteering usually means helping with one task or one activity. Leadership Team roles usually involve more regular responsibility, communication with other team members, and ongoing support for Alumni Community.
+
+  - question: What if I want to help but I am not sure how?
+    answer: >
+    That is okay. You can still contact us or fill out an interest form. You can tell us what you enjoy, what skills you have, how much time you may have, and what kind of support feels realistic for you.
     highlighted: true
