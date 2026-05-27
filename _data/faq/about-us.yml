@@ -25,21 +25,30 @@
 #   answer: Yes. I'll send the message.
 #   highlighted: true
 
-title: About Alumni Community (new)
+title: About the Alumni Community
 
 items:
-  - question: Who is Alumni Community for?
-    answer: Alumni Community is for people who completed English for Work and want to stay connected after the program ends.
-
-  - question: Do I need to be active every week?
-    answer: No. You can join activities when you have time, read updates, connect with others, or return later when you need support.
-
-  - question: Do I need perfect English to participate?
-    answer: No. Alumni Community is a place to keep practicing. Mistakes are part of learning, and members are encouraged to support each other.
-
-  - question: Who organizes Alumni Community?
-    answer: Alumni Community is supported by a volunteer Leadership Team and active Alumni members. The team helps organize activities, communication, resources, and community support.
-
-  - question: Is Alumni Community part of Hopelink?
-    answer: Alumni Community is connected to graduates of Hopelink's English for Work program. At this stage, it should be described carefully as a volunteer-led community for English for Work alumni, not as a separate official Hopelink department unless that wording is confirmed.
+  - question: What is the EFW Alumni Community?
+    answer: >
+    EFW Alumni Community is a volunteer-led community for English for Work alumni. It helps graduates stay connected after <a href="https://www.hopelink.org/programs/english-for-work/">English for Work</a>, continue practicing English, build confidence, share resources, and support each other during the job search and career transition journey.
     highlighted: true
+
+  - question: Who is the Alumni Community for?
+    answer: >
+    Alumni Community is for people who completed <a href="https://www.hopelink.org/programs/english-for-work/">English for Work</a> and want to stay connected after the program. Some members join activities often. Others only read updates, attend when they have time, or come back later when they need support.
+    highlighted: true
+
+  - question: Is the Alumni Community part of the Hopelink?
+    answer: >
+    Alumni Community is connected to graduates of Hopelink’s English for Work program. At this stage, Alumni Community should be described as a volunteer-led community for English for Work alumni, not as a separate official Hopelink department unless that wording is confirmed by Hopelink.
+    highlighted: true
+
+  - question: Is the Alumni Community free?
+    answer: Yes. Alumni Community activities and communication channels are free for members. Some external resources or events shared in the community may have their own rules or costs, but Alumni will try to make that clear when sharing information.
+
+  - question: Do I have to participate all the time?
+    answer: No. You can participate in a way that fits your life, time, and energy. You can attend Talk Time, read updates, join LinkedIn, ask questions, volunteer, or take a break and come back later.
+    highlighted: true
+
+  - question: Do I have to volunteer to be part of the Alumni Community?
+    answer: No. Volunteering is optional. You are welcome to be part of the Alumni Community even if you only want to receive updates, attend activities, or stay connected with other alumni.
