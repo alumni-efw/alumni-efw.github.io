@@ -35,7 +35,7 @@ items:
     highlighted: true
 
   - question: Is this a paid role?
-    answer: <
+    answer: >
     No. These are unpaid volunteer opportunities for Alumni members. They can still be valuable experience for your resume, LinkedIn profile, and future interviews.
     highlighted: true
 
@@ -45,12 +45,10 @@ items:
     highlighted: true
 
   - question: Can I suggest an idea without volunteering?
-    >
     answer: Yes. Your ideas are helpful even if you do not have time to volunteer. You can suggest topics, resources, website content, event ideas, or improvements.
 
   - question: Do I need perfect English to volunteer?
-    answer: >
-    No. You do not need perfect English. Volunteering can be a way to practice English, build confidence, and develop communication skills in a supportive environment.
+    answer: No. You do not need perfect English. Volunteering can be a way to practice English, build confidence, and develop communication skills in a supportive environment.
     highlighted: true
 
   - question: Can volunteering help my resume or LinkedIn profile?
@@ -63,7 +61,7 @@ items:
 
   - question: How is the Leadership Team different from one-time volunteering?
     answer: >
-    One-time volunteering usually means helping with one task or one activity. Leadership Team roles usually involve more regular responsibility, communication with other team members, and ongoing support for Alumni Community.
+    One-time volunteering usually means helping with one task or one activity. Leadership Team roles usually involve more regular responsibility, communication with other team members, and ongoing support for the Alumni Community.
 
   - question: What if I want to help but I am not sure how?
     answer: >
