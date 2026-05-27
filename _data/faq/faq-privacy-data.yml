@@ -25,9 +25,53 @@
 #   answer: Yes. I'll send the message.
 #   highlighted: true
 
+# Example (long answer using multiline text with >):
+# Use > when the answer is long or spans multiple lines.
+# IMPORTANT:
+# - The content below > must be indented.
+# - Do not use quotes around the multiline text.
+#
+# - question: Do you have any question?
+#   answer: >
+#     Yes. I'll send the message.
+#     I can also continue writing an email. 
+#   highlighted: true
+
 title: Privacy and Data
 
 items:
+
   - question: Does the website collect my personal information?
-    answer: The EFW Alumni Community website itself does not collect personal information directly. However, we may use external forms, such as Microsoft Forms, for registration, access requests, volunteer opportunities, event sign-ups, ideas, questions, or feedback.
+    answer: >
+      The EFW Alumni Community website itself does not collect personal information directly. 
+      However, we may use external forms, such as Microsoft Forms, for registration, access requests, volunteer opportunities, event sign-ups, ideas, questions, or feedback.
     highlighted: true
+
+  - question: Why do forms ask for my information?
+    answer: >
+      Forms help the Leadership Team understand who is joining, how to contact members, what support people may need, and how to plan community activities. 
+      We try to collect only information that is useful for Alumni communication, planning, and support.
+
+  - question: What information may Alumni collect?
+    answer: >
+      Depending on the form, we may ask for information such as your name, email address, phone number, English for Work course or quarter, interests, professional background, volunteer interests, or questions.
+
+  - question: Who can see my information?
+    answer: >
+      Access should be limited to people who need the information for Alumni-related work, such as membership, communication, event planning, or volunteer coordination. 
+      The Alumni Community should not share your personal information publicly without your permission.
+
+  - question: Will my name, photo, story, or personal details be published?
+    answer: >
+      No, not without your permission. We will not publish your name, photo, story, testimonial, contact information, or personal details unless you clearly agree to share that information publicly.
+    highlighted: true
+
+  - question: Can I ask to update or remove my information?
+    answer: >
+      Yes. You can contact us if you want to update, correct, or remove your information from Alumni records. 
+      Some requests may take time because Alumni is volunteer-led, but the team should try to respond in a reasonable way.
+
+  - question: Where can I read the full Privacy and Data Notice?
+    answer: > 
+      You can read the full Privacy and Data Notice on the Privacy and Data Notice page.
+

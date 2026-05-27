@@ -21,27 +21,70 @@
 #   on both the Full FAQ page and the individual FAQ section
 
 # Example:
-# - question: Do you have any question?
+# - question: Do you have any questions?
 #   answer: Yes. I'll send the message.
 #   highlighted: true
 
+# Example (long answer using multiline text with >):
+# Use > when the answer is long or spans multiple lines.
+# IMPORTANT:
+# - The content below > must be indented.
+# - Do not use quotes around the multiline text.
+#
+# - question: Do you have any questions?
+#   answer: >
+#     Yes. I'll send the message.
+#     I can also continue writing on multiple lines.
+#   highlighted: true
 title: Ways to connect
 
 items:
   - question: Do I need to join every channel?
-    answer:  No. You can choose the channel that feels easiest and most useful for you. WhatsApp is helpful for quick reminders and updates. LinkedIn is useful for professional networking. Email updates are good if you prefer a simple summary.
+    answer: >
+      No. You can choose the channel that feels easiest and most useful for you. WhatsApp is helpful for quick reminders and updates. LinkedIn is useful for professional networking.
+      Email updates are good if you prefer a simple summary.
     highlighted: true
 
   - question: What is the difference between WhatsApp, LinkedIn, and email updates?
-    answer: WhatsApp is the fastest way to receive reminders, schedule changes, and short community updates. LinkedIn is a professional space for networking and updates. Email updates are useful if you prefer to receive the most important information in one place.
+    answer: >
+      WhatsApp is the fastest way to receive reminders, schedule changes, and short community updates. LinkedIn is a professional space for networking and updates.
+      Email updates are useful if you prefer to receive the most important information in one place.
     highlighted: true
 
   - question: What is the WhatsApp group for?
-    answer: The WhatsApp group is a closed community channel for Alumni members. It is used for important updates, Talk Time reminders, schedule changes, community announcements, useful resources, and relevant questions from members
+    answer: >
+      The WhatsApp group is a closed community channel for Alumni members. It is used for important updates, Talk Time reminders, schedule changes, community announcements, useful resources, and relevant questions from members.
 
   - question: Who can join the WhatsApp group?
-    answer: The WhatsApp group is for Alumni members. To keep the group useful and respectful, members are expected to follow the Community Guidelines.
+    answer: >
+      The WhatsApp group is for Alumni members. To keep the group useful and respectful, members are expected to follow the Community Guidelines.
     highlighted: true
 
-  - question: Can I ask questions in WhatsApp?
-    answer: Yes, if your question is relevant to Alumni Community, English practice, events, resources, job search, or community support. Please keep messages respectful, clear, and useful for the group.
+  - question: Can I ask questions on WhatsApp?
+    answer: >
+      Yes, if your question is relevant to Alumni Community, English practice, events, resources, job search, or community support. Please keep messages respectful, clear, and useful for the group.
+
+  - question: What should I not post on WhatsApp?
+    answer: >
+      Please do not post spam, unrelated promotions, political arguments, offensive content, private information about other people, or messages that make the group feel unsafe or uncomfortable.
+
+  - question: What is the LinkedIn group for?
+    answer: >
+      The LinkedIn group is a professional networking space for Alumni members. It can help you stay connected, follow Alumni updates, practice professional networking, and connect with other people who completed English for Work.
+
+  - question: Do I need LinkedIn to be a part of the Alumni Community?
+    answer: >
+      No. LinkedIn is optional. You can still participate in the Alumni Community through other channels, such as WhatsApp, email updates, or Talk Time.
+
+  - question: Can I connect with other Alumni members on LinkedIn?
+    answer: >
+      Yes. LinkedIn can be a good place to practice professional networking. When you send a connection request, it is helpful to include a short message with your name and your connection to English for Work.
+
+  - question: What are email updates for?
+    answer: >
+      Email updates are for members who prefer to receive important Alumni information in one place. They may include recent updates, upcoming events, Talk Time information, useful resources, volunteer opportunities, and reminders.
+
+  - question: Can I unsubscribe from email updates?
+    answer: >
+      Yes. You can unsubscribe from email updates. Each email update should include a simple way to unsubscribe or contact us if you no longer want to receive messages.
+    highlighted: true
