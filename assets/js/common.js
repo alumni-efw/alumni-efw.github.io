@@ -10,10 +10,10 @@ document.addEventListener("DOMContentLoaded", async () => {
   const menuToggle = document.getElementById("menuToggle");
   const siteNav = document.getElementById("siteNav");
 
+  if (!menuToggle || !siteNav) return;
+
   menuToggle.addEventListener("click", (e) => {
     if (e.target.id === "menuToggle") {
-      const siteNav = document.getElementById("siteNav");
-
       if (siteNav) {
         //toggle menu
         siteNav.classList.toggle("active");
@@ -21,8 +21,10 @@ document.addEventListener("DOMContentLoaded", async () => {
         // change icon
         if (siteNav.classList.contains("active")) {
             menuToggle.innerHTML = "✕";
+            menuToggle.setAttribute("aria-expanded", "true");
         } else {
             menuToggle.innerHTML = "☰";
+            menuToggle.setAttribute("aria-expanded", "false");
         }
       }
     }
@@ -30,14 +32,13 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   // window resize
   window.addEventListener("resize", () => {
-    const siteNav = document.getElementById("siteNav");
-
     if (window.innerWidth > 768) {
 
         siteNav.classList.remove("active");
 
         // reset icon
         menuToggle.innerHTML = "☰";
+        menuToggle.setAttribute("aria-expanded", "false");
     }
   });
 });
