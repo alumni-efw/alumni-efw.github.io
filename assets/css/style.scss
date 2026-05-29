@@ -143,9 +143,11 @@ img {
 }
 
 .page-content-link,
+.page-content a,
 .accordion-body a,
 .faq-highlighted a,
-.faq-page a {
+.faq-page a,
+.benefit-text a {
   color:  $brand-green-dark;
   font-weight: 600;
   text-decoration: underline;
@@ -394,6 +396,12 @@ img {
 .benefit-text p {
   font-size: 14px;
   line-height: 1.55;
+}
+.benefit-guide{
+  margin: 0 auto !important;
+  max-width: 1200px;
+  padding: 10px 24px 0;
+  text-align: center;
 }
 
 .steps-grid {
@@ -695,6 +703,7 @@ img {
   margin-bottom: 0;
   padding-left: 0 !important;
 }
+.faq-body a:hover,
 .accordion-body a:hover,
 .faq-more a:hover {
   color: $dark-font-color;
