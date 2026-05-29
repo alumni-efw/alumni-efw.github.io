@@ -714,7 +714,7 @@ img {
   text-align: center;
 }
 
-/* Responsive for mobile */
+/* ──Responsive for mobile────────────────────── */
 
 /* Tablet */
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -798,9 +798,6 @@ img {
   .container p {
     font-size: 1rem;
   }
-  .talk-time-section {
-    flex-direction: column;
-  }
   .talk-time-hero {
     padding: 64px 0 56px;
     scroll-margin-top: 220px;
@@ -828,6 +825,9 @@ img {
   }
   .benefit-item:last-child {
     border-bottom: 0;
+  }
+  .faq-body {
+    width: 90%;
   }
   .section {
     padding: 56px 0;
@@ -861,5 +861,8 @@ img {
   }
   .accordion-body {
     padding: 0 20px 20px;
+  }
+  .footer-container{
+    padding: 0px;
   }
 }
