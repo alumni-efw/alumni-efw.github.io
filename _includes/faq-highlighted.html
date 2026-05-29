@@ -1,46 +1,30 @@
-<div class="faq-highlighted mt-4 pt-4">
+{% assign faq_key = include.faq_key | default: "example" %}
+{% assign faq = site.data.faq[faq_key] %}
+{% assign highlighted_items = faq.items | where: "highlighted", true %}
 
-  <p class="fs-3 fw-semibold">
-    Frequently Asked Questions
-  </p>
+<section class="faq-highlighted faq-highlighted-{{ faq_key }} section">
 
-  <p class="font-weight-light">
-    Visit our full
-    <a class="page-content-link" href="/faq/">FAQ page</a>
-    for more helpful information about our Alumni Community,
-    events, and resources.
-  </p>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
-  <div class="accordion" id="accordionExample">
-    {% assign faq = site.data.faq[include.faq_key] %}
-    {% assign highlighted_items = faq.items | where: "highlighted", true %}
-
-    <div class="accordion-item">
-
-      <h2 class="accordion-header">
-        <button
-          class="accordion-button"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#collapseOne"
-          aria-expanded="true"
-          aria-controls="collapseOne"
-        >
+  <div class="faq-header">
+    <div class="section-label">Frequently asked</div>
+      <h2 class="section-title">Questions about
+        {% if faq_key == "about-us" %}
+          the Alumni Community
+        {% else %}
           {{ faq.title }}
-        </button>
+        {% endif %}
       </h2>
-
-      <div
-        id="collapseOne"
-        class="accordion-collapse collapse show"
-        data-bs-parent="#accordionExample"
-      >
-        <div class="accordion-body">
-          {% include faq-list.html data=highlighted_items %}
-        </div>
-      </div>
-
     </div>
 
-</div>
+
+    <div class="faq-body">
+      {% include faq-list.html data=highlighted_items %}
+    </div>
+  </div>
+
+  <p class="faq-more">
+      Have more questions? Visit our
+      <a href="/faq/" class="page-content-link">full FAQ page</a>
+      for information about the Alumni Community, events, and resources.
+  </p>
+
+</section>

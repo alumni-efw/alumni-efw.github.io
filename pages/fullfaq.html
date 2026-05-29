@@ -4,53 +4,58 @@ title: FAQ
 permalink: /faq/
 nav: false
 ---
-<h1 class="pb-4">Frequently Asked Questions</h1>
-<div class="section">
-  <p>Have a question? You're in the right place. We've gathered answers to the most common questions about our Alumni community, events, resources, and ways to get involved.</p>
 
-  <p class="fw-medium">Can't find an answer?</p>
-  <p>We'd be happy to help. Email us at <a href="mailto:{{ site.email }}" aria-label="Email">
-  alumni.efw@gmail.com</a> or connect with us through [ WhatsApp ]  or  [ LinkedIn ] </p>
-</div>
+<article class="faq-page">
+  <section class="faq-intro section">
+    <div class="faq-header">
+      <h1 class="section-title">Frequently Asked Questions</h1>
+    </div>
 
-<!-- Full FAQ -->
-<div id="full-faq-section">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
-  <div class="accordion" id="accordionExample">
+    <div class="faq-intro-desc">
+      <p>Have a question? You're in the right place. We've gathered answers to the most common questions about our Alumni community, events, resources, and ways to get involved.</p>
+      <p><strong> Can't find an answer?</strong> </p>
+        <p>Email us at <a href="mailto:{{ site.email }}" aria-label="Email">{{ site.email }}</a> or connect with us through WhatsApp or LinkedIn.</p>
+    </div>
+  </section>
 
-    {% for section in site.data.faq.full-faq.sections %}
+  <section class="full-faq-section section">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <div class="accordion" id="fullFAQAccordion">
 
-      {% assign faq = site.data.faq[section.key] %}
-      {% assign collapseId = "collapse-" | append: section.key %}
+      {% for section in site.data.faq.full-faq.sections %}
 
-      <div class="accordion-item">
+        {% assign faq = site.data.faq[section.key] %}
+        {% assign collapseId = "collapse-" | append: section.key %}
 
-        <h2 class="accordion-header">
-          <button
-            class="accordion-button {% unless forloop.first %}collapsed{% endunless %}"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#{{ collapseId }}"
-            aria-expanded="{% if forloop.first %}true{% else %}false{% endif %}"
-            aria-controls="{{ collapseId }}"
+        <div class="accordion-item">
+
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button {% unless forloop.first %}collapsed{% endunless %}"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#{{ collapseId }}"
+              aria-expanded="{% if forloop.first %}true{% else %}false{% endif %}"
+              aria-controls="{{ collapseId }}"
+            >
+              {{ faq.title }}
+            </button>
+          </h2>
+
+          <div
+            id="{{ collapseId }}"
+            class="accordion-collapse collapse {% if forloop.first %}show{% endif %}"
+            data-bs-parent="#fullFAQAccordion"
           >
-            {{ faq.title }}
-          </button>
-        </h2>
-
-        <div
-          id="{{ collapseId }}"
-          class="accordion-collapse collapse {% if forloop.first %}show{% endif %}"
-          data-bs-parent="#accordionExample"
-        >
-          <div class="accordion-body">
-            {% include faq-list.html data=faq.items %}
+            <div class="accordion-body">
+              {% include faq-list.html data=faq.items %}
+            </div>
           </div>
+
         </div>
 
-      </div>
+      {% endfor %}
 
-    {% endfor %}
-
-  </div>
-</div>
+    </div>
+  </section>
+</article>
