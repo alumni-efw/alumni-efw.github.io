@@ -2,7 +2,7 @@
 
   {% for item in include.data %}
 
-    <div class="faq-item py-3 border-top">
+    <div class="faq-item py-3{% unless forloop.first %} border-top{% endunless %}">
       <h5 class="fw-semibold mb-2">
         {{ item.question }}
       </h5>

@@ -308,7 +308,7 @@ img {
   font-style: normal;
   color: $brand-green-dark;
 }
-.hero-desc {
+.page-content p.hero-desc {
   font-size: 18px !important;
   line-height: 1.75;
   color: $gray-color;
@@ -621,7 +621,18 @@ img {
   line-height: 1.7;
   margin-bottom: 14px;
 }
-
+.faq-body {
+  max-width: 900px;
+  margin: 0 auto 10px;
+  background: $cream-background-color;
+  color: $gray-color;
+  font-size: 16px;
+  line-height: 1.7;
+  padding: 0 24px 22px;
+  border: 1px solid $border-line-color !important;
+  border-radius: 12px !important;
+  margin-bottom: 10px;
+}
 /* Bootstrap accordion overrides */
 .accordion {
   margin: 0 auto;
@@ -646,11 +657,19 @@ img {
 }
 .accordion-button:not(.collapsed) {
   background: $cream-background-color;
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
   color: $dark-font-color;
 }
 .accordion-collapse {
+  background: $cream-background-color;
   border-top: 1px solid $border-line-color;
 }
+.accordion-collapse.show {
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
 .accordion-body {
   background: $cream-background-color;
   color: $gray-color;
@@ -744,10 +763,12 @@ img {
     align-items: stretch;
     flex-direction: column;
     gap: 0;
-    width: 100%;
+    margin-left: auto;
+    width: max-content;
   }
   .site-nav .nav-menu li {
     display: block;
+    width: 100%;
   }
   .site-nav .nav-link,
   .site-nav .nav-link:hover {
@@ -758,8 +779,8 @@ img {
     width: 100%;
   }
   .site-nav .nav-link::after {
-    left: 14px;
-    right: 14px;
+    left: 0;
+    right: 0;
   }
   .page-content h1,
   .container h1 {
@@ -776,7 +797,7 @@ img {
     padding: 64px 0 56px;
     scroll-margin-top: 220px;
   }
-  .talk-time-hero-grid,
+  .hero-grid,
   .facilitate-layout {
     gap: 40px;
     grid-template-columns: 1fr;
@@ -784,7 +805,7 @@ img {
   .talk-time-hero h1 {
     font-size: 36px;
   }
-  .talk-time-hero-card {
+  .hero-card {
     min-height: 280px;
     padding: 24px;
   }
