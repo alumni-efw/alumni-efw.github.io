@@ -142,11 +142,10 @@ img {
 }
 
 .page-content-link,
-.page-content a,
 .accordion-body a,
 .faq-highlighted a,
 .faq-page a,
-.benefit-text a {
+.talk-time-benefits a{
   color:  $brand-green-dark;
   font-weight: 600;
   text-decoration: underline;
@@ -284,7 +283,7 @@ img {
   color: $gray-color;
   font-size: 18px;
   line-height: 1.7;
-  max-width: 600px;
+  max-width: 800px;
 }
 .talk-time-hero {
   background: white;
@@ -704,7 +703,8 @@ img {
 }
 .faq-body a:hover,
 .accordion-body a:hover,
-.faq-more a:hover {
+.faq-more a:hover,
+.talk-time-benefits a:hover {
   color: $dark-font-color;
 }
 .faq-more {
