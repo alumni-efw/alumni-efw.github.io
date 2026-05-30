@@ -233,14 +233,17 @@ img {
 
 
 /* Talk Time design */
-.page-content:has(.talk-time-page) {
+.page-content:has(.talk-time-page),
+.page-content:has(.get-involved-page){
   max-width: none;
   padding: 0 !important;
   margin: 0 !important;
 }
 .section { padding: 80px 0; }
 .section-sm { padding: 56px 0; }
-.section p {
+
+.section p,
+.section-sm p {
   color: $gray-color;
   font-size: 16px;
   line-height: 1.7;
@@ -280,12 +283,10 @@ img {
   margin-bottom: 16px;
 }
 .section-sub {
-  color: $gray-color;
-  font-size: 18px;
-  line-height: 1.7;
-  max-width: 800px;
+  font-size: 18px !important;
+  max-width: 900px;
 }
-.talk-time-hero {
+.hero {
   background: white;
   overflow: hidden;
   padding: 96px 0 88px;
@@ -347,9 +348,15 @@ img {
 .talk-time-facilitate {
   background: $cream-background-color;
 }
-.talk-time-benefits-grid {
+
+.get-involved-benefits {
+  background: $cream-background-color;
+}
+
+.benefits-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
 }
 .benefit-item {
   align-items: flex-start;
@@ -359,6 +366,15 @@ img {
   padding: 44px 36px;
 }
 .benefit-item:last-child { border-right: 0; }
+.get-involved-benefits-grid .benefit-item {
+  border-bottom: 1px solid $border-line-color;
+}
+.get-involved-benefits-grid .benefit-item:nth-child(3n) {
+  border-right: 0;
+}
+.get-involved-benefits-grid .benefit-item:nth-last-child(-n + 3) {
+  border-bottom: 0;
+}
 .benefit-item-schedule {
   flex-wrap: wrap;
 }
@@ -412,6 +428,8 @@ img {
   background: white;
   border: 1px solid $border-line-color;
   border-radius: 16px;
+  display: flex;
+  flex-direction: column;
   padding: 36px 30px;
   transition: box-shadow 0.2s, transform 0.2s;
 }
@@ -451,6 +469,13 @@ img {
 .step-card h3 {
   font-size: 20px;
   margin-bottom: 10px;
+}
+.get-involed-contribute-level .step-card p {
+  margin-bottom: 24px;
+}
+.step-card .btn-green {
+  align-self: flex-start;
+  margin-top: auto;
 }
 .talk-time-channel-panel {
   align-items: center;
@@ -718,18 +743,33 @@ img {
 
 /* Tablet */
 @media (min-width: 769px) and (max-width: 1024px) {
-  .talk-time-benefits-grid {
+  .benefits-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-  .talk-time-benefits-grid .benefit-item {
+  .benefits-grid .benefit-item {
     border-bottom: 1px solid $border-line-color;
   }
-  .talk-time-benefits-grid .benefit-item:nth-child(2) {
+  .benefits-grid .benefit-item:nth-child(2) {
     border-right: 0;
   }
-  .talk-time-benefits-grid .benefit-item:last-child {
+  .benefits-grid .benefit-item:last-child {
     border-bottom: 0;
     grid-column: 1 / -1;
+  }
+  .get-involved-benefits-grid .benefit-item:nth-child(3n) {
+    border-right: 1px solid $border-line-color;
+  }
+  .get-involved-benefits-grid .benefit-item:nth-child(2n) {
+    border-right: 0;
+  }
+  .get-involved-benefits-grid .benefit-item:nth-last-child(-n + 3) {
+    border-bottom: 1px solid $border-line-color;
+  }
+  .get-involved-benefits-grid .benefit-item:nth-last-child(-n + 2) {
+    border-bottom: 0;
+  }
+  .benefits-grid.get-involved-benefits-grid .benefit-item:last-child {
+    grid-column: auto;
   }
   .mini-schedule-card {
     width: 100%;
@@ -798,7 +838,7 @@ img {
   .container p {
     font-size: 1rem;
   }
-  .talk-time-hero {
+  .hero {
     padding: 64px 0 56px;
     scroll-margin-top: 220px;
   }
@@ -807,14 +847,11 @@ img {
     gap: 40px;
     grid-template-columns: 1fr;
   }
-  .talk-time-hero h1 {
-    font-size: 36px;
-  }
   .hero-card {
     min-height: 280px;
     padding: 24px;
   }
-  .talk-time-benefits-grid,
+  .benefits-grid,
   .steps-grid {
     grid-template-columns: 1fr;
   }
