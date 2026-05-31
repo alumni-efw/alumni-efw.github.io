@@ -860,7 +860,13 @@ img {
     border-right: 0;
     padding: 28px 24px;
   }
-  .benefit-item:last-child {
+  .get-involved-benefits-grid .benefit-item,
+  .get-involved-benefits-grid .benefit-item:nth-last-child(-n + 3) {
+
+    border-bottom: 1px solid $border-line-color;
+  }
+  .benefit-item:last-child,
+  .get-involved-benefits-grid .benefit-item:last-child {
     border-bottom: 0;
   }
   .faq-body {
