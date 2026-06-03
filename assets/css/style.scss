@@ -236,7 +236,7 @@ img {
 /* brand design */
 .page-content:has(.talk-time-page),
 .page-content:has(.get-involved-page),
-.page-content:has(.about-us-v2-page),
+.page-content:has(.about-us-page),
 .page-content:has(.about-us-v3-page),
 .page-content:has(.ways-to-connect-page){
   max-width: none;
@@ -542,7 +542,7 @@ img {
   font-size: 20px;
   margin-bottom: 10px;
 }
-.get-involed-contribute-level .step-card p {
+.step-card p {
   margin-bottom: 24px;
 }
 .step-card .btn-green {
@@ -962,7 +962,7 @@ img {
 .faq-item {
   border-top-color: $border-line-color !important;
 }
- .faq-item h5 {
+.faq-item h5 {
   color: $dark-font-color;
   font-size: 17px;
 }
