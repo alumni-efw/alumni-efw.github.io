@@ -145,7 +145,8 @@ img {
 .accordion-body a,
 .faq-highlighted a,
 .faq-page a,
-.talk-time-benefits a{
+.talk-time-benefits a,
+.connection-info-layout a{
   color:  $brand-green-dark;
   font-weight: 600;
   text-decoration: underline;
@@ -232,9 +233,12 @@ img {
 }
 
 
-/* Talk Time design */
+/* brand design */
 .page-content:has(.talk-time-page),
-.page-content:has(.get-involved-page){
+.page-content:has(.get-involved-page),
+.page-content:has(.about-us-v2-page),
+.page-content:has(.about-us-v3-page),
+.page-content:has(.ways-to-connect-page){
   max-width: none;
   padding: 0 !important;
   margin: 0 !important;
@@ -295,7 +299,7 @@ img {
   align-items: center;
   display: grid;
   gap: 64px;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 2fr 1fr;
 }
 .hero h1 {
   font-size: clamp(36px, 5vw, 62px);
@@ -313,7 +317,6 @@ img {
   font-size: 18px !important;
   line-height: 1.75;
   color: $gray-color;
-  max-width: 480px;
 }
 .hero-card {
   align-items: center;
@@ -344,12 +347,81 @@ img {
   background: $brand-green-color;
   color: $dark-font-color;
 }
+.connection-hero-card {
+  align-items: stretch;
+  gap: 22px;
+  justify-content: center;
+}
+.connection-hero-label {
+  color: $brand-green-dark;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.connection-hero-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.connection-hero-row {
+  align-items: center;
+  background: white;
+  border: 1px solid $border-line-color;
+  border-radius: 12px;
+  display: flex;
+  gap: 16px;
+  padding: 18px;
+}
+.connection-hero-icon {
+  align-items: center;
+  background: $light-green-color;
+  border-radius: 10px;
+  color: $brand-green-dark;
+  display: flex;
+  flex-shrink: 0;
+  font-size: 22px;
+  height: 48px;
+  justify-content: center;
+  width: 48px;
+}
+.connection-hero-row strong {
+  color: $dark-font-color;
+  display: block;
+  font-size: 18px;
+  line-height: 1.25;
+}
+.connection-hero-row small {
+  color: $gray-color;
+  display: block;
+  font-size: 13px;
+  line-height: 1.4;
+  margin-top: 4px;
+}
+.connection-hero-note {
+  align-items: center;
+  background: $brand-green-color;
+  border-radius: 12px;
+  color: $dark-font-color;
+  display: flex;
+  font-size: 14px;
+  font-weight: 700;
+  gap: 10px;
+  padding: 16px 18px;
+}
+
 .talk-time-benefits,
 .talk-time-facilitate {
   background: $cream-background-color;
 }
 
-.get-involved-benefits {
+.get-involved-benefits,
+.about-us-benefits {
+  background: $cream-background-color;
+}
+
+.ways-to-connect-space,
+.ways-to-connect-community-care {
   background: $cream-background-color;
 }
 
@@ -518,6 +590,172 @@ img {
 }
 .channel-btn.whatsapp i { color: #25d366; }
 .channel-btn.linkedin i { color: #0a66c2; }
+
+.connection-info-layout {
+  align-items: center;
+  display: grid;
+  gap: 48px;
+  grid-template-columns: minmax(0, 1fr) 420px;
+}
+
+.confirmation-panel {
+  align-items: flex-start;
+  background: white;
+  border: 1px solid $border-line-color;
+  border-radius: 14px;
+  display: flex;
+  gap: 16px;
+  padding: 28px;
+}
+.confirmation-icon {
+  align-items: center;
+  background: $light-green-color;
+  border-radius: 12px;
+  color: $brand-green-dark;
+  display: flex;
+  flex-shrink: 0;
+  font-size: 20px;
+  height: 46px;
+  justify-content: center;
+  width: 46px;
+}
+.confirmation-panel h3 {
+  color: $dark-font-color;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.confirmation-panel p {
+  font-size: 14px;
+  line-height: 1.65;
+}
+.connection-options {
+  background: white;
+}
+.connection-choice-board {
+  display: grid;
+  gap: 28px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.connection-card {
+  border: 1px solid $border-line-color;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  min-height: 520px;
+  padding: 34px;
+  position: relative;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.connection-card:hover {
+  box-shadow: 0 18px 44px -18px rgba(26, 25, 24, 0.28);
+  transform: translateY(-3px);
+}
+.connection-card::before {
+  background: $brand-green-color;
+  border-radius: 16px 16px 0 0;
+  content: "";
+  height: 6px;
+  left: -1px;
+  position: absolute;
+  right: -1px;
+  top: -1px;
+}
+.connection-card-top {
+  align-items: center;
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.connection-card-icon {
+  align-items: center;
+  background: $light-green-color;
+  border-radius: 14px;
+  color: $brand-green-dark;
+  display: flex;
+  font-size: 28px;
+  height: 60px;
+  justify-content: center;
+  width: 60px;
+}
+.connection-card-tag {
+  color: $brand-green-dark;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-align: right;
+  text-transform: uppercase;
+}
+.connection-card h3 {
+  color: $dark-font-color;
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  margin-bottom: 14px;
+}
+.connection-card p {
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+.connection-detail-list {
+  border-top: 1px solid $border-line-color;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 30px;
+  padding-top: 24px;
+}
+.connection-detail-list span {
+  color: $body-font-color;
+  display: flex;
+  font-size: 15px;
+  gap: 10px;
+  line-height: 1.45;
+}
+.connection-detail-list span::before {
+  color: $brand-green-dark;
+  content: "\f00c";
+  flex-shrink: 0;
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+}
+.connection-card .btn-green {
+  align-self: flex-start;
+  margin-top: auto;
+}
+.both-spaces-panel {
+  align-items: center;
+  border: 1px solid $border-line-color;
+  border-radius: 16px;
+  display: grid;
+  gap: 28px;
+  grid-template-columns: minmax(0, 1fr) auto;
+  margin-top: 32px;
+  padding: 32px;
+}
+.both-spaces-panel .section-label {
+  margin-bottom: 10px;
+}
+.both-spaces-panel h2 {
+  color: $dark-font-color;
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+.both-spaces-panel p {
+  font-size: 16px;
+  max-width: 720px;
+}
+.both-spaces-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: flex-end;
+}
 .facilitate-layout {
   align-items: center;
   display: grid;
@@ -774,6 +1012,16 @@ img {
   .mini-schedule-card {
     width: 100%;
   }
+  .connection-layout,
+  .both-spaces-panel {
+    grid-template-columns: 1fr;
+  }
+  .confirmation-panel {
+    max-width: 620px;
+  }
+  .both-spaces-actions {
+    justify-content: flex-start;
+  }
   .mini-schedule-row {
     align-items: start;
     grid-template-columns: 18px minmax(0, 1fr);
@@ -831,8 +1079,30 @@ img {
     right: 0;
   }
   .page-content h1,
-  .container h1 {
-    font-size: 1.5rem;
+  .container h1,
+  .hero h1 {
+    font-size: 28px;
+  }
+  .page-content h2,
+  .container h2,
+  .section-title {
+    font-size: 24px;
+  }
+  .page-content h3,
+  .container h3 {
+    font-size: 20px;
+  }
+  .page-content h4,
+  .container h4 {
+    font-size: 18px;
+  }
+  .page-content h5,
+  .container h5 {
+    font-size: 16px;
+  }
+  .page-content h6,
+  .container h6 {
+    font-size: 14px;
   }
   .page-content p,
   .container p {
@@ -854,6 +1124,53 @@ img {
   .benefits-grid,
   .steps-grid {
     grid-template-columns: 1fr;
+  }
+  .connection-layout,
+  .connection-choice-board,
+  .both-spaces-panel {
+    grid-template-columns: 1fr;
+  }
+  .connection-hero-card {
+    gap: 16px;
+  }
+  .connection-hero-row {
+    padding: 16px;
+  }
+  .connection-layout {
+    gap: 28px;
+  }
+  .confirmation-panel {
+    flex-direction: column;
+    padding: 24px;
+  }
+  .connection-card {
+    min-height: 0;
+    padding: 28px 24px;
+  }
+  .connection-card-top {
+    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: 24px;
+  }
+  .connection-card-tag {
+    text-align: left;
+  }
+  .connection-card h3 {
+    font-size: 20px;
+  }
+  .connection-card .btn-green,
+  .both-spaces-actions,
+  .both-spaces-actions .channel-btn {
+    width: 100%;
+  }
+  .both-spaces-actions {
+    justify-content: flex-start;
+  }
+  .both-spaces-panel {
+    padding: 24px;
+  }
+  .both-spaces-panel h2 {
+    font-size: 24px;
   }
   .benefit-item {
     border-bottom: 1px solid $border-line-color;
