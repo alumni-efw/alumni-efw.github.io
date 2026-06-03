@@ -588,6 +588,7 @@ img {
   color: $dark-font-color;
   transform: translateY(-2px);
 }
+
 .channel-btn.whatsapp i { color: #25d366; }
 .channel-btn.linkedin i { color: #0a66c2; }
 
@@ -629,9 +630,7 @@ img {
   font-size: 14px;
   line-height: 1.65;
 }
-.connection-options {
-  background: white;
-}
+
 .connection-choice-board {
   display: grid;
   gap: 28px;
@@ -662,37 +661,47 @@ img {
   top: -1px;
 }
 .connection-card-top {
+  margin-bottom: 22px;
+}
+.connection-card-title {
   align-items: center;
   display: flex;
-  gap: 12px;
-  justify-content: space-between;
-  margin-bottom: 30px;
+  flex-wrap: nowrap;
+  gap: 10px;
+  line-height: 1;
+  margin-bottom: 8px;
+  white-space: nowrap;
 }
 .connection-card-icon {
   align-items: center;
-  background: $light-green-color;
-  border-radius: 14px;
-  color: $brand-green-dark;
+  background: transparent;
+  border-radius: 0;
+  color: #25d366;
   display: flex;
-  font-size: 28px;
-  height: 60px;
+  flex-shrink: 0;
+  font-size: 24px;
+  height: 28px;
   justify-content: center;
-  width: 60px;
+  width: 28px;
+}
+.linkedin-card .connection-card-icon {
+  color: #0a66c2;
 }
 .connection-card-tag {
+  display: block;
   color: $brand-green-dark;
   font-size: 12px;
   font-weight: 800;
   letter-spacing: 0.08em;
-  text-align: right;
   text-transform: uppercase;
 }
 .connection-card h3 {
   color: $dark-font-color;
   font-size: 30px;
   font-weight: 800;
-  letter-spacing: -0.01em;
-  margin-bottom: 14px;
+  letter-spacing: 0;
+  line-height: 1.2;
+  margin-bottom: 0;
 }
 .connection-card p {
   font-size: 16px;
@@ -1146,14 +1155,6 @@ img {
   .connection-card {
     min-height: 0;
     padding: 28px 24px;
-  }
-  .connection-card-top {
-    align-items: flex-start;
-    flex-direction: column;
-    margin-bottom: 24px;
-  }
-  .connection-card-tag {
-    text-align: left;
   }
   .connection-card h3 {
     font-size: 20px;
