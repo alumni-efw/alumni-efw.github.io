@@ -134,10 +134,6 @@ img {
   max-width: 1200px;
   margin: 96px auto 0;
   flex:1;
-}
-.page-content p {
-  font-size: 1.1rem;
-  margin-bottom: 1.3rem;
   color: $body-font-color;
 }
 
@@ -329,6 +325,12 @@ img {
   justify-content: center;
   min-height: 360px;
   padding: 36px;
+}
+.hero-card-img {
+  align-items: center;
+  border: 1px solid $border-line-color;
+  border-radius: 16px;
+  padding: 16px;
 }
 .talk-bubble {
   border-radius: 16px;
