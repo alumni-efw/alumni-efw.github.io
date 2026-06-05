@@ -303,7 +303,6 @@ img {
   padding: 96px 0 88px;
 }
 .hero-grid {
-  align-items: center;
   display: grid;
   gap: 64px;
   grid-template-columns: 2fr 1fr;
@@ -1194,7 +1193,6 @@ img {
     padding: 64px 0 56px;
     scroll-margin-top: 220px;
   }
-  .hero-grid,
   .community-perks-list-layout {
     gap: 40px;
     grid-template-columns: 1fr;
