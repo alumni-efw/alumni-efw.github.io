@@ -254,7 +254,9 @@ img {
   max-width: 1200px;
   padding: 0 24px;
 }
-
+.section-color-cream {
+  background: $cream-background-color;
+}
 .section-label {
   align-items: center;
   color: $brand-green-dark;
@@ -286,6 +288,13 @@ img {
   font-size: 18px !important;
   max-width: 900px;
 }
+.section-intro p,
+.section-desc p{
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+.section-intro p:last-of-type { margin-bottom: 32px; }
+.section-intro strong { color: $body-font-color; }
 
 /** HERO **/
 .hero {
@@ -444,16 +453,6 @@ img {
 }
 
 
-.home-how-to-join,
-.ways-to-connect-space,
-.ways-to-connect-community-care,
-.talk-time-benefits,
-.talk-time-facilitate,
-.get-involved-benefits,
-.about-us-benefits {
-  background: $cream-background-color;
-}
-
 .benefits-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -500,17 +499,30 @@ img {
   justify-content: center;
   width: 48px;
 }
+
+.principle-icon {
+  align-items: center;
+  border-radius: 10px;
+  background: $light-green-color;
+  color: $brand-green-dark;
+  display: flex;
+  flex-shrink: 0;
+  font-size: 22px;
+  height: 48px;
+  justify-content: center;
+  width: 48px;
+}
+
 .benefit-text h3,
 .step-card h3,
 .talk-time-channel-panel h3,
-.perk-body h4 {
+.principle-header h3{
   color: $dark-font-color;
   font-weight: 700;
-}
-.benefit-text h3 {
   font-size: 16px;
   margin-bottom: 4px;
 }
+
 .benefit-text p {
   font-size: 14px;
   line-height: 1.55;
@@ -740,7 +752,7 @@ img {
   line-height: 1.7;
   margin-bottom: 24px;
 }
-.connection-detail-list {
+.detail-list {
   border-top: 1px solid $border-line-color;
   display: flex;
   flex-direction: column;
@@ -748,14 +760,14 @@ img {
   margin-bottom: 30px;
   padding-top: 24px;
 }
-.connection-detail-list span {
+.detail-list span {
   color: $body-font-color;
   display: flex;
   font-size: 15px;
   gap: 10px;
   line-height: 1.45;
 }
-.connection-detail-list span::before {
+.detail-list span::before {
   color: $brand-green-dark;
   content: "\f00c";
   flex-shrink: 0;
@@ -797,18 +809,14 @@ img {
   gap: 12px;
   justify-content: flex-end;
 }
+
 .community-perks-list-layout {
   align-items: center;
   display: grid;
   gap: 64px;
   grid-template-columns: 1fr 1fr;
 }
-.community-perks-introp {
-  font-size: 17px;
-  margin-bottom: 16px;
-}
-.community-perks-intro p:last-of-type { margin-bottom: 32px; }
-.community-perks-intro strong { color: $body-font-color; }
+
 .btn-green {
   align-items: center;
   background: $brand-green-color;
@@ -865,6 +873,38 @@ img {
   line-height: 1.5;
 }
 
+.principles-grid {
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.principle-item {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  background: white;
+  border: 1px solid $border-line-color;
+  border-radius: 12px;
+  padding: 20px 22px;
+}
+
+.principle-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.participation-list {
+  background-color: $cream-background-color;
+  border: 1px solid $border-line-color;
+  border-radius: 12px;
+  padding: 34px;
+}
+.participation-list p{
+  margin-bottom: 14px;
+}
 /* Talk Time schedule card */
 .mini-schedule-card {
   background: white;
@@ -943,6 +983,7 @@ img {
   border-radius: 12px !important;
   margin-bottom: 10px;
 }
+
 /* Bootstrap accordion overrides */
 .accordion {
   margin: 0 auto;
