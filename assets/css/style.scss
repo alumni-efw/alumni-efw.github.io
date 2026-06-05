@@ -286,6 +286,8 @@ img {
   font-size: 18px !important;
   max-width: 900px;
 }
+
+/** HERO **/
 .hero {
   background: white;
   overflow: hidden;
@@ -366,6 +368,13 @@ img {
   flex-direction: column;
   gap: 14px;
 }
+.connection-space-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 30px;
+}
 .connection-hero-row {
   align-items: center;
   background: white;
@@ -374,6 +383,7 @@ img {
   display: flex;
   gap: 16px;
   padding: 18px;
+  max-width: 300px;
 }
 .connection-hero-icon {
   align-items: center;
@@ -411,19 +421,36 @@ img {
   gap: 10px;
   padding: 16px 18px;
 }
-
-.talk-time-benefits,
-.talk-time-facilitate {
-  background: $cream-background-color;
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 48px;
+    height: 48px;
+    background-color: $brand-green-color;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.8;
+}
+.carousel-inner img{
+  max-width: 1200px;
+  max-height: 500px;
+}
+.carousel-indicators [data-bs-target] {
+    background-color:$brand-green-color;
+}
+.carousel-indicators .active {
+    background-color: $brand-green-dark;
+    opacity: 1;
 }
 
+
+.home-how-to-join,
+.ways-to-connect-space,
+.ways-to-connect-community-care,
+.talk-time-benefits,
+.talk-time-facilitate,
 .get-involved-benefits,
 .about-us-benefits {
-  background: $cream-background-color;
-}
-
-.ways-to-connect-space,
-.ways-to-connect-community-care {
   background: $cream-background-color;
 }
 
@@ -439,14 +466,17 @@ img {
   gap: 18px;
   padding: 44px 36px;
 }
-.benefit-item:last-child { border-right: 0; }
-.get-involved-benefits-grid .benefit-item {
-  border-bottom: 1px solid $border-line-color;
-}
-.get-involved-benefits-grid .benefit-item:nth-child(3n) {
+.benefits-grid-lg:last-child {
   border-right: 0;
 }
-.get-involved-benefits-grid .benefit-item:nth-last-child(-n + 3) {
+
+.benefits-grid-lg .benefit-item {
+  border-bottom: 1px solid $border-line-color;
+}
+.benefits-grid-lg .benefit-item:nth-child(3n) {
+  border-right: 0;
+}
+.benefits-grid-lg .benefit-item:nth-last-child(-n + 3) {
   border-bottom: 0;
 }
 .benefit-item-schedule {
@@ -767,18 +797,18 @@ img {
   gap: 12px;
   justify-content: flex-end;
 }
-.facilitate-layout {
+.community-perks-list-layout {
   align-items: center;
   display: grid;
   gap: 64px;
   grid-template-columns: 1fr 1fr;
 }
-.facilitate-text p {
+.community-perks-introp {
   font-size: 17px;
   margin-bottom: 16px;
 }
-.facilitate-text p:last-of-type { margin-bottom: 32px; }
-.facilitate-text strong { color: $body-font-color; }
+.community-perks-intro p:last-of-type { margin-bottom: 32px; }
+.community-perks-intro strong { color: $body-font-color; }
 .btn-green {
   align-items: center;
   background: $brand-green-color;
@@ -800,7 +830,7 @@ img {
   color: white;
   transform: translateY(-2px);
 }
-.facilitate-perks {
+.community-perks {
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -1005,19 +1035,19 @@ img {
     border-bottom: 0;
     grid-column: 1 / -1;
   }
-  .get-involved-benefits-grid .benefit-item:nth-child(3n) {
+  .benefits-grid-lg .benefit-item:nth-child(3n) {
     border-right: 1px solid $border-line-color;
   }
-  .get-involved-benefits-grid .benefit-item:nth-child(2n) {
+  .benefits-grid-lg .benefit-item:nth-child(2n) {
     border-right: 0;
   }
-  .get-involved-benefits-grid .benefit-item:nth-last-child(-n + 3) {
+  .benefits-grid-lg .benefit-item:nth-last-child(-n + 3) {
     border-bottom: 1px solid $border-line-color;
   }
-  .get-involved-benefits-grid .benefit-item:nth-last-child(-n + 2) {
+  .benefits-grid-lg .benefit-item:nth-last-child(-n + 2) {
     border-bottom: 0;
   }
-  .benefits-grid.get-involved-benefits-grid .benefit-item:last-child {
+  .benefits-grid-lg .benefit-item:last-child {
     grid-column: auto;
   }
   .mini-schedule-card {
@@ -1124,7 +1154,7 @@ img {
     scroll-margin-top: 220px;
   }
   .hero-grid,
-  .facilitate-layout {
+  .community-perks-list-layout {
     gap: 40px;
     grid-template-columns: 1fr;
   }
@@ -1180,13 +1210,13 @@ img {
     border-right: 0;
     padding: 28px 24px;
   }
-  .get-involved-benefits-grid .benefit-item,
-  .get-involved-benefits-grid .benefit-item:nth-last-child(-n + 3) {
+  .benefits-grid-lg .benefit-item,
+  .benefits-grid-lg .benefit-item:nth-last-child(-n + 3) {
 
     border-bottom: 1px solid $border-line-color;
   }
   .benefit-item:last-child,
-  .get-involved-benefits-grid .benefit-item:last-child {
+  .benefits-grid-lg .benefit-item:last-child {
     border-bottom: 0;
   }
   .faq-body {
