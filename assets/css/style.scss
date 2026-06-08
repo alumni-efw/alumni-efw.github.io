@@ -149,13 +149,26 @@ img {
   color: $dark-font-color;
 }
 .page-content p{
-  color: $body-font-color;
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
 }
 
 /* brand design */
-.section { padding: 80px 0; }
-.section-sm { padding: 56px 0; }
+.section {
+  padding: 80px 0;
 
+  @media (max-width: 768px) {
+    padding: 56px 0;
+  }
+}
+.section-sm {
+  padding: 56px 0;
+
+  @media (max-width: 768px) {
+    padding: 40px 0;
+  }
+}
 .section p,
 .section-sm p {
   color: $gray-color;
@@ -197,6 +210,10 @@ img {
   letter-spacing: -0.02em;
   line-height: 1.15;
   margin-bottom: 16px;
+
+  @media (max-width: 768px) {
+    font-size: 24px;
+  }
 }
 .section-sub {
   font-size: 18px !important;
@@ -219,6 +236,35 @@ img {
   letter-spacing: -0.035em;
   line-height: 1.08;
   margin-bottom: 22px;
+
+  @media (max-width: 768px) {
+    font-size: 28px;
+  }
+}
+.page-content h2 {
+  @media (max-width: 768px) {
+    font-size: 24px;
+  }
+}
+.page-content h3 {
+  @media (max-width: 768px) {
+    font-size: 20px;
+  }
+}
+.page-content h4 {
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
+}
+.page-content h5 {
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
+}
+.page-content h6 {
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
 }
 
 .page-content h1 em,
@@ -312,18 +358,33 @@ img {
   text-decoration: none;
 }
 
-
 /** HERO **/
 .hero {
   background: white;
   overflow: hidden;
   padding: 96px 0 88px;
+
+  @media (max-width: 768px) {
+    padding: 64px 0 56px;
+    scroll-margin-top: 220px;
+  }
 }
 .hero-grid {
   display: grid;
   gap: 64px;
   grid-template-columns: 2fr 1fr;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
 }
+.hero-content {
+  @media (max-width: 768px) {
+    order: 1;
+  }
+}
+
 .page-content p.hero-desc {
   font-size: 18px !important;
   line-height: 1.75;
@@ -340,12 +401,26 @@ img {
   justify-content: center;
   min-height: 360px;
   padding: 36px;
+
+  @media (max-width: 768px) {
+    order: 2;
+    padding: 24px;
+    justify-self: center;
+    width: 80%;
+  }
 }
 .hero-card-img {
   align-items: center;
   border: 1px solid $border-line-color;
   border-radius: 16px;
   padding: 16px;
+
+  @media (max-width: 768px) {
+    order: 2;
+    padding: 24px;
+    justify-self: center;
+    width: 80%;
+  }
 }
 .talk-bubble {
   border-radius: 16px;
@@ -368,6 +443,10 @@ img {
   align-items: stretch;
   gap: 22px;
   justify-content: center;
+
+  @media (max-width: 768px) {
+    gap: 16px;
+  }
 }
 .connection-hero-label {
   color: $brand-green-dark;
@@ -397,6 +476,10 @@ img {
   gap: 16px;
   padding: 18px;
   max-width: 300px;
+
+  @media (max-width: 768px) {
+    padding: 16px;
+  }
 }
 .connection-hero-icon {
   align-items: center;
@@ -456,11 +539,18 @@ img {
     opacity: 1;
 }
 
-
 .benefits-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1px;
+
+  @media (min-width: 769px) and (max-width: 1024px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
 }
 .benefit-item {
   align-items: flex-start;
@@ -468,26 +558,73 @@ img {
   display: flex;
   gap: 18px;
   padding: 44px 36px;
-}
-.benefits-grid-lg:last-child {
-  border-right: 0;
-}
 
+  @media (max-width: 768px) {
+    border-bottom: 1px solid $border-line-color;
+    border-right: 0;
+    padding: 28px 24px;
+  }
+}
+.benefits-grid .benefit-item {
+  @media (min-width: 769px) and (max-width: 1024px) {
+    border-bottom: 1px solid $border-line-color;
+  }
+}
+.benefits-grid .benefit-item:nth-child(2) {
+  @media (min-width: 769px) and (max-width: 1024px) {
+    border-right: 0;
+  }
+}
+.benefits-grid .benefit-item:last-child {
+  @media (min-width: 769px) and (max-width: 1024px) {
+    border-bottom: 0;
+    grid-column: 1 / -1;
+  }
+  @media (max-width: 768px) {
+    border-bottom: 0;
+  }
+}
 .benefits-grid-lg .benefit-item {
   border-bottom: 1px solid $border-line-color;
+
+  @media (max-width: 768px) {
+    border-bottom: 1px solid $border-line-color;
+  }
 }
 .benefits-grid-lg .benefit-item:nth-child(3n) {
   border-right: 0;
+
+  @media (min-width: 769px) and (max-width: 1024px) {
+    border-right: 1px solid $border-line-color;
+  }
+}
+.benefits-grid-lg .benefit-item:nth-child(2n) {
+  @media (min-width: 769px) and (max-width: 1024px) {
+    border-right: 0;
+  }
 }
 .benefits-grid-lg .benefit-item:nth-last-child(-n + 3) {
   border-bottom: 0;
+
+  @media (min-width: 769px) and (max-width: 1024px) {
+    border-bottom: 1px solid $border-line-color;
+  }
+  @media (max-width: 768px) {
+    border-bottom: 1px solid $border-line-color;
+  }
 }
-.benefit-item-schedule {
-  flex-wrap: wrap;
+.benefits-grid-lg .benefit-item:nth-last-child(-n + 2) {
+  @media (min-width: 769px) and (max-width: 1024px) {
+    border-bottom: 0;
+  }
 }
-.benefit-item-schedule .benefit-text {
-  flex: 1 1 calc(100% - 66px);
-  min-width: 0;
+.benefits-grid-lg .benefit-item:last-child {
+  @media (min-width: 769px) and (max-width: 1024px) {
+    grid-column: auto;
+  }
+  @media (max-width: 768px) {
+    border-bottom: 0;
+  }
 }
 
 .benefit-icon {
@@ -543,6 +680,10 @@ img {
   gap: 24px;
   grid-template-columns: repeat(3, 1fr);
   margin-top: 56px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
 }
 .step-card {
   background: white;
@@ -607,6 +748,11 @@ img {
   justify-content: space-between;
   margin-top: 40px;
   padding: 28px;
+
+  @media (max-width: 768px) {
+    align-items: stretch;
+    flex-direction: column;
+  }
 }
 .talk-time-channel-panel h3 {
   font-size: 20px;
@@ -616,6 +762,11 @@ img {
   display: flex;
   flex-shrink: 0;
   gap: 12px;
+
+  @media (max-width: 768px) {
+    align-items: stretch;
+    flex-direction: column;
+  }
 }
 a.main-channel-btn {
   text-decoration: none;
@@ -654,6 +805,31 @@ a.channel-btn {
   display: grid;
   gap: 48px;
   grid-template-columns: minmax(0, 1fr) 420px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+.connection-info-layout > .section-desc {
+  @media (max-width: 768px) {
+    order: 1;
+  }
+}
+.connection-info-layout > .confirmation-panel {
+  @media (max-width: 768px) {
+    order: 2;
+  }
+}
+
+.connection-layout {
+  @media (min-width: 769px) and (max-width: 1024px) {
+    grid-template-columns: 1fr;
+  }
+
+  @media (max-width: 768px) {
+    gap: 28px;
+    grid-template-columns: 1fr;
+  }
 }
 
 .confirmation-panel {
@@ -664,6 +840,15 @@ a.channel-btn {
   display: flex;
   gap: 16px;
   padding: 28px;
+
+  @media (min-width: 769px) and (max-width: 1024px) {
+    max-width: 620px;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 24px;
+  }
 }
 .confirmation-icon {
   align-items: center;
@@ -692,6 +877,10 @@ a.channel-btn {
   display: grid;
   gap: 28px;
   grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
 }
 .connection-card {
   border: 1px solid $border-line-color;
@@ -702,6 +891,11 @@ a.channel-btn {
   padding: 34px;
   position: relative;
   transition: box-shadow 0.2s, transform 0.2s;
+
+  @media (max-width: 768px) {
+    min-height: 0;
+    padding: 28px 24px;
+  }
 }
 .connection-card:hover {
   box-shadow: 0 18px 44px -18px rgba(26, 25, 24, 0.28);
@@ -759,6 +953,10 @@ a.channel-btn {
   letter-spacing: 0;
   line-height: 1.2;
   margin-bottom: 0;
+
+  @media (max-width: 768px) {
+    font-size: 20px;
+  }
 }
 .connection-card p {
   font-size: 16px;
@@ -790,6 +988,10 @@ a.channel-btn {
 .connection-card .btn-green {
   align-self: flex-start;
   margin-top: auto;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 }
 .both-spaces-panel {
   align-items: center;
@@ -800,6 +1002,15 @@ a.channel-btn {
   grid-template-columns: minmax(0, 1fr) auto;
   margin-top: 32px;
   padding: 32px;
+
+  @media (min-width: 769px) and (max-width: 1024px) {
+    grid-template-columns: 1fr;
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    padding: 24px;
+  }
 }
 .both-spaces-panel .section-label {
   margin-bottom: 10px;
@@ -811,6 +1022,10 @@ a.channel-btn {
   letter-spacing: -0.01em;
   line-height: 1.2;
   margin-bottom: 10px;
+
+  @media (max-width: 768px) {
+    font-size: 24px;
+  }
 }
 .both-spaces-panel p {
   font-size: 16px;
@@ -821,6 +1036,20 @@ a.channel-btn {
   flex-wrap: wrap;
   gap: 12px;
   justify-content: flex-end;
+
+  @media (min-width: 769px) and (max-width: 1024px) {
+    justify-content: flex-start;
+  }
+
+  @media (max-width: 768px) {
+    justify-content: flex-start;
+    width: 100%;
+  }
+}
+.both-spaces-actions .channel-btn {
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 }
 
 .community-perks-list-layout {
@@ -828,6 +1057,11 @@ a.channel-btn {
   display: grid;
   gap: 64px;
   grid-template-columns: 1fr 1fr;
+
+  @media (max-width: 768px) {
+    gap: 40px;
+    grid-template-columns: 1fr;
+  }
 }
 
 .btn-green {
@@ -896,6 +1130,10 @@ a.btn-green:hover {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 16px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
 }
 .principle-item {
   display: flex;
@@ -931,6 +1169,10 @@ a.btn-green:hover {
   flex: 0 1 90%;
   margin: 0 auto 0;
   width: 90%;
+
+  @media (min-width: 769px) and (max-width: 1024px) {
+    width: 100%;
+  }
 }
 .mini-schedule-row {
   align-items: center;
@@ -997,6 +1239,10 @@ a.btn-green:hover {
   border: 1px solid $border-line-color !important;
   border-radius: 12px !important;
   margin-bottom: 10px;
+
+  @media (max-width: 768px) {
+    width: 90%;
+  }
 }
 
 /* Bootstrap accordion overrides */
@@ -1004,6 +1250,10 @@ a.btn-green:hover {
   margin: 0 auto;
   max-width: 900px;
   width: 100%;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 }
 .accordion-item {
   border: 1px solid $border-line-color !important;
@@ -1020,6 +1270,11 @@ a.btn-green:hover {
   font-weight: 600;
   line-height: 1.35;
   padding: 22px 24px;
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+    padding: 18px 20px;
+  }
 }
 .accordion-button:not(.collapsed) {
   background: $cream-background-color;
@@ -1042,6 +1297,10 @@ a.btn-green:hover {
   font-size: 16px;
   line-height: 1.7;
   padding: 0 24px 22px;
+
+  @media (max-width: 768px) {
+    padding: 0 20px 20px;
+  }
 }
 .faq-list {
   margin-left: 0;
@@ -1062,7 +1321,6 @@ a.btn-green:hover {
   padding-left: 0 !important;
 }
 
-
 .faq-more {
   color: $gray-color;
   font-size: 15px;
@@ -1070,53 +1328,7 @@ a.btn-green:hover {
   text-align: center;
 }
 
-/* ──Responsive for mobile────────────────────── */
-
-/* Tablet */
-@media (min-width: 769px) and (max-width: 1024px) {
-  .benefits-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-  .benefits-grid .benefit-item {
-    border-bottom: 1px solid $border-line-color;
-  }
-  .benefits-grid .benefit-item:nth-child(2) {
-    border-right: 0;
-  }
-  .benefits-grid .benefit-item:last-child {
-    border-bottom: 0;
-    grid-column: 1 / -1;
-  }
-  .benefits-grid-lg .benefit-item:nth-child(3n) {
-    border-right: 1px solid $border-line-color;
-  }
-  .benefits-grid-lg .benefit-item:nth-child(2n) {
-    border-right: 0;
-  }
-  .benefits-grid-lg .benefit-item:nth-last-child(-n + 3) {
-    border-bottom: 1px solid $border-line-color;
-  }
-  .benefits-grid-lg .benefit-item:nth-last-child(-n + 2) {
-    border-bottom: 0;
-  }
-  .benefits-grid-lg .benefit-item:last-child {
-    grid-column: auto;
-  }
-  .mini-schedule-card {
-    width: 100%;
-  }
-  .connection-layout,
-  .both-spaces-panel {
-    grid-template-columns: 1fr;
-  }
-  .confirmation-panel {
-    max-width: 620px;
-  }
-  .both-spaces-actions {
-    justify-content: flex-start;
-  }
-}
-/* Mobile */
+/* Responsive layout: header, navigation, and footer */
 @media (max-width: 768px) {
   .header-inner {
     flex-wrap: wrap;
@@ -1162,139 +1374,7 @@ a.btn-green:hover {
     left: 0;
     right: 0;
   }
-  .page-content h1,
-  .hero h1 {
-    font-size: 28px;
-  }
-  .page-content h2,
-  .section-title {
-    font-size: 24px;
-  }
-  .page-content h3 {
-    font-size: 20px;
-  }
-  .page-content h4 {
-    font-size: 18px;
-  }
-  .page-content h5 {
-    font-size: 16px;
-  }
-  .page-content h6 {
-    font-size: 14px;
-  }
-  .page-content p {
-    font-size: 1rem;
-  }
-  .hero {
-    padding: 64px 0 56px;
-    scroll-margin-top: 220px;
-  }
-  .hero-grid {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-  .hero-content {
-    order: 1;
-  }
-  .hero-card,
-  .hero-card-img {
-    order: 2;
-    padding: 24px;
-    justify-self: center;
-    width: 80%;
-  }
-  .community-perks-list-layout {
-    gap: 40px;
-    grid-template-columns: 1fr;
-  }
-  .benefits-grid,
-  .steps-grid,
-  .connection-layout,
-  .connection-info-layout,
-  .connection-choice-board,
-  .both-spaces-panel,
-  .principles-grid {
-    grid-template-columns: 1fr;
-  }
-  .connection-hero-card {
-    gap: 16px;
-  }
-  .connection-hero-row {
-    padding: 16px;
-  }
-  .connection-layout {
-    gap: 28px;
-  }
-  .connection-info-layout > .section-desc {
-    order: 1;
-  }
-  .connection-info-layout > .confirmation-panel {
-    order: 2;
-  }
-  .confirmation-panel {
-    flex-direction: column;
-    padding: 24px;
-  }
-  .connection-card {
-    min-height: 0;
-    padding: 28px 24px;
-  }
-  .connection-card h3 {
-    font-size: 20px;
-  }
-  .connection-card .btn-green,
-  .both-spaces-actions,
-  .both-spaces-actions .channel-btn {
-    width: 100%;
-  }
-  .both-spaces-actions {
-    justify-content: flex-start;
-  }
-  .both-spaces-panel {
-    padding: 24px;
-  }
-  .both-spaces-panel h2 {
-    font-size: 24px;
-  }
-  .benefit-item {
-    border-bottom: 1px solid $border-line-color;
-    border-right: 0;
-    padding: 28px 24px;
-  }
-  .benefits-grid-lg .benefit-item,
-  .benefits-grid-lg .benefit-item:nth-last-child(-n + 3) {
-
-    border-bottom: 1px solid $border-line-color;
-  }
-  .benefit-item:last-child,
-  .benefits-grid-lg .benefit-item:last-child {
-    border-bottom: 0;
-  }
-  .faq-body {
-    width: 90%;
-  }
-  .section {
-    padding: 56px 0;
-  }
-  .section-sm {
-    padding: 40px 0;
-  }
-  .talk-time-channel-panel,
-  .channel-links {
-    align-items: stretch;
-    flex-direction: column;
-  }
-  .accordion {
-    width: 100%;
-  }
-  .accordion-button {
-    font-size: 16px;
-    padding: 18px 20px;
-  }
-  .accordion-body {
-    padding: 0 20px 20px;
-  }
-  .footer-container{
+  .footer-container {
     padding: 0px;
   }
 }
