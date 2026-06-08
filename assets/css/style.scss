@@ -127,118 +127,33 @@ img {
   padding: 0;
 }
 
-
 /* Body */
 /* page content */
 .page-content {
-  max-width: 1200px;
-  margin: 96px auto 0;
-  flex:1;
+  max-width: none;
+  padding: 0 !important;
+  margin: 0 !important;
   color: $body-font-color;
 }
-
 .page-content-link,
-.accordion-body a,
-.faq-highlighted a,
-.faq-page a,
-.talk-time-benefits a,
-.connection-info-layout a{
+.section a,
+.section-sm a,
+.section-policy a{
   color:  $brand-green-dark;
   font-weight: 600;
   text-decoration: underline;
 }
-
-
-/* social button style */
-.social-btn {
-  width: 44px;
-  height: 44px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  color: $body-font-color;
-  font-size: 22px;
-  transition: 0.2s ease;
+.page-content-link a:hover,
+.section a:hover,
+.section-sm a:hover,
+.section-policy a:hover {
+  color: $dark-font-color;
 }
-.social-btn:hover {
-  background-color: $light-green-color;
-  color: $brand-green-dark;
-}
-
-/* FAQ styles are defined in the shared FAQ section below. */
-
-/* policy page - community guidelines, privacy page */
-.policy-page p {
-  font-size: 1rem;
-  line-height: 1.5;
-  margin-bottom: .75rem;
-}
-.policy-page li {
-  font-size: 1rem;
-  line-height: 1;
-  margin-bottom: .75rem;
-}
-.policy-page ul {
-  padding-left: 1.25rem;
-  margin-bottom: 1rem;
-}
-.policy-page .updated-date {
-  font-size: .95rem;
-  color: $brand-green-dark;
-  margin-bottom: 2rem;
-}
-
-/* footer */
-.footer-contact {
-  text-align: center;
-}
-.site-footer {
-  border-top: 2px solid $brand-green-color;
-  padding: 20px 40px;
+.page-content p{
   color: $body-font-color;
 }
-.footer-container {
-  .text-light{
-    color:  $body-font-color !important;
-    font-size: .875em;
-    font-weight: 400;
-  }
-  .links{
-    text-align: left;
-  }
-  ul {
-    list-style: none;
-    padding: 0;
-    margin-top: 12px;
-  }
-}
-.footer-top h6 {
-  font-weight: 700;
-  margin-bottom: 14px;
-}
-.footer a {
-  text-decoration: none;
-  color: $body-font-color;
-}
-.footer a:hover {
-  text-decoration: underline;
-}
-.footer a.social-btn:hover {
-  text-decoration: none;
-}
-
 
 /* brand design */
-.page-content:has(.talk-time-page),
-.page-content:has(.get-involved-page),
-.page-content:has(.about-us-page),
-.page-content:has(.about-us-v3-page),
-.page-content:has(.ways-to-connect-page){
-  max-width: none;
-  padding: 0 !important;
-  margin: 0 !important;
-}
 .section { padding: 80px 0; }
 .section-sm { padding: 56px 0; }
 
@@ -296,6 +211,109 @@ img {
 .section-intro p:last-of-type { margin-bottom: 32px; }
 .section-intro strong { color: $body-font-color; }
 
+/* page heading */
+.page-content h1,
+.hero h1 {
+  color: $dark-font-color;
+  font-size: clamp(36px, 5vw, 62px);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 1.08;
+  margin-bottom: 22px;
+}
+
+.page-content h1 em,
+.hero h1 em {
+  color: $brand-green-dark;
+  font-style: normal;
+}
+/* social button style */
+.social-btn {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: $body-font-color;
+  font-size: 22px;
+  transition: 0.2s ease;
+}
+.social-btn:hover {
+  background-color: $light-green-color;
+  color: $brand-green-dark;
+}
+
+/* policy page - community guidelines, privacy page */
+.section-policy {
+  padding: 15px 0;
+}
+
+.policy-page p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: $gray-color;
+}
+.policy-page li {
+  font-size: 1rem;
+  line-height: 1;
+  margin-bottom: .75rem;
+  color: $body-font-color;
+}
+.policy-page ul {
+  margin-left: 0.5rem;
+  padding-left: 1.25rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+
+}
+.policy-page .updated-date {
+  font-size: .95rem;
+  color: $body-font-color;
+  margin-bottom: 2rem;
+  font-style: italic;
+}
+
+/* footer */
+.footer-contact {
+  text-align: center;
+}
+.site-footer {
+  border-top: 2px solid $brand-green-color;
+  padding: 20px 40px;
+  color: $body-font-color;
+}
+.footer-container {
+  .text-light{
+    color:  $body-font-color !important;
+    font-size: .875em;
+    font-weight: 400;
+  }
+  .links{
+    text-align: left;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 12px;
+  }
+}
+.footer-top h6 {
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+.footer a {
+  text-decoration: none;
+  color: $body-font-color;
+}
+.footer a:hover {
+  text-decoration: underline;
+}
+.footer a.social-btn:hover {
+  text-decoration: none;
+}
+
+
 /** HERO **/
 .hero {
   background: white;
@@ -306,18 +324,6 @@ img {
   display: grid;
   gap: 64px;
   grid-template-columns: 2fr 1fr;
-}
-.hero h1 {
-  font-size: clamp(36px, 5vw, 62px);
-  font-weight: 800;
-  line-height: 1.08;
-  letter-spacing: -0.035em;
-  margin-bottom: 22px;
-  color: $dark-font-color;
-}
-.hero h1 em {
-  font-style: normal;
-  color: $brand-green-dark;
 }
 .page-content p.hero-desc {
   font-size: 18px !important;
@@ -612,12 +618,13 @@ img {
   flex-shrink: 0;
   gap: 12px;
 }
-.channel-btn {
+a.channel-btn {
   align-items: center;
   background: white;
   border: 1px solid $border-line-color;
   border-radius: 8px;
   color: $body-font-color;
+  text-decoration: none;
   display: inline-flex;
   font-size: 15px;
   font-weight: 600;
@@ -825,16 +832,21 @@ img {
   display: inline-flex;
   font-family: inherit;
   font-size: 15px;
-  font-weight: 700;
+  font-weight: 700 !important;
   gap: 9px;
   padding: 14px 26px;
   transition: background 0.18s, color 0.18s, transform 0.15s;
   white-space: nowrap;
 }
-.btn-green:hover {
+a.btn-green{
+  color: $dark-font-color;
+  text-decoration: none;
+}
+a.btn-green:hover {
   background: $brand-green-dark;
   border-color: $brand-green-dark;
   color: white;
+  text-decoration: none;
   transform: translateY(-2px);
 }
 .community-perks {
@@ -878,7 +890,6 @@ img {
   grid-template-columns: repeat(4, 1fr);
   gap: 16px;
 }
-
 .principle-item {
   display: flex;
   flex-direction: column;
@@ -888,7 +899,6 @@ img {
   border-radius: 12px;
   padding: 20px 22px;
 }
-
 .principle-header {
   display: flex;
   align-items: center;
@@ -949,7 +959,6 @@ img {
   background: $border-line-color;
   height: 1px;
 }
-
 
 /* FAQ styling */
 .faq-intro {
@@ -1045,12 +1054,8 @@ img {
   margin-bottom: 0;
   padding-left: 0 !important;
 }
-.faq-body a:hover,
-.accordion-body a:hover,
-.faq-more a:hover,
-.talk-time-benefits a:hover {
-  color: $dark-font-color;
-}
+
+
 .faq-more {
   color: $gray-color;
   font-size: 15px;
@@ -1151,33 +1156,26 @@ img {
     right: 0;
   }
   .page-content h1,
-  .container h1,
   .hero h1 {
     font-size: 28px;
   }
   .page-content h2,
-  .container h2,
   .section-title {
     font-size: 24px;
   }
-  .page-content h3,
-  .container h3 {
+  .page-content h3 {
     font-size: 20px;
   }
-  .page-content h4,
-  .container h4 {
+  .page-content h4 {
     font-size: 18px;
   }
-  .page-content h5,
-  .container h5 {
+  .page-content h5 {
     font-size: 16px;
   }
-  .page-content h6,
-  .container h6 {
+  .page-content h6 {
     font-size: 14px;
   }
-  .page-content p,
-  .container p {
+  .page-content p {
     font-size: 1rem;
   }
   .hero {

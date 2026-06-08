@@ -4,37 +4,43 @@ title: Community Guidelines
 permalink: /guidelines/
 nav: false
 ---
-<h1>{{ site.data.guidelines.title }}</h1>
 <div class="policy-page container py-4">
-  <p class="updated-date"><strong>Last updated:</strong> {{ site.data.guidelines.updated }}</p>
-
-  <p>{{ site.data.guidelines.intro | markdownify }}</p>
+  <section class="policy-page-intro section-sm">
+    <div class="inner">
+      <h1>{{ site.data.guidelines.title }}</h1>
+      <p class="updated-date"><strong>Last updated:</strong> {{ site.data.guidelines.updated }}</p>
+      {{ site.data.guidelines.intro | markdownify }}
+    </div>
+  </section>
 
   {% for section in site.data.guidelines.sections %}
-    <h2>{{ section.id }}. {{ section.title }}</h2>
+  <section class="section-policy">
+    <div class="inner">
+      <h2 class="section-title">{{ section.id }}. {{ section.title }}</h2>
+      {% for paragraph in section.content %}
+        {{ paragraph | markdownify }}
+      {% endfor %}
 
-    {% for paragraph in section.content %}
-      <p>{{ paragraph | markdownify }}</p>
-    {% endfor %}
+      {% if section.bullets %}
+        <ul>
+          {% for item in section.bullets %}
+            <li>{{ item }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
 
-    {% if section.bullets %}
-      <ul>
-        {% for item in section.bullets %}
-          <li>{{ item }}</li>
-        {% endfor %}
-      </ul>
-    {% endif %}
+      {% for paragraph in section.content2 %}
+        <p>{{ paragraph }}</p>
+      {% endfor %}
 
-    {% for paragraph in section.content2 %}
-      <p>{{ paragraph }}</p>
-    {% endfor %}
-
-    {% if section.bullets2 %}
-      <ul>
-        {% for item in section.bullets2 %}
-          <li>{{ item }}</li>
-        {% endfor %}
-      </ul>
-    {% endif %}
+      {% if section.bullets2 %}
+        <ul>
+          {% for item in section.bullets2 %}
+            <li>{{ item }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </div>
+  </section>
   {% endfor %}
 </div>
