@@ -618,6 +618,14 @@ img {
   flex-shrink: 0;
   gap: 12px;
 }
+a.main-channel-btn {
+  text-decoration: none;
+}
+a.main-channel-btn:hover strong,
+a.main-channel-btn:hover small {
+  color: $brand-green-dark;
+}
+
 a.channel-btn {
   align-items: center;
   background: white;

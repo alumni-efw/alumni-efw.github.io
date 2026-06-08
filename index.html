@@ -118,20 +118,24 @@ nav: false
         </div>
       </div>
       <div class="connection-space-list">
-        <div class="connection-hero-row">
-          <span class="connection-hero-icon"><i class="fa-brands fa-whatsapp"></i></span>
-          <div>
-            <strong>WhatsApp</strong>
-            <small>Timely reminders and updates</small>
+        <a class="main-channel-btn" href="{{ site.whatsapp_link }}" target="_blank" aria-label="Request WhatsApp access">
+          <div class="connection-hero-row">
+            <span class="connection-hero-icon"><i class="fa-brands fa-whatsapp"></i></span>
+            <div>
+              <strong>WhatsApp</strong>
+              <small>Timely reminders and updates</small>
+            </div>
           </div>
-        </div>
-        <div class="connection-hero-row">
-          <span class="connection-hero-icon"><i class="fa-brands fa-linkedin-in"></i></span>
-          <div>
-            <strong>LinkedIn</strong>
-            <small>Professional networking</small>
+        </a>
+        <a class="main-channel-btn" href="https://www.linkedin.com/groups/{{ site.linkedin_groupid }}" target="_blank" aria-label="Request LinkedIn access">
+          <div class="connection-hero-row">
+            <span class="connection-hero-icon"><i class="fa-brands fa-linkedin-in"></i></span>
+            <div>
+              <strong>LinkedIn</strong>
+              <small>Professional networking</small>
+            </div>
           </div>
-        </div>
+        </a>
       </div>
      </div>
   </section>
@@ -156,7 +160,7 @@ nav: false
         </div>
 
         <div class="perk">
-          <div class="perk-icon"><i class="fa-solid fa-seedling"></i></div>
+          <div class="perk-icon"><i class="fa-solid fa-comments"></i></div>
           <div class="perk-body">
             <h4>Join the conversation</h4>
             <p>Ask a question, attend Talk Time, share feedback, or connect with another Alumni member.</p>
