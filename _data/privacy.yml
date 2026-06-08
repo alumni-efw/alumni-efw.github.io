@@ -141,7 +141,7 @@ sections:
     title: Contact us
     content:
       - "If you have questions about this Privacy & Data Notice or how your information is used, please contact us:"
-      - "alumni.efw@gmail.com"
+      - "[alumni.efw@gmail.com](mailto:alumni.efw@gmail.com)"
 
   - id: 11
     title: Updates to this notice
