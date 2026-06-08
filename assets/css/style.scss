@@ -1103,15 +1103,6 @@ img {
   .both-spaces-actions {
     justify-content: flex-start;
   }
-  .mini-schedule-row {
-    align-items: start;
-    grid-template-columns: 18px minmax(0, 1fr);
-    gap: 6px 10px;
-  }
-  .mini-schedule-time {
-    grid-column: 2;
-    white-space: normal;
-  }
 }
 /* Mobile */
 @media (max-width: 768px) {
@@ -1193,21 +1184,31 @@ img {
     padding: 64px 0 56px;
     scroll-margin-top: 220px;
   }
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .hero-content {
+    order: 1;
+  }
+  .hero-card,
+  .hero-card-img {
+    order: 2;
+    padding: 24px;
+    justify-self: center;
+    width: 80%;
+  }
   .community-perks-list-layout {
     gap: 40px;
     grid-template-columns: 1fr;
   }
-  .hero-card {
-    min-height: 280px;
-    padding: 24px;
-  }
   .benefits-grid,
-  .steps-grid {
-    grid-template-columns: 1fr;
-  }
+  .steps-grid,
   .connection-layout,
+  .connection-info-layout,
   .connection-choice-board,
-  .both-spaces-panel {
+  .both-spaces-panel,
+  .principles-grid {
     grid-template-columns: 1fr;
   }
   .connection-hero-card {
@@ -1218,6 +1219,12 @@ img {
   }
   .connection-layout {
     gap: 28px;
+  }
+  .connection-info-layout > .section-desc {
+    order: 1;
+  }
+  .connection-info-layout > .confirmation-panel {
+    order: 2;
   }
   .confirmation-panel {
     flex-direction: column;
@@ -1271,18 +1278,6 @@ img {
   .channel-links {
     align-items: stretch;
     flex-direction: column;
-  }
-  .mini-schedule-card {
-    max-width: 100%;
-  }
-  .mini-schedule-row {
-    align-items: start;
-    grid-template-columns: 18px minmax(0, 1fr);
-    gap: 6px 10px;
-  }
-  .mini-schedule-time {
-    grid-column: 2;
-    white-space: normal;
   }
   .accordion {
     width: 100%;
