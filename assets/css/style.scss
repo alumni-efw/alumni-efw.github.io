@@ -576,6 +576,7 @@ img {
   }
 }
 .benefits-grid .benefit-item:last-child {
+  border-right: 0;
   @media (min-width: 769px) and (max-width: 1024px) {
     border-bottom: 0;
     grid-column: 1 / -1;
