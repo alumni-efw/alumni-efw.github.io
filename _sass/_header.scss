@@ -1,0 +1,142 @@
+.header {
+  width: 100%;
+  border-bottom: 1px solid $border-line-color;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: $white-color;
+}
+.header-inner {
+  max-width: 1200px;
+  height: 85px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 0 24px;
+}
+.site-logo {
+  height: 60px;
+  width: auto;
+  display: block;
+}
+/* Navigation */
+.site-nav .nav-menu {
+  align-items: center;
+  display: flex;
+  gap: 4px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.site-nav .nav-menu li {
+  display: flex;
+  flex: 0 0 auto;
+  list-style: none;
+}
+.site-nav .nav-link {
+  align-items: center;
+  background: transparent;
+  border: 0;
+  border-radius: 6px;
+  box-sizing: border-box;
+  color: $body-font-color;
+  display: inline-flex;
+  font-size: 14px;
+  font-weight: 500;
+  height: 34px;
+  justify-content: center;
+  line-height: 1;
+  margin: 0;
+  padding: 6px 14px;
+  position: relative;
+  text-decoration: none;
+  transition: background 0.18s, color 0.18s;
+  white-space: nowrap;
+}
+.site-nav .nav-link::after {
+  background: transparent;
+  bottom: 0;
+  content: "";
+  height: 2px;
+  left: 14px;
+  position: absolute;
+  right: 14px;
+}
+.site-nav .nav-link:hover {
+  background: $cream-background-color;
+  text-decoration: none;
+}
+.site-nav .nav-link.active {
+  color: $dark-font-color;
+  font-weight: 700;
+}
+.site-nav .nav-link.active::after {
+  background: $brand-green-color;
+}
+.site-nav .nav-link.active:hover {
+  background: transparent;
+}
+.menu-toggle {
+  background: none;
+  border: 0;
+  color: $body-font-color;
+  cursor: pointer;
+  display: none;
+  font-size: 32px;
+  line-height: 1;
+  margin-left: auto;
+  padding: 0;
+}
+
+/* Responsive layout: header, navigation, and footer */
+@media (max-width: 768px) {
+  .header-inner {
+    flex-wrap: wrap;
+    gap: 0;
+    height: auto;
+    padding: 14px 20px;
+  }
+  .menu-toggle {
+    display: block;
+    order: 2;
+  }
+  .site-nav {
+    background: white;
+    border-top: 1px solid $border-line-color;
+    display: none;
+    margin-top: 12px;
+    order: 3;
+    width: 100%;
+  }
+  .site-nav.active {
+    display: block;
+  }
+  .site-nav .nav-menu {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 0;
+    margin-left: auto;
+    width: max-content;
+  }
+  .site-nav .nav-menu li {
+    display: block;
+    width: 100%;
+  }
+  .site-nav .nav-link,
+  .site-nav .nav-link:hover {
+    border-radius: 0;
+    height: 40px;
+    justify-content: flex-start;
+    padding: 10px 14px;
+    width: 100%;
+  }
+  .site-nav .nav-link::after {
+    left: 0;
+    right: 0;
+  }
+  .footer-container {
+    padding: 0px;
+  }
+}

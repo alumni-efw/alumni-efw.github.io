@@ -1,0 +1,99 @@
+/* ── HERO : Carousel ────────────────────────────────────── */
+.carousel-wrap {
+  position: relative;
+  margin-top: 48px;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+
+.carousel-slide {
+  flex: 0 0 100%;
+  width: 100%;
+  position: relative;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ── Controls — overlaid on the bottom of the image  */
+.carousel-controls {
+  position: absolute;
+  bottom: 3.5%;        /* sits in the extra bottom space added in Figma */
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  pointer-events: none;
+}
+
+/* Arrow buttons */
+.arrow-btn {
+  pointer-events: all;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1.5px solid #7AAB24;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  padding: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  transition: background 0.15s, transform 0.1s;
+}
+
+.arrow-btn:hover {
+  background: rgba(255, 255, 255, 0.75);
+  transform: scale(1.08);
+}
+
+.arrow-btn:active { transform: scale(0.95); }
+
+.arrow-btn svg {
+  width: 14px;
+  height: 14px;
+  fill: none;
+  stroke: #7AAB24;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Dot indicators */
+.dots {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  pointer-events: all;
+}
+
+.dot {
+  display: block;
+  height: 8px;
+  border-radius: 4px;
+  background: #D9D9D9;
+  cursor: pointer;
+  transition: width 0.3s ease, background 0.3s ease;
+  width: 8px;
+  border: none;
+  padding: 0;
+}
+
+.dot.active {
+  width: 24px;
+  background: #7AAB24;
+}
