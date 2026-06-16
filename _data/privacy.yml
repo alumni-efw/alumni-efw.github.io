@@ -41,7 +41,7 @@ sections:
     title: What information we collect
     content:
       - The EFW Alumni Community website itself does not collect personal information directly.
-      - "However, we may use external forms, such as Microsoft Forms, for activities such as:"
+      - "However, we may use external forms, such as Fillout Forms, for activities such as:"
     bullets:
       - Alumni registration;
       - requesting access to community channels;
@@ -77,10 +77,10 @@ sections:
       - We do not sell your personal information.
 
   - id: 3
-    title: Microsoft Forms
+    title: Fillout Forms
     content:
-      - Some forms on this website may be hosted by Microsoft Forms.
-      - When you open a Microsoft Form, you are leaving the EFW Alumni Community website and using a Microsoft service. Information submitted through Microsoft Forms may be stored and processed according to Microsoft’s own privacy and security practices.
+      - Some forms on this website may be hosted by Fillout Forms.
+      - When you open a Fillout Form, you are leaving the EFW Alumni Community website and using a Fillout service. Information submitted through Fillout Forms may be stored and processed according to Fillout’s own privacy and security practices.
       - Before submitting a form, please review the information requested and submit only what you are comfortable sharing.
 
   - id: 4
@@ -101,7 +101,7 @@ sections:
   - id: 5
     title: Community channels and external platforms
     content:
-      - EFW Alumni Community may use external platforms such as WhatsApp, LinkedIn, Zoom, email, or Microsoft Forms.
+      - EFW Alumni Community may use external platforms such as WhatsApp, LinkedIn, Zoom, email, or Fillout Forms.
       - Each platform has its own privacy practices and settings. For example, if you join a WhatsApp group, other members may be able to see your name, phone number, profile photo, or messages depending on your WhatsApp settings.
       - Please be careful when sharing personal information in community channels.
 
