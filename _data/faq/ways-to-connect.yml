@@ -83,8 +83,3 @@ items:
   - question: What are email updates for?
     answer: >
       Email updates are for members who prefer to receive important Alumni information in one place. They may include recent updates, upcoming events, Talk Time information, useful resources, volunteer opportunities, and reminders.
-
-  - question: Can I unsubscribe from email updates?
-    answer: >
-      Yes. You can unsubscribe from email updates. Each email update should include a simple way to unsubscribe or contact us if you no longer want to receive messages.
-    highlighted: true
