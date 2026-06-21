@@ -232,6 +232,7 @@ p.text-sm {
   @media (max-width: 768px) {
     order: 2;
     justify-self: center;
+    padding: 0px;
   }
 }
 .talk-bubble {
@@ -301,7 +302,7 @@ a.btn-green:hover {
   padding: 44px 30px;
 
   @media (max-width: 768px) {
-    padding: 28px 24px;
+    padding: 28px 4px;
   }
 }
 .benefit-text p {
