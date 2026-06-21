@@ -252,6 +252,58 @@ p.text-sm {
   background: $brand-green-color;
   color: $dark-font-color;
 }
+.connection-space-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 30px;
+
+  @media (max-width: 768px) {
+    align-items: center;
+    flex-direction: column;
+    gap: 14px;
+  }
+}
+.connection-channel-row {
+  align-items: center;
+  background: white;
+  border: 1px solid $border-line-color;
+  border-radius: 12px;
+  display: flex;
+  gap: 16px;
+  padding: 18px;
+  max-width: 300px;
+
+  @media (max-width: 768px) {
+    padding: 16px;
+  }
+}
+.connection-channel-icon {
+  align-items: center;
+  background: $light-green-color;
+  border-radius: 10px;
+  color: $brand-green-dark;
+  display: flex;
+  flex-shrink: 0;
+  font-size: 22px;
+  height: 48px;
+  justify-content: center;
+  width: 48px;
+}
+.connection-channel-row strong {
+  color: $dark-font-color;
+  display: block;
+  font-size: 18px;
+  line-height: 1.25;
+}
+.connection-channel-row small {
+  color: $gray-color;
+  display: block;
+  font-size: 13px;
+  line-height: 1.4;
+  margin-top: 4px;
+}
 
 /** Button **/
 .btn-green {
@@ -433,11 +485,7 @@ a.btn-green:hover {
 }
 a.main-channel-btn {
   text-decoration: none;
-
-  @media (max-width: 768px) {
-    max-width: 300px;
-    width: 100%;
-  }
+  width: 300px;
 }
 a.main-channel-btn:hover strong,
 a.main-channel-btn:hover small {
