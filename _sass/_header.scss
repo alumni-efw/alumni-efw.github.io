@@ -65,15 +65,24 @@
   right: 14px;
 }
 .site-nav .nav-link:hover {
+  border-radius: 8px;
   background: $cream-background-color;
   text-decoration: none;
 }
 .site-nav .nav-link.active {
   color: $dark-font-color;
   font-weight: 700;
+  @media (max-width: 768px) {
+    border: 1px solid $brand-green-color;
+    border-radius: 8px;
+  }
+
 }
 .site-nav .nav-link.active::after {
   background: $brand-green-color;
+  @media (max-width: 768px) {
+    background: transparent;
+  }
 }
 .site-nav .nav-link.active:hover {
   background: transparent;
@@ -90,7 +99,7 @@
   padding: 0;
 }
 
-/* Responsive layout: header, navigation, and footer */
+/* Responsive layout: header, navigation */
 @media (max-width: 768px) {
   .header-inner {
     flex-wrap: wrap;
@@ -112,6 +121,7 @@
   }
   .site-nav.active {
     display: block;
+    border-top: 0px;
   }
   .site-nav .nav-menu {
     align-items: stretch;
@@ -126,7 +136,6 @@
   }
   .site-nav .nav-link,
   .site-nav .nav-link:hover {
-    border-radius: 0;
     height: 40px;
     justify-content: flex-start;
     padding: 10px 14px;
@@ -136,7 +145,5 @@
     left: 0;
     right: 0;
   }
-  .footer-container {
-    padding: 0px;
-  }
+
 }
