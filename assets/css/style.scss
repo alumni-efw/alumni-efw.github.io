@@ -518,7 +518,7 @@ a.channel-btn {
 .connection-card-icon.linkedin i,
 .channel-btn.linkedin i { color: #0a66c2; }
 
-.connect-community-care-layout {
+.community-care-layout {
   align-items: center;
   display: grid;
   gap: 48px;
@@ -528,12 +528,12 @@ a.channel-btn {
     grid-template-columns: 1fr;
   }
 }
-.connect-community-care-layout > .section-desc {
+.community-care-layout > .section-desc {
   @media (max-width: 768px) {
     order: 1;
   }
 }
-.connect-community-care-layout > .confirmation-panel {
+.community-care-layout > .emphasize-panel {
   @media (max-width: 768px) {
     order: 2;
   }
@@ -550,7 +550,7 @@ a.channel-btn {
   }
 }
 
-.confirmation-panel {
+.emphasize-panel{
   align-items: flex-start;
   background: white;
   border: 1px solid $border-line-color;
@@ -568,7 +568,7 @@ a.channel-btn {
     padding: 24px;
   }
 }
-.confirmation-icon {
+.emphasize-icon {
   align-items: center;
   background: $light-green-color;
   border-radius: 12px;
@@ -581,12 +581,12 @@ a.channel-btn {
   width: 46px;
 }
 
-.confirmation-panel p {
+.emphasize-panel p {
   font-size: 14px;
   line-height: 1.65;
 }
 
-.confirmation-panel .quote {
+.emphasize-panel .quote {
   text-align: center;
   font-size: 16px;
   font-style: italic;
