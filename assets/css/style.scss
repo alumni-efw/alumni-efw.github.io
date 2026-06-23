@@ -526,6 +526,7 @@ a.channel-btn {
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
+    gap: 20px;
   }
 }
 .community-care-layout > .section-desc {
@@ -743,7 +744,7 @@ a.channel-btn {
   grid-template-columns: 1fr 1fr;
 
   @media (max-width: 768px) {
-    gap: 40px;
+    gap: 20px;
     grid-template-columns: 1fr;
   }
 }
