@@ -1,0 +1,38 @@
+# Defines the page content and section order for the full resources page.
+
+title: Adult Education and Employment <em>Resources</em>
+intro: Explore education, job training, employment support, and apprenticeship opportunities for adult learners in Washington State.
+purpose: Use this guide to compare programs, find contact information, and connect with services that support your education and career goals.
+updated: June 16, 2026
+pdf: /assets/documents/Adult_Education_Employment_Resources_June2026.pdf
+
+sections:
+  - key: college
+    label: College
+    icon: fa-solid fa-graduation-cap
+    anchor: college
+    items_key: colleges
+
+  - key: community
+    label: Community
+    icon: fa-solid fa-people-group
+    anchor: community
+    items_key: programs
+
+  - key: job-training
+    label: Job Training
+    icon: fa-solid fa-briefcase
+    anchor: job-training
+    items_key: programs
+
+  - key: employment-resources
+    label: Resources
+    icon: fa-solid fa-file-lines
+    anchor: employment-resources
+    items_key: resources
+
+  - key: apprenticeship
+    label: Apprenticeship
+    icon: fa-solid fa-screwdriver-wrench
+    anchor: apprenticeship
+    items_key: programs

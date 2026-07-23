@@ -1,0 +1,62 @@
+# How to add or edit resources
+# IMPORTANT:
+# - Put ONE space after each colon [:]
+# - Keep the same indentation (spaces)
+# - Do not remove the dash [-]
+#   The dash means "start of a new item"
+
+title: "Community Classes: <br> <h3>English Language, ABE, Citizenship, Computer</h3>"
+
+intro: >
+  There are several classes in the community available to adult learners.
+  Classes are free, except for at Westminster Language Academy. English Language Learners Alliance (ELLA), libraries, and Westminster Language Academy do not have any visa restrictions,
+  so they can serve people who are in the United States on a short-term basis.
+
+programs:
+  - name: Hopelink English for Work
+    location: King County, WA
+    website: https://www.hopelink.org/need-help/adult-education
+
+  - name: English Language Learners Alliance (ELLA)
+    location: Bellevue, WA
+    info: English conversation practice and classes in-person and online
+    phone: 425-312-3552
+    email: ellallianceinfo@gmail.com
+    website: http://www.ellalliance.org/
+
+  - name: Public Libraries
+    location: King County, WA
+    info: Talk Time/English conversation classes, Citizenship prep classes, drop-in tutoring, and more
+    branches:
+      - branch: King County Library System
+        website: https://kcls.org/adult-learners/
+      - branch: Seattle Public Library System
+        website: https://www.spl.org/programs-and-services/learning/learn-english
+
+  - name: Westminster Language Academy
+    location: 13646 NE 24th Street, Bellevue, WA 98005 (at Westminster Chapel)
+    info: English classes and private tutoring
+    phone: 425-460-4041
+    email: wla-info@westminster.org
+    website: https://westminsterlanguageacademy.org/
+
+  - name: Goodwill
+    location: King County, WA
+    info: English classes and computer/digital literacy classes
+    branches:
+      - branch: Seattle
+        phohe: 206-860-5791
+        website: https://evergreengoodwill.org/locations/job-training-education-center-king-county/
+      - branch: Renton
+        phone: 425 264-0277
+        website: https://evergreengoodwill.org/locations/renton-goodwill/
+      - branch: Shoreline
+        phone: 206-631-8454
+        website: https://evergreengoodwill.org/locations/shoreline-goodwill/
+
+  - name: Casa Latina
+    location: 317 17th Avenue South Seattle, WA 98144
+    info: English classes and computer/digital literacy Classes
+    email: learning@casa-latina.org
+    website: https://casa-latina.org/work/english-classes/
+    sns: https://www.facebook.com/casalatinaenglish

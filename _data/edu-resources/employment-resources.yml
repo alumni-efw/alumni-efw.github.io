@@ -1,0 +1,43 @@
+# How to add or edit resources
+# IMPORTANT:
+# - Put ONE space after each colon [:]
+# - Keep the same indentation (spaces)
+# - Do not remove the dash [-]
+#   The dash means "start of a new item"
+
+title: Free Employment Resources
+
+resources:
+  - name: Welcome Back Center at Highline College
+    location: Des Moines, WA
+    info: Career and education planning for immigrants and refugees who graduated from college outside of the U.S.
+    phone: 206-592-3670
+    email: welcomebackcenter@highline.edu
+    website: http://welcomeback.highline.edu/
+
+  - name: WorkSource
+    location: WA state
+    info: Job search help, hiring events, job search workshops, and more. Open to all job seekers.
+    website: https://www.worksourcewa.com/
+
+  - name: Lake Washington Institute of Technology Employment Resource Center
+    location: Kirkland, WA
+    info: Career exploration workshops offered at various times. Individual appointments are also available. Open to all job seekers.
+    phone: 425-739-8113
+    email: career.services@lwtech.edu
+    website: https://www.lwtech.edu/campus-services/career-services/index.aspx
+
+  - name: Center for Career Connections and The Women's Center at Bellevue College
+    location: Bellevue, WA
+    info: Classes, workshops and career planning services. Open to all job seekers.
+    phone: 425-564-2279
+    email: careers@bellevuecollege.edu
+    website: https://www.bellevuecollege.edu/careers/
+
+  - name: Upwardly Global
+    location: Online only
+    info: Upwardly Global' FREE online learning resources help you, a professionally focused and work-authorized immigrant or refugee, get back to work in your professional field.
+    contact: Kate Johnson
+    phone: 425-559-5228
+    email: kjohnson@hopelink.org
+    website: https://tinyurl.com/3fv89p98

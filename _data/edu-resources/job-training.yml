@@ -1,0 +1,50 @@
+# How to add or edit resources
+# IMPORTANT:
+# - Put ONE space after each colon [:]
+# - Keep the same indentation (spaces)
+# - Do not remove the dash [-]
+#   The dash means "start of a new item"
+
+title: Free Job Training Programs
+
+programs:
+  - name: BankWork$ Fundamentals
+    location: Online
+    info: Eight-week training for careers in banking
+    phone: 866-500-4443
+    email: fundamentals@careerworkstraining.org
+    website: https://www.careerworks.org/programs/bankworks-fundamentals/
+    website2: https://www.careerworks.org/contact-us/
+
+  - name: MediWork$
+    location: Seattle, WA
+    info: Eight-week training for non-clinical, entry-level positions in healthcare
+    phone: 206-317-1017
+    email: lniggemyer@careerpathservices.org
+    website: https://www.careerworks.org/programs/mediworks/
+
+  - name: FareStart
+    location: Seattle, WA
+    info: 12-week culinary training program for adults who want to work in food service
+    phone: 206-787-1502
+    email: enroll@farestart.org
+    website: https://www.farestart.org/job-training/food-pathways-program/
+
+  - name: Goodwill
+    location: King County, WA
+    info: Offers cashiering and customer service training
+    branches:
+      - branch: Seattle
+        phone: 206-860-5791
+        website: https://evergreengoodwill.org/locations/job-training-education-center-king-county/
+      - branch: Shoreline
+        phone: 206-631-8454
+        website: https://evergreengoodwill.org/locations/shoreline-goodwill/
+
+  - name: Year Up United
+    location: Seattle, WA
+    info: One-year career preparation program; students can learn about business operations, project management, IT, computer networking and support, database analysis and more. Must be age 18-29.
+    phone: 855-932-7871
+    email: admissions@yearupunited.org
+    website: https://www.yearup.org/job-training
+    website2: https://www.yearup.org/locations/seattle-wa

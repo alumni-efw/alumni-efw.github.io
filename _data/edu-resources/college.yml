@@ -1,0 +1,192 @@
+# How to add or edit resources
+# IMPORTANT:
+# - Put ONE space after each colon [:]
+# - Keep the same indentation (spaces)
+# - Do not remove the dash [-]
+#   The dash means "start of a new item"
+
+title: College Classes & Programs
+
+intro: >
+  [Community and Technical Colleges in Washington State](https://www.sbctc.edu/our-colleges/explore-colleges/default.aspx) offer several classes and programs for people who want to improve their skills, prepare for college-level coursework, and prepare for employment.
+
+program_description:
+  - |
+    **English language classes ($25/quarter)** :
+    for English language learners who want to develop their English speaking, listening, reading, and writing skills.
+
+    Classes range from beginning to advanced level.
+
+    a.k.a: ELL (English Language Learner/Learning), ESL (English as an Second Language)
+
+  - |
+    **ABE classes ($25/quarter)** : for people who want to develop their reading, writing, and math skills to earn a GED or high school diploma,
+    get a job or advance in a job, or prepare for college.
+
+  - |
+    **I-BEST (full college tuition)** : stands for Integrated Basic Education and Skills Training.
+    Students improve their reading, writing, math, and communication skills while training for a specific job.
+    Students can train to become an accountant, mechanic, machinist, office assistant, preschool teacher, nursing assistant, and more!
+
+    Search a database of [I-BEST programs](https://ibestprograms.sbctc.edu/)
+
+colleges:
+  - name: Bellevue College
+    location: Bellevue, WA
+    programs:
+      - program: English
+        email: eslbats@bellevuecollege.edu
+        website: https://www.bellevuecollege.edu/bats/esl/
+
+      - program: ABE
+        email: abe@bellevuecollege.edu
+        website: https://www.bellevuecollege.edu/bats/abe/
+
+      - program: I-BEST
+        email: ibest@bellevuecollege.edu
+        website: https://www.bellevuecollege.edu/bats/i-best/
+
+  - name: Lake Washington Institute of Technology
+    location: Kirkland, WA
+    programs:
+      - program: English
+        phone: 425-739-8359
+        website: https://www.lwtech.edu/academics/english-language-learning.aspx
+
+      - program: ABE
+        phone: 425-739-8100
+        website: https://www.lwtech.edu/academics/basic-education-for-adults/
+
+      - program: I-BEST
+        phone: 425-739-8100 ext. 8567
+        website: https://www.lwtech.edu/academics/i-best/
+
+  - name: Shoreline Community College
+    location: Shoreline, WA
+    programs:
+      - program: English
+        phone: 206-705-8725
+        email: esl@shoreline.edu
+        website: https://www.shoreline.edu/transitional-studies/ell/default.aspx
+
+      - program: ABE
+        phone: 206-705-8725
+        email: abe@shoreline.edu
+        website: https://www.shoreline.edu/transitional-studies/adult-basic-education/default.aspx
+
+      - program: I-BEST
+        phone: 206-546-6930
+        email: mlockman@shoreline.edu
+        website: https://www.shoreline.edu/transitional-studies/ibest/
+
+  - name: Cascadia College
+    location: Bothell, WA
+    programs:
+      - program: English
+        phone: 425-352-8158
+        email: eslabe@cascadia.edu
+        website: https://www.cascadia.edu/academic-programs/college-and-career-foundations/esl.aspx
+
+      - program: ABE
+        phone: 425-352-8158
+        email: eslabe@cascadia.edu
+        website: https://www.cascadia.edu/academic-programs/college-and-career-foundations/abe.aspx
+
+      - program: I-BEST (No I-BEST programs)
+
+  - name: Edmonds College
+    location: Lynnwood, WA
+    programs:
+      - program: English
+        phone: 425-640-1478
+        phone2: 425-640-1040 (Spanish)
+        email: elaadvising@edmonds.edu
+        website: https://www.edcc.edu/programs/inted/ela/
+
+      - program: ABE (College and Career Prep)
+        phone: 425-640-1593
+        email: precollege@edmonds.edu
+        website: https://www.edmonds.edu/programs-and-degrees/pre-college/college-and-career-prep/default.html
+
+      - program: I-BEST
+        email: ibest@edmonds.edu
+        phone: 425-640-1593
+        website: https://www.edmonds.edu/programs-and-degrees/pre-college/ibest/default.html
+
+  - name: Renton Technical College
+    location: Renton, WA
+    programs:
+      - program: English
+        phone: 206-880-1704
+        email: askccp@rtc.edu
+        website: https://www.rtc.edu/learn-english
+
+      - program: ABE
+        phone: 206-880-1704
+        website: https://www.rtc.edu/academics/areas-of-study/college-career-pathways/Adult-Basic-Education.php
+
+      - program: I-BEST
+        phone: 425-235-2319
+        website: https://rtc.edu/academics/areas-of-study/college-career-pathways/i-best.php
+
+  - name: North Seattle College
+    location: Seattle, WA
+    programs:
+      - program: English
+        phone: 206-934-4720
+        email: Sarka.Faltinova@seattlecolleges.edu
+        website: https://northseattle.edu/programs/esl
+
+      - program: ABE
+        phone: 206-934-4537
+        email: Shan.Lackey@seattlecolleges.edu
+        website: https://northseattle.edu/programs/transitional-studies-abe-ged-high-school-college-prep
+
+      - program: I-BEST
+        phone: 206-934-6030
+        email: Nyah.Ferreira@seattlecolleges.edu
+        website: https://northseattle.edu/basic-and-transitional-studies/i-best
+
+  - name: Seattle Central College
+    location: Seattle, WA
+    programs:
+      - program: English
+        phone: 206-934-4180
+        email: btsinfo@seattlecolleges.edu
+        website: https://seattlecentral.edu/programs/basic-and-transitional-studies/esl
+
+      - program: ABE
+        email: dino.kladouris@seattlecolleges.edu
+        website: https://seattlecentral.edu/programs/basic-and-transitional-studies
+
+      - program: I-BEST (TBA)
+
+  - name: South Seattle College
+    location: Seattle, WA
+    programs:
+      - program: English
+        website: https://southseattle.edu/transitional-studies/english-second-language-esl
+
+      - program: ABE
+        phone: 206-934-5363
+        email: SouthTS@seattlecolleges.edu
+        website: https://southseattle.edu/transitional-studies
+
+      - program: I-BEST
+        phone: 206-934-5394
+        email: southproftech@seattlecolleges.edu
+        website: https://southseattle.edu/transitional-studies/i-best-career-training
+
+  - name: Highline College
+    location: Des Moines, WA
+    programs:
+      - program: English
+        email: elcapofficestaff@highline.edu
+        email2: cknighton@highline.edu
+        website: https://www.highline.edu/academics-pathways/learn-english.html
+
+      - program: ABE
+        website: https://elcap.highline.edu/what-we-offer/
+
+      - program: I-BEST
+        website: https://elcap.highline.edu/what-we-offer/i-best/

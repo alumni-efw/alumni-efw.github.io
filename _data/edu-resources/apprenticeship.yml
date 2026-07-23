@@ -1,0 +1,61 @@
+# How to add or edit resources
+# IMPORTANT:
+# - Put ONE space after each colon [:]
+# - Keep the same indentation (spaces)
+# - Do not remove the dash [-]
+#   The dash means "start of a new item"
+
+title: Pre-Apprenticeship and Apprenticeship Programs
+
+intro: >
+  Pre-apprenticeship programs help people build the skills and confidence needed to enter an apprenticeship.
+  Apprenticeships combine paid on-the-job training with classroom instruction, allowing participants to gain practical experience, learn industry knowledge, earn a living wage, and, in some programs, receive college credit.
+  Browse [apprenticeship opportunities across Washington State](https://secure.lni.wa.gov/arts-public/#/)
+
+programs:
+  - name: Apprenti
+    location: Seattle, WA
+    info: Apprenticeship programs to help people prepare for various careers in Information Technology including software developer, database administrator, web developer, cloud support specialist, and more
+    phone: 425-270-2128
+    email: info@apprenticareers.org
+    website: https://apprenticareers.org
+
+  - name: ANEW
+    location: Tukwila, WA
+    info: Pre-apprenticeship training to help people enter careers in construction trades
+    website: https://anewcareer.org/programs/pre-apprenticeship-trades-rotation-training-program/
+
+  - name: Seattle City Light
+    location: Seattle, WA
+    info: Pre-apprenticeship program to prepare people to become line workers; apprenticeship programs to prepare people to become cable splicers, meter electricians, and more
+    phone: 206-386-1603
+    email: scl_apprenticeship@seattle.gov
+    website: http://www.seattle.gov/city-light/about-us/careers/apprenticeships
+
+  - name: Construction Industry Training Council of Washington
+    location: Bellevue, WA
+    info: Apprenticeship programs to prepare people to become electricians, plumbers, painters, and more
+    phone: 425-454-2482
+    website: https://citcwa.org/apprenticeship/
+
+  - name: Pre-Apprenticeship Construction Training (PACT)
+    location: Seattle, WA
+    info: Certificate program to gain skills to enter construction trade apprenticeships
+    contact: Jerry Jordan
+    phone: 206-934-4942
+    email: jerry.jordan@seattlecolleges.edu
+    website: https://woodtech.seattlecentral.edu/programs/pre-apprenticeship-construction-training
+
+  - name: Machinists Institute
+    location: Tukwila and Everett, WA
+    info: Pre-apprenticeship classes and apprenticeship programs in aerospace, automotive, manufacturing and machinist industries
+    branches:
+      - branch: General
+        phone: 206-331-4648
+        website: https://www.machinistsinstitute.org/
+      - branch: Tukwila
+        contact: Marcus Harrell
+        email: marcus.harrell@machinistsinstitute.org
+        email2: ttc@machinistsinstitute.org
+      - branch: Everett
+        email: etc@machinistsinstitute.org

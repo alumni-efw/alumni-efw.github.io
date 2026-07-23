@@ -1,0 +1,96 @@
+{% assign section_meta = include.section %}
+{% assign section_data = site.data["edu-resources"][section_meta.key] %}
+{% assign items = section_data[section_meta.items_key] %}
+
+<section
+  class="resource-section section{% cycle ' resource-section-white', ' section-color-cream' %}"
+  id="{{ section_meta.anchor }}"
+  data-resource-section="{{ section_meta.key }}"
+>
+  <div class="inner">
+    <header class="resource-section-header">
+      <div class="section-label">
+        <i class="{{ section_meta.icon }}" aria-hidden="true"></i>
+        {{ section_meta.label }}
+      </div>
+      <h2 class="section-title">{{ section_data.title }}</h2>
+    </header>
+
+    {% if section_data.intro or section_data.program_description %}
+      <div class="resource-section-overview">
+        {% if section_data.intro %}
+          <div class="resource-overview-intro">
+            {{ section_data.intro | markdownify }}
+          </div>
+        {% endif %}
+
+        {% if section_data.program_description %}
+          <div class="resource-program-description">
+            {% for description in section_data.program_description %}
+              <div class="resource-description-item">
+                {{ description | markdownify }}
+              </div>
+            {% endfor %}
+          </div>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    {% if items.size > 0 %}
+      <div class="resource-mobile-picker">
+        <label for="resource-select-{{ section_meta.key }}">
+          Choose {{ section_meta.label }}
+        </label>
+        <select
+          id="resource-select-{{ section_meta.key }}"
+          data-resource-select="{{ section_meta.key }}"
+        >
+          {% for item in items %}
+            <option
+              value="resource-card-{{ section_meta.key }}-{{ forloop.index0 }}"
+              {% if forloop.first %}selected{% endif %}
+            >
+              {{ item.name }}
+            </option>
+          {% endfor %}
+        </select>
+      </div>
+
+      <div class="resource-browser">
+        <div
+          class="resource-item-list"
+          role="tablist"
+          aria-label="{{ section_data.title }}"
+          aria-orientation="vertical"
+        >
+          {% for item in items %}
+            <button
+              id="resource-trigger-{{ section_meta.key }}-{{ forloop.index0 }}"
+              class="resource-item-trigger{% if forloop.first %} is-active{% endif %}"
+              type="button"
+              data-resource-trigger="resource-card-{{ section_meta.key }}-{{ forloop.index0 }}"
+              aria-controls="resource-card-{{ section_meta.key }}-{{ forloop.index0 }}"
+              aria-selected="{% if forloop.first %}true{% else %}false{% endif %}"
+              role="tab"
+            >
+              {{ item.name }}
+            </button>
+          {% endfor %}
+        </div>
+
+        <div class="resource-detail-panel" aria-live="polite">
+          {% for item in items %}
+            {% include resource-card.html
+              item=item
+              section_key=section_meta.key
+              item_index=forloop.index0
+              is_first=forloop.first
+            %}
+          {% endfor %}
+        </div>
+      </div>
+    {% else %}
+      <p class="resource-empty">Resource information is coming soon.</p>
+    {% endif %}
+  </div>
+</section>

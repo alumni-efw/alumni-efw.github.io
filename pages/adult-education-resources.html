@@ -1,0 +1,57 @@
+---
+layout: page
+title: Adult Education and Employment Resources
+permalink: /adult-education-resources/
+nav: false
+---
+
+{% assign page_data = site.data["edu-resources"]["full-resources"] %}
+
+<article class="edu-resources-page">
+  <section class="hero edu-resources-hero">
+    <div class="inner">
+      <div class="hero-content">
+        <h1>{{ page_data.title }}</h1>
+        <p class="hero-desc">{{ page_data.intro }}</p>
+        <p class="hero-desc">{{ page_data.purpose }}</p>
+
+        <div class="edu-resources-hero-meta">
+          <span><strong>Last updated:</strong> {{ page_data.updated }}</span>
+          {% if page_data.pdf %}
+            <br>
+            <a
+              class="btn-green"
+              href="{{ page_data.pdf | relative_url }}"
+              target="_blank"
+              rel="noopener"
+            >
+              <i class="fa-regular fa-file-pdf" aria-hidden="true"></i>
+              View PDF
+            </a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <nav class="edu-resources-quick-nav" aria-label="Resource sections">
+    <div class="inner">
+      <div class="edu-resources-quick-nav-track">
+        {% for section in page_data.sections %}
+          <a class="edu-resources-nav-pill" href="#{{ section.anchor }}">
+            <i class="{{ section.icon }}" aria-hidden="true"></i>
+            <span>{{ section.label }}</span>
+          </a>
+        {% endfor %}
+      </div>
+    </div>
+  </nav>
+
+  <div class="edu-resources-sections">
+    {% for section in page_data.sections %}
+      {% include resource-section.html section=section section_index=forloop.index0 %}
+    {% endfor %}
+  </div>
+</article>
+
+<script src="{{ '/assets/js/edu-resources.js' | relative_url }}" defer></script>
