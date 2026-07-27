@@ -107,6 +107,7 @@
                 </a>
               {% endif %}
             </div>
+            {% if subitem.contact or subitem.phone or subitem.email %}
             <dl class="resource-subitem-details">
               {% if subitem.contact %}
                 <div>
@@ -138,6 +139,7 @@
                 </div>
               {% endif %}
             </dl>
+            {% endif %}
           </section>
         {% endfor %}
       </div>

@@ -15,7 +15,7 @@ intro: >
 programs:
   - name: Hopelink English for Work
     location: King County, WA
-    website: https://www.hopelink.org/need-help/adult-education
+    website: https://www.hopelink.org/programs/english-for-work/
 
   - name: English Language Learners Alliance (ELLA)
     location: Bellevue, WA
@@ -45,10 +45,10 @@ programs:
     info: English classes and computer/digital literacy classes
     branches:
       - branch: Seattle
-        phohe: 206-860-5791
+        phone: 206-860-5791
         website: https://evergreengoodwill.org/locations/job-training-education-center-king-county/
       - branch: Renton
-        phone: 425 264-0277
+        phone: 425-264-0277
         website: https://evergreengoodwill.org/locations/renton-goodwill/
       - branch: Shoreline
         phone: 206-631-8454

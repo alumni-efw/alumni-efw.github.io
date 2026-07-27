@@ -165,6 +165,8 @@ colleges:
     location: Seattle, WA
     programs:
       - program: English
+        phone: 206-934-5363
+        email: SouthTS@seattlecolleges.edu
         website: https://southseattle.edu/transitional-studies/english-second-language-esl
 
       - program: ABE

@@ -26,7 +26,7 @@ sections:
     items_key: programs
 
   - key: employment-resources
-    label: Resources
+    label: Employment Resources
     icon: fa-solid fa-file-lines
     anchor: employment-resources
     items_key: resources
