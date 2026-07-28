@@ -1,0 +1,125 @@
+name: Sync main to dev-info
+
+on:
+  # Run after the GitHub Pages workflow completes on main.
+  workflow_run:
+    workflows:
+      - "pages build and deployment"
+    types:
+      - completed
+    branches:
+      - main
+
+  # Allow manual testing from the Actions page.
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: read
+
+concurrency:
+  group: sync-main-to-dev-info
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    name: Sync main to dev-info
+    runs-on: ubuntu-latest
+
+    # Run automatically only after a successful Pages deployment.
+    # Manual workflow runs are also allowed for testing.
+    if: >
+      github.event_name == 'workflow_dispatch' ||
+      github.event.workflow_run.conclusion == 'success'
+
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v6
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Fetch main and dev-info
+        shell: bash
+        run: |
+          git fetch origin \
+            +refs/heads/main:refs/remotes/origin/main \
+            +refs/heads/dev-info:refs/remotes/origin/dev-info
+
+      # Do not sync an older deployment if main has already advanced.
+      - name: Verify deployed commit is current main
+        if: github.event_name == 'workflow_run'
+        shell: bash
+        env:
+          DEPLOYED_SHA: ${{ github.event.workflow_run.head_sha }}
+        run: |
+          MAIN_SHA="$(git rev-parse origin/main)"
+
+          echo "Deployed commit: $DEPLOYED_SHA"
+          echo "Current main:    $MAIN_SHA"
+
+          if [ "$DEPLOYED_SHA" != "$MAIN_SHA" ]; then
+            echo "::error::A newer main commit exists. Waiting for its deployment to complete."
+            exit 1
+          fi
+
+          echo "The deployed commit matches the current main branch."
+
+      # Avoid updating dev-info while an administrator PR is still open.
+      - name: Check for open dev-info pull requests
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          PR_NUMBER="$(
+            gh pr list \
+              --repo "$GITHUB_REPOSITORY" \
+              --base dev \
+              --head dev-info \
+              --state open \
+              --json number \
+              --jq '.[0].number // empty'
+          )"
+
+          if [ -n "$PR_NUMBER" ]; then
+            echo "::error::PR #$PR_NUMBER from dev-info to dev is still open."
+            echo "Merge or close the administrator PR before syncing dev-info."
+            exit 1
+          fi
+
+          echo "No open dev-info-to-dev pull request was found."
+
+      # Protect commits that exist only on dev-info from being overwritten.
+      - name: Verify fast-forward safety
+        id: safety
+        shell: bash
+        run: |
+          MAIN_SHA="$(git rev-parse origin/main)"
+          DEV_INFO_SHA="$(git rev-parse origin/dev-info)"
+
+          echo "Main commit:     $MAIN_SHA"
+          echo "Dev-info commit: $DEV_INFO_SHA"
+
+          if [ "$MAIN_SHA" = "$DEV_INFO_SHA" ]; then
+            echo "needed=false" >> "$GITHUB_OUTPUT"
+            echo "dev-info is already synchronized with main."
+            exit 0
+          fi
+
+          if ! git merge-base --is-ancestor origin/dev-info origin/main; then
+            echo "::error::dev-info contains commits that are not included in main."
+            echo "Sync was stopped to protect unmerged administrator changes."
+            exit 1
+          fi
+
+          echo "needed=true" >> "$GITHUB_OUTPUT"
+          echo "A safe fast-forward update is available."
+
+      - name: Fast-forward dev-info to main
+        if: steps.safety.outputs.needed == 'true'
+        shell: bash
+        run: |
+          git push origin \
+            refs/remotes/origin/main:refs/heads/dev-info
+
+          echo "dev-info was synchronized with main."

@@ -4,6 +4,29 @@
 # - Keep the same indentation (spaces)
 # - Do not remove the dash [-]
 #   The dash means "start of a new item"
+#
+## Format
+# Resource items do not always use the same fields.
+# Some items have a phone number, email address, website, contact person, or several locations.
+# These fields are optional and field order does not matter.
+# The easiest way to add a new resource is to copy an existing item with a similar structure.
+# Some organizations have more than one location or branch. In this case, use a branches section.
+# Copy an existing item that already uses branches, then edit the information.
+# The following fields are optional: Contact, phone, phone2, email, email2, website, website2, SNS, branches
+
+## Example
+#- name: Example Organization
+#  location: King County, WA
+#  info: English and computer classes
+#  branches:
+#    - branch: Seattle
+#      phone: 206-555-1111
+#      website: https://example.org/seattle
+#
+#    - branch: Renton
+#      phone: 425-555-2222
+#      email: contact@example.org
+#      website: https://example.org/renton
 
 title: Free Job Training Programs
 

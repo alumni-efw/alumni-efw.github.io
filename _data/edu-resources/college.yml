@@ -5,6 +5,28 @@
 # - Do not remove the dash [-]
 #   The dash means "start of a new item"
 
+# Format:
+#
+#colleges:
+#  - name: ABC College
+#    location: Seattle, WA
+#    programs:
+#      - program: English
+#        phone: 123-444-1234 (optional field)
+#        email: esl@example.edu (optional field)
+#        website: https://www.example.edu/esl/ (optional field)
+
+#      - program: ABE
+#        phone: 123-444-1234 (optional field)
+#        email: abe@example.edu (optional field)
+#        website: https://www.example.edu/abe/ (optional field)
+
+#     - program: I-BEST
+#        phone: 123-444-1234 (optional field)
+#        email: ibest@example.edu (optional field)
+#        website: https://www.example.edu/i-best/ (optional field)
+
+
 title: College Classes & Programs
 
 intro: >
