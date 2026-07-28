@@ -1,0 +1,175 @@
+name: Promote dev to main
+
+on:
+  # Run on March 1, June 1, September 1, and December 1.
+  # GitHub Actions cron schedules use UTC.
+  # 15:00 UTC means 8:00 AM PDT(Daylight Saving Time) or 7:00 AM PST (Standard Time) in Seattle
+  schedule:
+    - cron: "0 15 1 3,6,9,12 *"
+
+  # Allow this workflow to be triggered manually.
+  workflow_dispatch:
+
+  # Run when a tag beginning with "baseline-" is created.
+  #git switch dev
+  #git pull origin dev
+  #git tag baseline-2026-07-27
+  #git push origin baseline-2026-07-27
+  push:
+    tags:
+      - "baseline-*"
+
+permissions:
+  contents: read
+  pull-requests: write
+
+concurrency:
+  group: promote-dev-to-main
+  cancel-in-progress: false
+
+jobs:
+  validate-and-create-pr:
+    name: Validate dev and create PR
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout dev
+        uses: actions/checkout@v4
+        with:
+          ref: dev
+          fetch-depth: 0
+
+      - name: Fetch main and dev
+        run: git fetch origin main dev --tags
+
+      # Verify that the baseline tag points to the latest dev commit.
+      # Skip this step for scheduled and manually triggered runs.
+      - name: Verify baseline tag points to current dev
+        if: github.event_name == 'push'
+        shell: bash
+        run: |
+          TAG_COMMIT="$(git rev-parse "${GITHUB_SHA}^{commit}")"
+          DEV_COMMIT="$(git rev-parse origin/dev)"
+
+          if [ "$TAG_COMMIT" != "$DEV_COMMIT" ]; then
+            echo "::error::The baseline tag must point to the latest dev commit."
+            echo "Tag commit: $TAG_COMMIT"
+            echo "Dev commit: $DEV_COMMIT"
+            exit 1
+          fi
+
+          echo "The baseline tag points to the latest dev commit."
+
+      # Stop successfully when main already contains every commit from dev.
+      - name: Check whether promotion is needed
+        id: changes
+        shell: bash
+        run: |
+          if git merge-base --is-ancestor origin/dev origin/main; then
+            echo "needed=false" >> "$GITHUB_OUTPUT"
+            echo "main already contains all commits from dev."
+          else
+            echo "needed=true" >> "$GITHUB_OUTPUT"
+            echo "dev contains commits that are not in main."
+          fi
+
+      - name: Set up Ruby
+        if: steps.changes.outputs.needed == 'true'
+        uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+
+      - name: Validate YAML
+        if: steps.changes.outputs.needed == 'true'
+        shell: bash
+        run: |
+          ruby <<'RUBY'
+          require "date"
+          require "yaml"
+
+          files = Dir.glob("_data/**/*.{yml,yaml}")
+          files += ["_config.yml"] if File.exist?("_config.yml")
+
+          if files.empty?
+            abort "No YAML files were found."
+          end
+
+          files.uniq.sort.each do |file|
+            begin
+              YAML.safe_load_file(
+                file,
+                permitted_classes: [Date, Time],
+                aliases: true
+              )
+              puts "Valid: #{file}"
+            rescue StandardError => error
+              warn "Invalid YAML: #{file}"
+              warn error.message
+              exit 1
+            end
+          end
+
+          puts "Validated #{files.uniq.length} YAML files."
+          RUBY
+
+      - name: Build Jekyll site
+        if: steps.changes.outputs.needed == 'true'
+        run: bundle exec jekyll build
+
+      - name: Check for existing pull request
+        if: steps.changes.outputs.needed == 'true'
+        id: existing-pr
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          PR_NUMBER="$(
+            gh pr list \
+              --repo "$GITHUB_REPOSITORY" \
+              --base main \
+              --head dev \
+              --state open \
+              --json number \
+              --jq '.[0].number // empty'
+          )"
+
+          if [ -n "$PR_NUMBER" ]; then
+            echo "exists=true" >> "$GITHUB_OUTPUT"
+            echo "number=$PR_NUMBER" >> "$GITHUB_OUTPUT"
+            echo "An open dev-to-main PR already exists: #$PR_NUMBER"
+          else
+            echo "exists=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Create dev-to-main pull request
+        if: >
+          steps.changes.outputs.needed == 'true' &&
+          steps.existing-pr.outputs.exists == 'false'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          gh pr create \
+            --repo "$GITHUB_REPOSITORY" \
+            --base main \
+            --head dev \
+            --title "Release: promote dev to main" \
+            --body "$(cat <<'EOF'
+          ## Dev → Main release
+
+          This pull request was created automatically by a quarterly schedule,
+          a manual workflow run, or a baseline tag.
+
+          Automated checks:
+
+          - YAML validation passed
+          - Jekyll build passed
+          - `dev` contains changes that are not in `main`
+
+          Before merging:
+
+          - Review the changed content and pages
+          - Confirm that the changes are ready for the production website
+          - Merge this pull request manually after verification
+          EOF
+          )"

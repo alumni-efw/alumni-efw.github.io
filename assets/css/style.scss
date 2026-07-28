@@ -5,6 +5,7 @@
 @import "footer";
 @import "index";
 @import "faq";
+@import "edu-resources";
 
 /* ── General style ────────────────────────────────────── */
 *,
@@ -351,7 +352,7 @@ a.btn-green:hover {
   align-items: flex-start;
   display: flex;
   gap: 18px;
-  padding: 44px 30px;
+  padding: 30px;
 
   @media (max-width: 768px) {
     padding: 28px 4px;
@@ -518,7 +519,7 @@ a.channel-btn {
 .connection-card-icon.linkedin i,
 .channel-btn.linkedin i { color: #0a66c2; }
 
-.connect-community-care-layout {
+.community-care-layout {
   align-items: center;
   display: grid;
   gap: 48px;
@@ -526,14 +527,15 @@ a.channel-btn {
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
+    gap: 20px;
   }
 }
-.connect-community-care-layout > .section-desc {
+.community-care-layout > .section-desc {
   @media (max-width: 768px) {
     order: 1;
   }
 }
-.connect-community-care-layout > .confirmation-panel {
+.community-care-layout > .emphasize-panel {
   @media (max-width: 768px) {
     order: 2;
   }
@@ -550,7 +552,7 @@ a.channel-btn {
   }
 }
 
-.confirmation-panel {
+.emphasize-panel{
   align-items: flex-start;
   background: white;
   border: 1px solid $border-line-color;
@@ -568,7 +570,7 @@ a.channel-btn {
     padding: 24px;
   }
 }
-.confirmation-icon {
+.emphasize-icon {
   align-items: center;
   background: $light-green-color;
   border-radius: 12px;
@@ -581,11 +583,16 @@ a.channel-btn {
   width: 46px;
 }
 
-.confirmation-panel p {
+.emphasize-panel p {
   font-size: 14px;
   line-height: 1.65;
 }
 
+.emphasize-panel .quote {
+  text-align: center;
+  font-size: 16px;
+  font-style: italic;
+}
 .connection-choice-board {
   display: grid;
   gap: 28px;
@@ -738,7 +745,7 @@ a.channel-btn {
   grid-template-columns: 1fr 1fr;
 
   @media (max-width: 768px) {
-    gap: 40px;
+    gap: 20px;
     grid-template-columns: 1fr;
   }
 }

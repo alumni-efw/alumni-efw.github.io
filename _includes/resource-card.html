@@ -1,0 +1,148 @@
+{% assign item = include.item %}
+
+<article
+  class="resource-card{% if include.is_first %} is-active{% endif %}"
+  id="resource-card-{{ include.section_key }}-{{ include.item_index }}"
+  data-resource-card="{{ include.section_key }}"
+  role="tabpanel"
+  aria-labelledby="resource-trigger-{{ include.section_key }}-{{ include.item_index }}"
+  {% unless include.is_first %}hidden{% endunless %}
+>
+  <header class="resource-card-header{% if item.programs %} resource-card-header-programs{% endif %}">
+    <h3>{{ item.name }}</h3>
+
+    {% if item.location %}
+      <p class="resource-location">
+        <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+        {{ item.location }}
+      </p>
+    {% endif %}
+  </header>
+
+  {% if item.info %}
+    <div class="resource-info">
+      {{ item.info | markdownify }}
+    </div>
+  {% endif %}
+
+  {% if item.contact or item.phone or item.email or item.email2 %}
+    <dl class="resource-contact-list">
+      {% if item.contact %}
+        <div>
+          <dt><i class="fa-solid fa-user" aria-hidden="true"></i> Contact</dt>
+          <dd>{{ item.contact }}</dd>
+        </div>
+      {% endif %}
+
+      {% if item.phone %}
+        <div>
+          <dt><i class="fa-solid fa-phone" aria-hidden="true"></i> Phone</dt>
+          <dd>{{ item.phone }}</dd>
+        </div>
+      {% endif %}
+
+      {% if item.email %}
+        <div>
+          <dt><i class="fa-solid fa-envelope" aria-hidden="true"></i> Email</dt>
+          <dd><a href="mailto:{{ item.email }}">{{ item.email }}</a></dd>
+        </div>
+      {% endif %}
+
+      {% if item.email2 %}
+        <div>
+          <dt><i class="fa-solid fa-envelope" aria-hidden="true"></i> Email</dt>
+          <dd><a href="mailto:{{ item.email2 }}">{{ item.email2 }}</a></dd>
+        </div>
+      {% endif %}
+    </dl>
+  {% endif %}
+
+  {% if item.website or item.website2 or item.sns %}
+    <div class="resource-actions">
+      {% if item.website %}
+        <a class="resource-action-link" href="{{ item.website }}" target="_blank" rel="noopener">
+          <i class="fa-solid fa-globe" aria-hidden="true"></i>
+          Website
+          <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+        </a>
+      {% endif %}
+
+      {% if item.website2 %}
+        <a class="resource-action-link" href="{{ item.website2 }}" target="_blank" rel="noopener">
+          <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+          More information
+          <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+        </a>
+      {% endif %}
+
+      {% if item.sns %}
+        <a class="resource-action-link" href="{{ item.sns }}" target="_blank" rel="noopener">
+          <i class="fa-solid fa-share-nodes" aria-hidden="true"></i>
+          Social media
+          <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+        </a>
+      {% endif %}
+    </div>
+  {% endif %}
+
+  {% assign subitems = item.programs | default: item.branches %}
+  {% if subitems %}
+    <div class="resource-card-group">
+      <div class="resource-subitems">
+        {% for subitem in subitems %}
+          {% assign subitem_name = subitem.program | default: subitem.branch %}
+          <section class="resource-subitem">
+            <div class="resource-subitem-header">
+              <h5>{{ subitem_name }}</h5>
+              {% if subitem.website %}
+                <a
+                  class="resource-subitem-link"
+                  href="{{ subitem.website }}"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <i class="fa-solid fa-globe" aria-hidden="true"></i>
+                  Website
+                  <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                </a>
+              {% endif %}
+            </div>
+            {% if subitem.contact or subitem.phone or subitem.email %}
+            <dl class="resource-subitem-details">
+              {% if subitem.contact %}
+                <div>
+                  <dt><i class="fa-solid fa-user" aria-hidden="true"></i> Contact</dt>
+                  <dd>{{ subitem.contact }}</dd>
+                </div>
+              {% endif %}
+              {% if subitem.phone %}
+                <div>
+                  <dt><i class="fa-solid fa-phone" aria-hidden="true"></i> Phone</dt>
+                  <dd>
+                    {{ subitem.phone }}
+                    {% if subitem.phone2 %}
+                    | {{ subitem.phone2 }}
+                    {% endif %}
+                  </dd>
+                </div>
+              {% endif %}
+
+              {% if subitem.email %}
+                <div>
+                  <dt><i class="fa-solid fa-envelope" aria-hidden="true"></i> Email</dt>
+                  <dd>
+                    <a href="mailto:{{ subitem.email }}">{{ subitem.email }}</a>
+                    {% if subitem.email2 %}
+                      ; <a href="mailto:{{ subitem.email2 }}">{{ subitem.email2 }}</a>
+                    {% endif %}
+                  </dd>
+                </div>
+              {% endif %}
+            </dl>
+            {% endif %}
+          </section>
+        {% endfor %}
+      </div>
+    </div>
+  {% endif %}
+</article>
