@@ -15,13 +15,13 @@
 # The following fields are optional: Contact, phone, phone2, email, email2, website, website2, SNS, branches
 
 ## Example
-#- name: Example Organization
-#  location: King County, WA
-#  info: English and computer classes
-#  contact: contact person name
-#  phone: 111-222-3333
-#  email: contact@gmail.com
-#  website: https://example.org/
+#  - name: Example Organization
+#    location: King County, WA
+#    info: English and computer classes
+#    contact: contact person name
+#    phone: 111-222-3333
+#    email: contact@gmail.com
+#    website: https://example.org/
 
 title: Free Employment Resources
 

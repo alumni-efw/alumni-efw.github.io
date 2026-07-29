@@ -15,10 +15,10 @@
 # The following fields are optional: Contact, phone, phone2, email, email2, website, website2, SNS, branches
 
 ## Example
-#- name: Example Organization
-#  location: King County, WA
-#  info: English and computer classes
-#  branches:
+#  - name: Example Organization
+#    location: King County, WA
+#    info: English and computer classes
+#    branches:
 #    - branch: Seattle
 #      phone: 206-555-1111
 #      website: https://example.org/seattle
