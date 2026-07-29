@@ -158,8 +158,7 @@ jobs:
             --body "$(cat <<'EOF'
           ## Dev → Main release
 
-          This pull request was created automatically by a quarterly schedule,
-          a manual workflow run, or a baseline tag.
+          This pull request was created automatically by a quarterly schedule, a manual workflow run, or a baseline tag.
 
           Automated checks:
 
