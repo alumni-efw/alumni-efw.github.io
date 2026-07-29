@@ -1,14 +1,8 @@
 name: Sync main to dev-info
 
 on:
-  # Run after the GitHub Pages workflow completes on main.
-  workflow_run:
-    workflows:
-      - "pages build and deployment"
-    types:
-      - completed
-    branches:
-      - main
+  # Run when a deployment status is created.
+  deployment_status:
 
   # Allow manual testing from the Actions page.
   workflow_dispatch:
@@ -30,7 +24,11 @@ jobs:
     # Manual workflow runs are also allowed for testing.
     if: >
       github.event_name == 'workflow_dispatch' ||
-      github.event.workflow_run.conclusion == 'success'
+      (
+        github.event.deployment_status.state == 'success' &&
+        github.event.deployment.environment == 'github-pages' &&
+        github.event.deployment.ref == 'main'
+      )
 
     steps:
       - name: Checkout main
@@ -48,10 +46,10 @@ jobs:
 
       # Do not sync an older deployment if main has already advanced.
       - name: Verify deployed commit is current main
-        if: github.event_name == 'workflow_run'
+        if: github.event_name == 'deployment_status'
         shell: bash
         env:
-          DEPLOYED_SHA: ${{ github.event.workflow_run.head_sha }}
+          DEPLOYED_SHA: ${{ github.event.deployment.sha }}
         run: |
           MAIN_SHA="$(git rev-parse origin/main)"
 
